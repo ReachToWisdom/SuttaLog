@@ -123,6 +123,9 @@ function findBestVoice(): SpeechSynthesisVoice | null {
 export function speakPali(text: string) {
   speechSynthesis.cancel()
 
+  // 소리 끔 설정 체크
+  if (localStorage.getItem('suttalog-sound') === 'off') return
+
   const trySpeak = () => {
     const voice = findBestVoice()
     const useDevanagari = voice && (voice.lang.startsWith('hi') || voice.lang.startsWith('sa'))
