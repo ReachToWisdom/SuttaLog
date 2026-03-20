@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { speakPali } from '../../utils/pali-tts'
+import WritingCanvas from '../../components/WritingCanvas'
 import { LESSON_SN56_11, type StepType } from './lesson-data-sn56-11'
 import { LESSON_SN22_59 } from './lesson-data-sn22-59'
 import { LESSON_SN45_8 } from './lesson-data-sn45-8'
@@ -48,8 +49,8 @@ export default function ScriptureLearn() {
   const isQuizType = step.type === 'match-listen' || step.type === 'match-reverse' || step.type === 'quiz'
   const isWriting = step.type === 'writing'
 
-  // 특수문자 키보드
-  const SPECIAL_CHARS = ['ā', 'ī', 'ū', 'ṃ', 'ṅ', 'ñ', 'ṭ', 'ḍ', 'ṇ', 'ḷ']
+  // 특수문자 (차후 타이핑 모드에서 사용)
+  // const SPECIAL_CHARS = ['ā', 'ī', 'ū', 'ṃ', 'ṅ', 'ñ', 'ṭ', 'ḍ', 'ṇ', 'ḷ']
 
   const getAnswerText = (): string => {
     if (!('answer' in step) || !('options' in step)) return ''
@@ -250,44 +251,29 @@ export default function ScriptureLearn() {
         {step.type === 'writing' && !writingEnabled && (() => { handleNext(); return null })()}
         {step.type === 'writing' && writingEnabled && (
           <div className="flex-1 flex flex-col">
-            <p className="text-base font-bold mb-2">{step.instruction}</p>
+            <p className="text-base font-bold mb-2">✍️ {step.instruction}</p>
             <p className="text-sm mb-1" style={{ color: 'var(--color-text-secondary)' }}>
               뜻: {step.meaning} · 발음: {step.pronKo}
             </p>
-            {step.hint && !writingChecked && <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>💡 {step.hint}</p>}
+            <button onClick={() => speak((step as { answer: string }).answer)}
+              className="text-xs mb-3 flex items-center gap-1 self-start" style={{ color: 'var(--color-accent)' }}>
+              🔊 발음 듣기
+            </button>
 
-            {/* 입력 필드 */}
-            <input type="text" value={writingInput}
-              onChange={e => setWritingInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && !writingChecked && checkWriting()}
-              placeholder="빠알리어를 입력하세요"
-              disabled={writingChecked}
-              className="w-full px-4 py-3 rounded-xl text-lg pali-text text-center"
-              style={{ backgroundColor: 'var(--color-surface)', border: writingChecked
-                ? (writingInput.trim().toLowerCase() === ((step as { answer: string }).answer).toLowerCase() ? '2px solid #4CAF50' : '2px solid #F44336')
-                : '2px solid var(--color-border)', color: 'var(--color-text)' }}
-            />
+            {/* 손글씨 캔버스 */}
+            <WritingCanvas />
 
-            {/* 특수문자 키보드 */}
-            <div className="flex flex-wrap gap-1.5 mt-3 justify-center">
-              {SPECIAL_CHARS.map(ch => (
-                <button key={ch} onClick={() => !writingChecked && setWritingInput(v => v + ch)}
-                  className="w-9 h-9 rounded-lg text-sm font-bold pali-text active:scale-90"
-                  style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', color: 'var(--color-primary)' }}>
-                  {ch}
-                </button>
-              ))}
-            </div>
-
-            {/* 결과 */}
-            {writingChecked && (
-              <div className="mt-3 rounded-xl p-3" style={{
-                backgroundColor: writingInput.trim().toLowerCase() === ((step as { answer: string }).answer).toLowerCase() ? '#E8F5E9' : '#FFEBEE',
-              }}>
-                <p className="text-sm font-bold">
-                  {writingInput.trim().toLowerCase() === ((step as { answer: string }).answer).toLowerCase()
-                    ? '✅ Sādhu! 정확합니다!'
-                    : `❌ 정답: ${(step as { answer: string }).answer}`}
+            {/* 정답 보기 */}
+            {!writingChecked ? (
+              <button onClick={() => setWritingChecked(true)}
+                className="mt-3 text-xs self-center underline" style={{ color: 'var(--color-text-secondary)' }}>
+                정답 보기
+              </button>
+            ) : (
+              <div className="mt-3 rounded-xl p-3 text-center" style={{ backgroundColor: '#E8F5E9', border: '1px solid #C8E6C9' }}>
+                <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>정답</p>
+                <p className="pali-text text-xl font-bold mt-1" style={{ color: 'var(--color-primary)' }}>
+                  {(step as { answer: string }).answer}
                 </p>
               </div>
             )}
