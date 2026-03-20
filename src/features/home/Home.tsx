@@ -7,7 +7,9 @@ export default function Home() {
   // 온보딩에서 설정한 일일 목표 읽기
   const dailyGoalRaw = localStorage.getItem('suttalog-daily-goal')
   const dailyGoal = dailyGoalRaw ? parseInt(dailyGoalRaw, 10) : null
-  const goalText = dailyGoal !== null ? `오늘 목표 0/${dailyGoal}` : '목표 미설정'
+  // 분 → 레슨 수 변환 (1레슨 ≈ 3분)
+  const goalLessons = dailyGoal !== null ? Math.max(1, Math.round(dailyGoal / 3)) : null
+  const goalText = goalLessons !== null ? `오늘 목표 0/${goalLessons} 레슨` : '목표 미설정'
 
   // 온보딩 레벨에 따른 시작 경로 결정
   // level 0 → 1과, level 1 → 2과(sn22-59), level 2 → 3과(sn45-8)
@@ -67,23 +69,28 @@ export default function Home() {
         <p className="text-xs font-semibold mb-2" style={{ color: 'var(--color-text-secondary)' }}>☸️ 학습 경로</p>
         <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
           {[
-            { num: '1과', title: '전법륜경 (사성제·팔정도)', status: '시작', active: true },
-            { num: '2과', title: '무아경 (오온·무아)', status: '잠김', active: false },
-            { num: '3과', title: '팔정도경 (수행의 길)', status: '잠김', active: false },
-            { num: '4과', title: '사념처경 (수행법) 🎯', status: '잠김', active: false },
-          ].map((item, i) => (
+            { num: '1과', title: '전법륜경 (사성제·팔정도)', idx: 0 },
+            { num: '2과', title: '무아경 (오온·무아)', idx: 1 },
+            { num: '3과', title: '팔정도경 (수행의 길)', idx: 2 },
+            { num: '4과', title: '사념처경 (수행법) 🎯', idx: 3 },
+          ].map((item, i) => {
+            const lvl = Number(level)
+            const active = item.idx === lvl
+            const done = item.idx < lvl
+            const status = active ? '시작' : done ? '완료' : '잠김'
+            return (
             <div key={i} className={`flex items-center gap-3 py-2.5 ${i > 0 ? 'border-t' : ''}`}
-              style={{ borderColor: 'var(--color-border)', opacity: item.active ? 1 : 0.4 }}>
+              style={{ borderColor: 'var(--color-border)', opacity: active || done ? 1 : 0.4 }}>
               <span className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0"
-                style={{ backgroundColor: item.active ? 'var(--color-primary)' : 'var(--color-border)' }}>
-                {item.active ? '▶' : '🔒'}
+                style={{ backgroundColor: active ? 'var(--color-primary)' : done ? 'var(--color-accent)' : 'var(--color-border)' }}>
+                {active ? '▶' : done ? '✓' : '🔒'}
               </span>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-semibold">{item.num}: {item.title}</p>
               </div>
-              <span className="text-xs" style={{ color: item.active ? 'var(--color-primary)' : 'var(--color-text-secondary)' }}>{item.status}</span>
+              <span className="text-xs" style={{ color: active ? 'var(--color-primary)' : done ? 'var(--color-accent)' : 'var(--color-text-secondary)' }}>{status}</span>
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </div>
