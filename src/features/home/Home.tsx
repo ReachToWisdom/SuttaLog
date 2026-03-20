@@ -49,20 +49,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 메인 CTA */}
-      <button onClick={() => nav(startPath)}
-        className="w-full rounded-2xl p-5 text-left text-white active:scale-[0.98] transition-transform"
-        style={{ backgroundColor: 'var(--color-primary)' }}>
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-xs opacity-80">학습 시작하기</p>
-            <p className="text-lg font-bold mt-1">{startLabel}</p>
-            <p className="text-xs opacity-80 mt-1">{startDesc}</p>
-          </div>
-          <span className="text-4xl">▶</span>
-        </div>
-      </button>
-
       {/* 오늘의 빠알리어 */}
       <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
         <p className="text-xs font-semibold mb-2" style={{ color: 'var(--color-text-secondary)' }}>💡 오늘의 빠알리어</p>
@@ -76,28 +62,27 @@ export default function Home() {
         <p className="text-xs font-semibold mb-2" style={{ color: 'var(--color-text-secondary)' }}>☸️ 학습 경로</p>
         <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
           {[
-            { num: '1과', title: '전법륜경 (사성제·팔정도)', idx: 0 },
-            { num: '2과', title: '무아경 (오온·무아)', idx: 1 },
-            { num: '3과', title: '팔정도경 (수행의 길)', idx: 2 },
-            { num: '4과', title: '사념처경 (수행법) 🎯', idx: 3 },
+            { num: '1과', title: '전법륜경 (사성제·팔정도)', idx: 0, route: '/learn/scripture/dhp1-alphabet' },
+            { num: '2과', title: '무아경 (오온·무아)', idx: 1, route: '/learn/scripture/sn22-59' },
+            { num: '3과', title: '팔정도경 (수행의 길)', idx: 2, route: '/learn/scripture/sn45-8' },
+            { num: '4과', title: '사념처경 (수행법) 🎯', idx: 3, route: '/learn/scripture/mn10' },
           ].map((item, i) => {
             const lvl = Number(level)
             const active = item.idx === lvl
-            const skipped = item.idx < lvl
-            const locked = item.idx > lvl
-            const status = active ? '시작' : skipped ? '미학습' : '잠김'
+            const status = active ? '시작 ▶' : item.idx < lvl ? '미학습' : '미학습'
             return (
-            <div key={i} className={`flex items-center gap-3 py-2.5 ${i > 0 ? 'border-t' : ''}`}
-              style={{ borderColor: 'var(--color-border)', opacity: active || skipped ? 1 : locked ? 0.4 : 1 }}>
+            <button key={i} onClick={() => nav(item.route)}
+              className={`w-full flex items-center gap-3 py-3 ${i > 0 ? 'border-t' : ''} active:scale-[0.98] transition-all text-left`}
+              style={{ borderColor: 'var(--color-border)' }}>
               <span className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0"
-                style={{ backgroundColor: active ? 'var(--color-primary)' : skipped ? 'var(--color-border)' : 'var(--color-border)' }}>
-                {active ? '▶' : skipped ? '—' : '🔒'}
+                style={{ backgroundColor: active ? 'var(--color-primary)' : 'var(--color-border)' }}>
+                {active ? '▶' : i + 1}
               </span>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold">{item.num}: {item.title}</p>
+                <p className={`text-sm ${active ? 'font-bold' : 'font-medium'}`}>{item.num}: {item.title}</p>
               </div>
               <span className="text-xs" style={{ color: active ? 'var(--color-primary)' : 'var(--color-text-secondary)' }}>{status}</span>
-            </div>
+            </button>
           )})}
         </div>
       </div>
