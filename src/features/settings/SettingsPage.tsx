@@ -1,8 +1,22 @@
-// 설정 페이지 — 초기화 + 소리 토글
-import { useState } from 'react'
+// 설정 페이지
+import { useState, useEffect } from 'react'
+import { isSyncConfigured, isSyncLoggedIn, getSyncUser, initSync, syncLogin, syncLogout, pullFromCloud, pushToCloud } from '../../utils/sync'
 
 export default function SettingsPage() {
   const [soundOn, setSoundOn] = useState(localStorage.getItem('suttalog-sound') !== 'off')
+  const [syncLoggedIn, setSyncLoggedIn] = useState(isSyncLoggedIn())
+  const [syncUser, setSyncUser] = useState(getSyncUser())
+  const [syncing, setSyncing] = useState(false)
+  const syncReady = isSyncConfigured()
+
+  useEffect(() => {
+    if (syncReady) {
+      initSync((loggedIn) => {
+        setSyncLoggedIn(loggedIn)
+        setSyncUser(getSyncUser())
+      })
+    }
+  }, [syncReady])
   const [writingOn, setWritingOn] = useState(localStorage.getItem('suttalog-writing') !== 'off')
   const [fontSize, setFontSize] = useState(Number(localStorage.getItem('suttalog-fontsize')) || 16)
 
@@ -52,6 +66,52 @@ export default function SettingsPage() {
               style={{ left: soundOn ? 24 : 4 }} />
           </button>
         </div>
+      </div>
+
+      {/* 동기화 */}
+      <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
+        <p className="text-sm font-semibold mb-2">🔄 기기간 동기화</p>
+        {!syncReady ? (
+          <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>준비 중 (Firebase 설정 필요)</p>
+        ) : syncLoggedIn ? (
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              {syncUser?.photoURL && <img src={syncUser.photoURL} className="w-8 h-8 rounded-full" />}
+              <div>
+                <p className="text-xs font-medium">{syncUser?.displayName}</p>
+                <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{syncUser?.email}</p>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <button onClick={async () => { setSyncing(true); await pullFromCloud(); setSyncing(false); alert('동기화 완료!') }}
+                disabled={syncing}
+                className="flex-1 py-2 rounded-lg text-xs font-medium text-white"
+                style={{ backgroundColor: 'var(--color-accent)' }}>
+                {syncing ? '동기화 중...' : '📥 가져오기'}
+              </button>
+              <button onClick={async () => { setSyncing(true); await pushToCloud(); setSyncing(false); alert('업로드 완료!') }}
+                disabled={syncing}
+                className="flex-1 py-2 rounded-lg text-xs font-medium text-white"
+                style={{ backgroundColor: 'var(--color-primary)' }}>
+                📤 올리기
+              </button>
+              <button onClick={async () => { await syncLogout(); setSyncLoggedIn(false); setSyncUser(null) }}
+                className="px-3 py-2 rounded-lg text-xs"
+                style={{ border: '1px solid var(--color-border)' }}>
+                로그아웃
+              </button>
+            </div>
+          </div>
+        ) : (
+          <button onClick={async () => { await syncLogin(); setSyncLoggedIn(isSyncLoggedIn()); setSyncUser(getSyncUser()) }}
+            className="w-full py-3 rounded-lg text-sm font-medium text-white flex items-center justify-center gap-2"
+            style={{ backgroundColor: '#4285F4' }}>
+            <span>🔑</span> Google 계정으로 로그인
+          </button>
+        )}
+        <p className="text-xs mt-2" style={{ color: 'var(--color-text-secondary)' }}>
+          Google 로그인으로 여러 기기에서 학습 진도를 동기화합니다
+        </p>
       </div>
 
       {/* 쓰기 모드 */}
