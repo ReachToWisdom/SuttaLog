@@ -6,12 +6,12 @@ const SKILLS = [
   { id: 9, title: '주석서', desc: 'Aṭṭhakathā 해석학', icon: '📗', status: 'locked', crown: 0, source: 'Aṭṭhakathā' },
   { id: 8, title: '원전 해석', desc: '긴 경전 독해', icon: '📜', status: 'locked', crown: 0, source: 'MN · DN' },
   { id: 7, title: '경전 독해', desc: '정형구/반복공식', icon: '📖', status: 'locked', crown: 0, source: 'SN · AN' },
-  { id: 6, title: '산디/합성어', desc: '연음 규칙, samāsa', icon: '🔗', status: 'current', crown: 2, source: 'Sutta Nipāta' },
-  { id: 5, title: '동사 활용', desc: '현재/과거/미래', icon: '🏃', status: 'done', crown: 4, source: 'Sutta Nipāta' },
-  { id: 4, title: '격변화', desc: '8격 체계', icon: '🔀', status: 'done', crown: 5, source: 'Itivuttaka' },
-  { id: 3, title: '문장 구조', desc: 'SOV 어순, 기초 문법', icon: '📝', status: 'done', crown: 5, source: 'Dhammapada' },
-  { id: 2, title: '기초 단어', desc: '핵심 100단어', icon: '💬', status: 'done', crown: 5, source: 'Dhammapada' },
-  { id: 1, title: '알파벳/발음', desc: 'ā ī ū ṃ ṅ ñ ṭ ḍ ṇ ḷ', icon: '🔤', status: 'done', crown: 5, source: 'Dhammapada 1게' },
+  { id: 6, title: '산디/합성어', desc: '연음 규칙, samāsa', icon: '🔗', status: 'locked', crown: 0, source: 'Sutta Nipāta' },
+  { id: 5, title: '동사 활용', desc: '현재/과거/미래', icon: '🏃', status: 'locked', crown: 0, source: 'Sutta Nipāta' },
+  { id: 4, title: '격변화', desc: '8격 체계', icon: '🔀', status: 'locked', crown: 0, source: 'Itivuttaka' },
+  { id: 3, title: '문장 구조', desc: 'SOV 어순, 기초 문법', icon: '📝', status: 'locked', crown: 0, source: 'Dhammapada' },
+  { id: 2, title: '기초 단어', desc: '핵심 100단어', icon: '💬', status: 'locked', crown: 0, source: 'Dhammapada' },
+  { id: 1, title: '알파벳/발음', desc: 'ā ī ū ṃ ṅ ñ ṭ ḍ ṇ ḷ', icon: '🔤', status: 'current', crown: 0, source: 'Dhammapada 1게' },
 ]
 
 function CrownStars({ count, max = 5 }: { count: number; max?: number }) {
@@ -31,7 +31,7 @@ export default function StudyMap() {
         <h1 className="text-xl font-bold">📖 학습맵</h1>
         <span className="text-sm px-3 py-1 rounded-full"
           style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}>
-          레벨 7
+          레벨 1
         </span>
       </div>
 

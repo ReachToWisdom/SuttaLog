@@ -1,8 +1,20 @@
-// 홈 대시보드 — 초보자 기준
+// 홈 대시보드 — 학습 전 초기 상태
 import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
   const nav = useNavigate()
+
+  // 온보딩에서 설정한 일일 목표 읽기
+  const dailyGoalRaw = localStorage.getItem('suttalog-daily-goal')
+  const dailyGoal = dailyGoalRaw ? parseInt(dailyGoalRaw, 10) : null
+  const goalText = dailyGoal !== null ? `오늘 목표 0/${dailyGoal}` : '목표 미설정'
+
+  // 온보딩 레벨에 따른 시작 경로 결정
+  // level 0 → 1과, level 1 → 2과(sn22-59), level 2 → 3과(sn45-8)
+  // 현재 2과/3과 미구현이므로 모두 1과로 폴백
+  const level = localStorage.getItem('suttalog-level') || '0'
+  // 현재 2과/3과 미구현이므로 모두 1과로 폴백
+  const startPath = level === '1' ? '/learn/scripture/dhp1-alphabet' : level === '2' ? '/learn/scripture/dhp1-alphabet' : '/learn/scripture/dhp1-alphabet'
 
   return (
     <div className="px-4 pt-6 space-y-5">
@@ -10,7 +22,7 @@ export default function Home() {
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold" style={{ color: 'var(--color-primary)' }}>🪷 SuttaLog</h1>
         <div className="flex items-center gap-3 text-sm">
-          <span>🔥 1</span>
+          <span>🔥 0</span>
           <span>💎 0</span>
           <span>🪷 3</span>
         </div>
@@ -19,8 +31,8 @@ export default function Home() {
       {/* 스트릭 + 오늘 목표 */}
       <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
         <div className="flex items-center justify-between mb-3">
-          <span className="text-sm font-semibold">🔥 수행 1일째</span>
-          <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>오늘 목표 0/3</span>
+          <span className="text-sm font-semibold">🔥 학습 전</span>
+          <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{goalText}</span>
         </div>
         <div className="h-2 rounded-full overflow-hidden" style={{ backgroundColor: 'var(--color-border)' }}>
           <div className="h-full rounded-full" style={{ width: '0%', backgroundColor: 'var(--color-primary)' }} />
@@ -28,7 +40,7 @@ export default function Home() {
       </div>
 
       {/* 메인 CTA */}
-      <button onClick={() => nav('/learn/scripture/dhp1-alphabet')}
+      <button onClick={() => nav(startPath)}
         className="w-full rounded-2xl p-5 text-left text-white active:scale-[0.98] transition-transform"
         style={{ backgroundColor: 'var(--color-primary)' }}>
         <div className="flex items-center justify-between">
