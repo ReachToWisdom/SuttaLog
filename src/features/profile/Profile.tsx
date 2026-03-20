@@ -1,5 +1,47 @@
 // 프로필/나 화면
+import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+
+// 학습 데이터 내보내기
+function exportData() {
+  const data: Record<string, string> = {}
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i)
+    if (key?.startsWith('suttalog-')) {
+      data[key] = localStorage.getItem(key) || ''
+    }
+  }
+  const json = JSON.stringify(data, null, 2)
+  const blob = new Blob([json], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `suttalog-backup-${new Date().toISOString().slice(0, 10)}.json`
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
+// 학습 데이터 가져오기
+function importData(file: File) {
+  const reader = new FileReader()
+  reader.onload = (e) => {
+    try {
+      const data = JSON.parse(e.target?.result as string)
+      let count = 0
+      for (const [key, value] of Object.entries(data)) {
+        if (key.startsWith('suttalog-')) {
+          localStorage.setItem(key, value as string)
+          count++
+        }
+      }
+      alert(`${count}개 항목을 가져왔습니다. 페이지를 새로고침합니다.`)
+      window.location.reload()
+    } catch {
+      alert('파일 형식이 올바르지 않습니다.')
+    }
+  }
+  reader.readAsText(file)
+}
 
 const ACHIEVEMENTS = [
   { icon: '🪷', title: '첫 레슨 완료', desc: '학습의 첫 걸음' },
@@ -14,9 +56,13 @@ const ACHIEVEMENTS = [
 
 export default function Profile() {
   const nav = useNavigate()
+  const importRef = useRef<HTMLInputElement>(null)
 
   return (
     <div className="px-4 pt-6 space-y-5">
+      {/* 숨김 파일 입력 (가져오기용) */}
+      <input ref={importRef} type="file" accept=".json" className="hidden"
+        onChange={e => { const f = e.target.files?.[0]; if (f) importData(f); e.target.value = '' }} />
       {/* 프로필 헤더 */}
       <div className="rounded-2xl p-5 text-center"
         style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
@@ -92,11 +138,12 @@ export default function Profile() {
       {/* 메뉴 */}
       <div className="rounded-2xl overflow-hidden" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
         {[
-          { icon: '⚙️', label: '설정', to: '/settings' },
-          { icon: '📤', label: '학습 데이터 내보내기', to: '#' },
-          { icon: '❓', label: '도움말', to: '#' },
+          { icon: '⚙️', label: '설정', action: () => nav('/settings') },
+          { icon: '📤', label: '학습 데이터 내보내기', action: exportData },
+          { icon: '📥', label: '학습 데이터 가져오기', action: () => importRef.current?.click() },
+          { icon: '❓', label: '도움말', action: () => {} },
         ].map((item, i) => (
-          <button key={i} onClick={() => nav(item.to)}
+          <button key={i} onClick={item.action}
             className="w-full flex items-center gap-3 px-4 py-3.5 text-sm text-left border-b last:border-b-0"
             style={{ borderColor: 'var(--color-border)' }}>
             <span>{item.icon}</span>
