@@ -1,14 +1,24 @@
 // 경전 중심 Duolingo식 학습 UI (데이터는 별도 파일)
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { speakPali } from '../../utils/pali-tts'
 import { LESSON_SN56_11, type StepType } from './lesson-data-sn56-11'
+import { LESSON_SN22_59 } from './lesson-data-sn22-59'
+import { LESSON_SN45_8 } from './lesson-data-sn45-8'
 
 type Step = StepType
-const STEPS: Step[] = LESSON_SN56_11
+
+const LESSON_MAP: Record<string, Step[]> = {
+  'dhp1-alphabet': LESSON_SN56_11,
+  'sn56-11': LESSON_SN56_11,
+  'sn22-59': LESSON_SN22_59,
+  'sn45-8': LESSON_SN45_8,
+}
 
 export default function ScriptureLearn() {
   const nav = useNavigate()
+  const { lessonId } = useParams<{ lessonId: string }>()
+  const STEPS = LESSON_MAP[lessonId || 'dhp1-alphabet'] || LESSON_SN56_11
   const [stepIdx, setStepIdx] = useState(0)
   const [hearts, setHearts] = useState(3)
   const [selected, setSelected] = useState<number | null>(null)

@@ -13,8 +13,9 @@ export default function Home() {
   // level 0 → 1과, level 1 → 2과(sn22-59), level 2 → 3과(sn45-8)
   // 현재 2과/3과 미구현이므로 모두 1과로 폴백
   const level = localStorage.getItem('suttalog-level') || '0'
-  // 현재 2과/3과 미구현이므로 모두 1과로 폴백
-  const startPath = level === '1' ? '/learn/scripture/dhp1-alphabet' : level === '2' ? '/learn/scripture/dhp1-alphabet' : '/learn/scripture/dhp1-alphabet'
+  const startPath = level === '2' ? '/learn/scripture/sn45-8' : level === '1' ? '/learn/scripture/sn22-59' : '/learn/scripture/dhp1-alphabet'
+  const startLabel = level === '2' ? '제3과: 팔정도 분별경' : level === '1' ? '제2과: 무아경' : '제1과: 전법륜경 기초'
+  const startDesc = level === '2' ? '팔정도 각 항목 분석' : level === '1' ? '오온과 무아' : '사성제와 팔정도 · 첫 설법'
 
   return (
     <div className="px-4 pt-6 space-y-5">
@@ -46,8 +47,8 @@ export default function Home() {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-xs opacity-80">학습 시작하기</p>
-            <p className="text-lg font-bold mt-1">제1과: 전법륜경 기초</p>
-            <p className="text-xs opacity-80 mt-1">사성제와 팔정도 · 첫 설법</p>
+            <p className="text-lg font-bold mt-1">{startLabel}</p>
+            <p className="text-xs opacity-80 mt-1">{startDesc}</p>
           </div>
           <span className="text-4xl">▶</span>
         </div>
