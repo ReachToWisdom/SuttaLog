@@ -1,4 +1,4 @@
-// 온보딩 플로우 (3단계): 환영 → 일일 목표 → 레벨
+// 온보딩 플로우 (2단계): 환영 → 일일 목표
 import { useState } from 'react'
 
 interface Props { onComplete: () => void }
@@ -6,18 +6,14 @@ interface Props { onComplete: () => void }
 export default function Onboarding({ onComplete }: Props) {
   const [step, setStep] = useState(0)
   const [dailyGoal, setDailyGoal] = useState(1)
-  const [level, setLevel] = useState(-1)
 
   const next = () => {
-    if (step < 2) setStep(s => s + 1)
+    if (step < 1) setStep(1)
     else {
       localStorage.setItem('suttalog-daily-goal', String([5, 10, 15, 20][dailyGoal]))
-      localStorage.setItem('suttalog-level', String(level))
       onComplete()
     }
   }
-
-  const canNext = step === 0 || (step === 1 && dailyGoal >= 0) || (step === 2 && level >= 0)
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>
@@ -71,46 +67,17 @@ export default function Onboarding({ onComplete }: Props) {
             ))}
           </div>
         )}
-
-        {/* 3. 레벨 선택 */}
-        {step === 2 && (
-          <div className="px-6 pt-12">
-            <h2 className="text-xl font-bold mb-2">현재 빠알리어<br/>수준은?</h2>
-            <p className="text-sm mb-6" style={{ color: 'var(--color-text-secondary)' }}>적합한 시작점을 안내합니다</p>
-            {[
-              { icon: '🌱', label: '처음이에요', desc: '발음과 기초 단어부터', level: '1과: 전법륜경' },
-              { icon: '🌿', label: '조금 알아요', desc: '기본 불교 용어 가능', level: '2과: 무아경' },
-              { icon: '🌳', label: '경전 읽기 가능', desc: '문법을 다지고 싶어요', level: '3과: 팔정도경' },
-              { icon: '🏔️', label: '사념처 수행자', desc: '사념처경을 원문으로', level: '4과: 사념처경' },
-            ].map((item, i) => (
-              <button key={i} onClick={() => setLevel(i)}
-                className="w-full flex items-start gap-4 p-4 mb-3 rounded-xl text-left transition-all active:scale-[0.98]"
-                style={{
-                  backgroundColor: 'var(--color-surface)',
-                  border: level === i ? '2px solid var(--color-primary)' : '2px solid var(--color-border)',
-                }}>
-                <span className="text-3xl mt-1">{item.icon}</span>
-                <div className="flex-1">
-                  <p className="font-bold">{item.label}</p>
-                  <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>{item.desc}</p>
-                  <p className="text-xs mt-1 px-2 py-0.5 rounded-full inline-block" style={{ backgroundColor: 'var(--color-primary)', color: 'white', opacity: 0.8 }}>{item.level}</p>
-                </div>
-                {level === i && <span className="mt-2" style={{ color: 'var(--color-primary)' }}>✓</span>}
-              </button>
-            ))}
-          </div>
-        )}
       </div>
 
       {/* 하단 */}
       <div className="shrink-0 px-6 pb-8 pt-3">
-        <button onClick={next} disabled={!canNext}
-          className="w-full py-4 rounded-xl text-white font-bold text-lg active:scale-[0.97] transition-transform disabled:opacity-40"
+        <button onClick={next}
+          className="w-full py-4 rounded-xl text-white font-bold text-lg active:scale-[0.97] transition-transform"
           style={{ backgroundColor: 'var(--color-primary)' }}>
-          {step === 2 ? '학습 시작하기' : step === 0 ? '시작하기' : '다음'}
+          {step === 0 ? '시작하기' : '학습 시작하기'}
         </button>
         <div className="flex justify-center gap-2 mt-4">
-          {[0, 1, 2].map(i => (
+          {[0, 1].map(i => (
             <div key={i} className="h-2 rounded-full transition-all"
               style={{ backgroundColor: i === step ? 'var(--color-primary)' : 'var(--color-border)', width: i === step ? 20 : 8 }} />
           ))}
