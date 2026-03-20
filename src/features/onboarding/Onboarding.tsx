@@ -42,13 +42,13 @@ export default function Onboarding({ onComplete }: Props) {
         {/* 2. 일일 목표 */}
         {step === 1 && (
           <div className="px-6 pt-12">
-            <h2 className="text-xl font-bold mb-2">하루에 얼마나<br/>수행하시겠습니까?</h2>
-            <p className="text-sm mb-6" style={{ color: 'var(--color-text-secondary)' }}>나중에 변경할 수 있습니다</p>
+            <h2 className="text-xl font-bold mb-2">하루 학습 목표를<br/>설정해주세요</h2>
+            <p className="text-sm mb-6" style={{ color: 'var(--color-text-secondary)' }}>목표 달성 시 알려드립니다 · 나중에 변경 가능</p>
             {[
-              { min: 5, label: '가벼운 수행', desc: '하루 1~2 레슨' },
-              { min: 10, label: '꾸준한 수행', desc: '하루 3~4 레슨', recommended: true },
-              { min: 15, label: '진지한 수행', desc: '하루 5~6 레슨' },
-              { min: 20, label: '깊은 수행', desc: '하루 7~8 레슨' },
+              { min: 5, label: '가볍게', desc: '하루 1~2 레슨' },
+              { min: 10, label: '꾸준히', desc: '하루 3~4 레슨', recommended: true },
+              { min: 15, label: '집중해서', desc: '하루 5~6 레슨' },
+              { min: 20, label: '몰입해서', desc: '하루 7~8 레슨' },
             ].map((item, i) => (
               <button key={i} onClick={() => setDailyGoal(i)}
                 className="w-full flex items-center justify-between p-4 mb-3 rounded-xl transition-all active:scale-[0.98]"
