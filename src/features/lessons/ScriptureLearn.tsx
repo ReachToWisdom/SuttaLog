@@ -6,7 +6,7 @@ import { speakPali } from '../../utils/pali-tts'
 // --- 스텝 타입 ---
 type Step =
   | { type: 'intro'; title: string; subtitle: string; description: string; icon: string }
-  | { type: 'teach'; word: string; pronKo: string; meaning: string; icon: string; buddhism?: string; audio?: boolean }
+  | { type: 'teach'; word: string; pronKo: string; meaning: string; icon: string; buddhism?: string; audio?: boolean; verseLine?: string; verseLineKo?: string }
   | { type: 'match-listen'; instruction: string; word: string; pronKo: string; options: string[]; answer: number }
   | { type: 'match-meaning'; instruction: string; word: string; options: string[]; answer: number }
   | { type: 'match-reverse'; instruction: string; meaning: string; options: string[]; answer: number }
@@ -33,6 +33,8 @@ const STEPS: Step[] = [
     icon: '🙏',
     buddhism: '세존(世尊). "복덕을 갖추신 분". 경전에서 붓다를 가리킬 때 가장 많이 쓰는 말.',
     audio: true,
+    verseLine: 'Ekaṃ samayaṃ bhagavā bārāṇasiyaṃ viharati isipatane migadāye.',
+    verseLineKo: '한 때 세존께서 바라나시의 녹야원에 머무셨다.',
   },
   {
     type: 'teach',
@@ -40,6 +42,8 @@ const STEPS: Step[] = [
     icon: '🧘',
     buddhism: '비구(比丘)들을 부르는 말. 경전에서 가장 자주 나오는 호칭.',
     audio: true,
+    verseLine: '"Dveme, bhikkhave, antā pabbajitena na sevitabbā."',
+    verseLineKo: '"비구들이여, 출가자가 따르지 말아야 할 두 극단이 있다."',
   },
   {
     type: 'teach',
@@ -47,6 +51,8 @@ const STEPS: Step[] = [
     icon: '💫',
     buddhism: '고(苦). 사성제의 첫째 진리. 단순한 고통이 아닌, 불만족·불완전함을 포괄.',
     audio: true,
+    verseLine: 'Idaṃ kho pana, bhikkhave, dukkhaṃ ariyasaccaṃ—',
+    verseLineKo: '비구들이여, 이것이 괴로움의 성스러운 진리이다—',
   },
 
   // ===== 3. 쉬운 매칭 — 듣고 고르기 =====
@@ -114,6 +120,8 @@ const STEPS: Step[] = [
     icon: '⚖️',
     buddhism: '중도(中道). 쾌락과 고행의 양극단을 피하는 길. 붓다 가르침의 핵심 방법론.',
     audio: true,
+    verseLine: 'Ete kho, bhikkhave, ubho ante anupagamma majjhimā paṭipadā tathāgatena abhisambuddhā',
+    verseLineKo: '이 양극단에 다가가지 않고, 여래가 깨달은 중도가 있으니',
   },
   {
     type: 'teach',
@@ -121,6 +129,8 @@ const STEPS: Step[] = [
     icon: '☸️',
     buddhism: '팔정도(八正道). 괴로움의 소멸로 이끄는 여덟 가지 수행법.',
     audio: true,
+    verseLine: 'Ayameva ariyo aṭṭhaṅgiko maggo, seyyathidaṃ—',
+    verseLineKo: '그것은 바로 성스러운 팔정도이니—',
   },
 
   // ===== 8. 팔정도 구절 =====
@@ -141,6 +151,8 @@ const STEPS: Step[] = [
     icon: '📜',
     buddhism: '성제(聖諦). 사성제(고·집·멸·도)의 각 항목. ariya(성스러운) + sacca(진리).',
     audio: true,
+    verseLine: 'Idaṃ kho pana, bhikkhave, dukkhaṃ ariyasaccaṃ—',
+    verseLineKo: '비구들이여, 이것이 괴로움의 성스러운 진리이다—',
   },
   {
     type: 'verse',
@@ -214,12 +226,30 @@ export default function ScriptureLearn() {
     )
   }
 
-  // 선택지 렌더링 헬퍼
-  const renderOptions = (options: string[]) => (
+  // 보기 랜덤 섞기 (stepIdx 기반 시드로 일관성 유지)
+  const shuffleOptions = (options: string[], answer: number): { shuffled: string[]; newAnswer: number } => {
+    const seed = stepIdx * 7 + 3
+    const indices = options.map((_, i) => i)
+    // Fisher-Yates with seed
+    for (let i = indices.length - 1; i > 0; i--) {
+      const j = ((seed * (i + 1) * 13) % (i + 1) + i + 1) % (i + 1)
+      ;[indices[i], indices[j]] = [indices[j], indices[i]]
+    }
+    return {
+      shuffled: indices.map(i => options[i]),
+      newAnswer: indices.indexOf(answer),
+    }
+  }
+
+  // 선택지 렌더링 헬퍼 (랜덤 순서)
+  const renderOptions = (options: string[]) => {
+    const answer = getAnswer()
+    const { shuffled, newAnswer } = shuffleOptions(options, answer)
+    return (
     <div className="space-y-2.5">
-      {options.map((opt, i) => {
-        const isAnswer = showResult && i === getAnswer()
-        const isWrong = showResult && selected === i && i !== getAnswer()
+      {shuffled.map((opt, i) => {
+        const isAnswer = showResult && i === newAnswer
+        const isWrong = showResult && selected === i && i !== newAnswer
         return (
           <button key={i} onClick={() => !showResult && setSelected(i)} disabled={showResult}
             className="w-full p-3.5 rounded-xl text-left text-sm font-medium transition-all active:scale-[0.98]"
@@ -232,7 +262,16 @@ export default function ScriptureLearn() {
         )
       })}
     </div>
-  )
+  )}
+
+  // 이전 스텝으로
+  const handlePrev = () => {
+    if (stepIdx > 0) {
+      setStepIdx(i => i - 1)
+      setSelected(null)
+      setShowResult(false)
+    }
+  }
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>
@@ -262,10 +301,25 @@ export default function ScriptureLearn() {
 
         {/* ===== 단어 소개 (teach) ===== */}
         {step.type === 'teach' && (
-          <div className="flex-1 flex flex-col items-center justify-center text-center px-2">
-            <span className="text-5xl mb-4">{step.icon}</span>
-            <div className="rounded-2xl p-5 w-full" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
-              <p className="pali-text text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>{step.word}</p>
+          <div className="flex-1 flex flex-col px-2 pt-2">
+            {/* 경전 원문 컨텍스트 — 항상 먼저 보여줌 */}
+            {step.verseLine && (
+              <div className="rounded-xl p-3 mb-3" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
+                <p className="pali-text text-sm leading-relaxed" style={{ color: 'var(--color-primary)' }}>
+                  {step.verseLine.split(new RegExp(`(${step.word.split(' ')[0]})`, 'i')).map((part, i) =>
+                    part.toLowerCase() === step.word.split(' ')[0].toLowerCase()
+                      ? <span key={i} className="font-bold px-0.5 rounded" style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}>{part}</span>
+                      : <span key={i}>{part}</span>
+                  )}
+                </p>
+                <p className="text-xs mt-1" style={{ color: 'var(--color-text-secondary)' }}>{step.verseLineKo}</p>
+              </div>
+            )}
+
+            {/* 배우는 단어 카드 */}
+            <div className="rounded-2xl p-5 text-center" style={{ backgroundColor: 'var(--color-surface)', border: '2px solid var(--color-primary)' }}>
+              <span className="text-4xl">{step.icon}</span>
+              <p className="pali-text text-2xl font-bold mt-3" style={{ color: 'var(--color-primary)' }}>{step.word}</p>
               <p className="text-base mt-1 font-medium">{step.pronKo}</p>
               {step.audio && (
                 <button onClick={() => speak(step.word)} className="mt-2 px-4 py-1.5 rounded-full text-xs text-white" style={{ backgroundColor: 'var(--color-accent)' }}>
@@ -275,8 +329,10 @@ export default function ScriptureLearn() {
               <hr className="my-3" style={{ borderColor: 'var(--color-border)' }} />
               <p className="text-lg font-bold">{step.meaning}</p>
             </div>
+
+            {/* 불교 용어 설명 */}
             {step.buddhism && (
-              <div className="mt-3 rounded-xl p-3 w-full text-left text-xs" style={{ backgroundColor: '#E8F5E9', border: '1px solid #C8E6C9' }}>
+              <div className="mt-3 rounded-xl p-3 text-left text-xs" style={{ backgroundColor: '#E8F5E9', border: '1px solid #C8E6C9' }}>
                 ☸️ {step.buddhism}
               </div>
             )}
@@ -409,19 +465,28 @@ export default function ScriptureLearn() {
       </div>
 
       {/* 하단 */}
-      <div className="shrink-0 px-4 pb-6 pt-2">
+      <div className="shrink-0 px-4 pb-20 pt-2">
         {showResult && isQuizType && (
           <div className="rounded-xl p-2.5 mb-2" style={{ backgroundColor: selected === getAnswer() ? '#E8F5E9' : '#FFEBEE' }}>
             <p className="text-sm font-bold">{selected === getAnswer() ? '✅ Sādhu! 정답!' : '❌ 틀렸습니다'}</p>
           </div>
         )}
-        <button
-          onClick={isQuizType && !showResult ? handleCheck : handleNext}
-          disabled={isQuizType && selected === null && !showResult}
-          className="w-full py-3.5 rounded-xl text-white font-bold text-base disabled:opacity-40 active:scale-[0.97] transition-transform"
-          style={{ backgroundColor: 'var(--color-primary)' }}>
-          {isQuizType && !showResult ? '확인' : '다음 →'}
-        </button>
+        <div className="flex gap-2">
+          {stepIdx > 0 && (
+            <button onClick={handlePrev}
+              className="px-4 py-3.5 rounded-xl font-bold text-sm active:scale-[0.97] transition-transform"
+              style={{ border: '2px solid var(--color-border)', color: 'var(--color-text)' }}>
+              ← 이전
+            </button>
+          )}
+          <button
+            onClick={isQuizType && !showResult ? handleCheck : handleNext}
+            disabled={isQuizType && selected === null && !showResult}
+            className="flex-1 py-3.5 rounded-xl text-white font-bold text-base disabled:opacity-40 active:scale-[0.97] transition-transform"
+            style={{ backgroundColor: 'var(--color-primary)' }}>
+            {isQuizType && !showResult ? '확인' : '다음 →'}
+          </button>
+        </div>
       </div>
     </div>
   )

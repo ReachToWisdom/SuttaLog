@@ -3,6 +3,14 @@ import { useState } from 'react'
 
 export default function SettingsPage() {
   const [soundOn, setSoundOn] = useState(localStorage.getItem('suttalog-sound') !== 'off')
+  const [fontSize, setFontSize] = useState(Number(localStorage.getItem('suttalog-fontsize')) || 16)
+
+  const changeFontSize = (size: number) => {
+    const clamped = Math.max(12, Math.min(24, size))
+    setFontSize(clamped)
+    localStorage.setItem('suttalog-fontsize', String(clamped))
+    document.documentElement.style.setProperty('--pali-fontsize', `${clamped}px`)
+  }
 
   const toggleSound = () => {
     const next = !soundOn
@@ -37,6 +45,26 @@ export default function SettingsPage() {
               style={{ left: soundOn ? 24 : 4 }} />
           </button>
         </div>
+      </div>
+
+      {/* 글자 크기 */}
+      <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
+        <p className="text-sm font-semibold mb-3">🔤 경전 글자 크기</p>
+        <div className="flex items-center gap-4">
+          <button onClick={() => changeFontSize(fontSize - 1)}
+            className="w-9 h-9 rounded-full flex items-center justify-center text-lg font-bold"
+            style={{ backgroundColor: 'var(--color-border)' }}>−</button>
+          <span className="text-sm font-mono flex-1 text-center">{fontSize}px</span>
+          <button onClick={() => changeFontSize(fontSize + 1)}
+            className="w-9 h-9 rounded-full flex items-center justify-center text-lg font-bold"
+            style={{ backgroundColor: 'var(--color-border)' }}>+</button>
+        </div>
+        <p className="pali-text mt-3 text-center" style={{ fontSize: `${fontSize}px`, color: 'var(--color-primary)' }}>
+          Evaṃ me sutaṃ
+        </p>
+        <p className="text-center mt-1" style={{ fontSize: `${fontSize - 2}px` }}>
+          이와 같이 나는 들었다
+        </p>
       </div>
 
       {/* 정보 */}

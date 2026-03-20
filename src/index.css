@@ -13,6 +13,7 @@
   --color-border: #E0D5C0;
   --font-pali: 'Noto Serif', Georgia, 'Times New Roman', serif;
   --font-ui: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  --pali-fontsize: 16px;
 }
 
 [data-theme="dark"] {
@@ -43,6 +44,7 @@ body {
 .pali-text {
   font-family: var(--font-pali);
   line-height: 1.8;
+  font-size: var(--pali-fontsize);
 }
 
 /* 스크롤바 숨김 (모바일) */

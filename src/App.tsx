@@ -45,14 +45,16 @@ export default function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
-        {/* 전체화면 학습 */}
-        <Route path="/learn/alphabet/:lessonId" element={<AlphabetLesson />} />
-        <Route path="/learn/vocab/:lessonId" element={<VocabLesson />} />
-        <Route path="/learn/grammar/:lessonId" element={<GrammarLesson />} />
-        <Route path="/learn/reading/:lessonId" element={<ReadingLesson />} />
-        <Route path="/learn/scripture/:lessonId" element={<ScriptureLearn />} />
-        <Route path="/lesson/:skillId" element={<Lesson />} />
-        <Route path="/lesson-complete" element={<LessonComplete />} />
+        {/* 학습 화면도 하단 메뉴 표시 */}
+        <Route element={<Layout />}>
+          <Route path="/learn/alphabet/:lessonId" element={<AlphabetLesson />} />
+          <Route path="/learn/vocab/:lessonId" element={<VocabLesson />} />
+          <Route path="/learn/grammar/:lessonId" element={<GrammarLesson />} />
+          <Route path="/learn/reading/:lessonId" element={<ReadingLesson />} />
+          <Route path="/learn/scripture/:lessonId" element={<ScriptureLearn />} />
+          <Route path="/lesson/:skillId" element={<Lesson />} />
+          <Route path="/lesson-complete" element={<LessonComplete />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
