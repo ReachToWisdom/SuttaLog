@@ -67,16 +67,20 @@ export default function ScriptureLearn() {
     return opts
   })()
 
+  const stopAudio = () => speechSynthesis.cancel()
+
   const handleCheck = () => {
     if (selected === null) return
     setShowResult(true)
     if (shuffledOpts[selected] !== getAnswerText()) setHearts(h => Math.max(0, h - 1))
   }
   const handleNext = () => {
+    stopAudio()
     if (stepIdx + 1 >= STEPS.length) { nav('/lesson-complete'); return }
     setStepIdx(i => i + 1); setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false)
   }
   const handlePrev = () => {
+    stopAudio()
     if (stepIdx > 0) { setStepIdx(i => i - 1); setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false) }
   }
   const checkWriting = () => {
