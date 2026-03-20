@@ -1,3786 +1,3839 @@
 {
   "sn56.11_001": {
-    "duration": 8.37,
+    "text": "Ekaṁ samayaṁ bhagavā bārāṇasiyaṁ viharati isipatane migadāye.",
+    "start": 1.8,
+    "end": 5.38,
+    "duration": 3.58,
     "words": [
       {
-        "word": "Anuatara",
-        "start": 0.0,
-        "end": 1.5
+        "word": "Ekaṁ",
+        "start": 1.8,
+        "end": 2.3
       },
       {
-        "word": "nabixamb",
-        "start": 1.5,
-        "end": 3.14
+        "word": "samayaṁ",
+        "start": 2.3,
+        "end": 4.66
       },
       {
-        "word": "completed",
-        "start": 3.14,
-        "end": 3.76
+        "word": "bhagavā",
+        "start": 4.66,
+        "end": 4.66
       },
       {
-        "word": "Sambhujatowata",
-        "start": 4.34,
-        "end": 6.18
+        "word": "bārāṇasiyaṁ",
+        "start": 4.66,
+        "end": 5.18
       },
       {
-        "word": "dalata",
-        "start": 6.18,
-        "end": 7.06
+        "word": "viharati",
+        "start": 5.18,
+        "end": 5.18
+      },
+      {
+        "word": "isipatane",
+        "start": 5.18,
+        "end": 5.38
+      },
+      {
+        "word": "migadāye.",
+        "start": 5.38,
+        "end": 5.38
       }
     ]
   },
   "sn56.11_002": {
-    "duration": 7.15,
+    "text": "Tatra kho bhagavā pañcavaggiye bhikkhū āmantesi:",
+    "start": 5.38,
+    "end": 5.84,
+    "duration": 0.46,
     "words": [
       {
-        "word": "Patamaniyanna",
-        "start": 0.0,
-        "end": 1.8
+        "word": "Tatra",
+        "start": 5.38,
+        "end": 5.38
       },
       {
-        "word": "desesidhamma",
-        "start": 1.8,
-        "end": 3.96
+        "word": "kho",
+        "start": 5.38,
+        "end": 5.38
       },
       {
-        "word": "chakanga",
-        "start": 3.96,
-        "end": 5.16
+        "word": "bhagavā",
+        "start": 5.38,
+        "end": 5.38
       },
       {
-        "word": "nutaraan",
-        "start": 5.16,
-        "end": 6.8
+        "word": "pañcavaggiye",
+        "start": 5.38,
+        "end": 5.84
+      },
+      {
+        "word": "bhikkhū",
+        "start": 5.84,
+        "end": 5.84
+      },
+      {
+        "word": "āmantesi:",
+        "start": 5.84,
+        "end": 5.84
       }
     ]
   },
   "sn56.11_003": {
-    "duration": 7.54,
+    "text": "Dveme, bhikkhave, antā pabbajitena na sevitabbā.",
+    "start": 5.84,
+    "end": 7.97,
+    "duration": 2.13,
     "words": [
       {
-        "word": "sambhation",
-        "start": 0.0,
-        "end": 1.14
+        "word": "Dveme,",
+        "start": 5.84,
+        "end": 5.84
       },
       {
-        "word": "Helpам",
-        "start": 1.14,
-        "end": 1.14
+        "word": "bhikkhave,",
+        "start": 5.84,
+        "end": 5.84
       },
       {
-        "word": "sabdhaa",
-        "start": 1.14,
-        "end": 1.74
+        "word": "antā",
+        "start": 5.84,
+        "end": 5.84
       },
       {
-        "word": "ha",
-        "start": 1.74,
-        "end": 2.18
+        "word": "pabbajitena",
+        "start": 5.84,
+        "end": 6.34
       },
       {
-        "word": "pathand",
-        "start": 2.18,
-        "end": 3.18
+        "word": "na",
+        "start": 6.34,
+        "end": 6.72
       },
       {
-        "word": "sh只有o",
-        "start": 3.18,
-        "end": 3.88
-      },
-      {
-        "word": "yoika",
-        "start": 3.92,
-        "end": 4.4
-      },
-      {
-        "word": "haa",
-        "start": 4.4,
-        "end": 5.3
-      },
-      {
-        "word": "patiwatiyaagh",
-        "start": 5.3,
-        "end": 7.2
+        "word": "sevitabbā.",
+        "start": 6.72,
+        "end": 7.97
       }
     ]
   },
   "sn56.11_004": {
-    "duration": 7.67,
+    "text": "Katame dve?",
+    "start": 9.98,
+    "end": 12.62,
+    "duration": 2.64,
     "words": [
       {
-        "word": "Yataka,",
-        "start": 0.0,
-        "end": 1.04
+        "word": "Katame",
+        "start": 9.98,
+        "end": 10.16
       },
       {
-        "word": "Tahu,",
-        "start": 1.38,
-        "end": 2.16
-      },
-      {
-        "word": "Boa,",
-        "start": 2.32,
-        "end": 3.02
-      },
-      {
-        "word": "Taba,",
-        "start": 3.2,
-        "end": 3.94
-      },
-      {
-        "word": "Tipati,",
-        "start": 4.22,
-        "end": 5.04
-      },
-      {
-        "word": "Chamajima",
-        "start": 5.5,
-        "end": 6.62
+        "word": "dve?",
+        "start": 11.26,
+        "end": 12.62
       }
     ]
   },
   "sn56.11_005": {
-    "duration": 6.97,
+    "text": "Yo cāyaṁ kāmesu kāmasukhallikānuyogo hīno gammo pothujjaniko anariyo anatthasaṁhito, yo cāyaṁ attakilamathānuyogo dukkho anariyo anatthasaṁhito.",
+    "start": 12.88,
+    "end": 24.64,
+    "duration": 11.76,
     "words": [
       {
-        "word": "plat",
-        "start": 0.0,
-        "end": 0.28
+        "word": "Yo",
+        "start": 12.88,
+        "end": 13.44
       },
       {
-        "word": "او",
-        "start": 0.28,
-        "end": 0.76
+        "word": "cāyaṁ",
+        "start": 13.44,
+        "end": 13.44
       },
       {
-        "word": "اس",
-        "start": 0.76,
-        "end": 1.02
+        "word": "kāmesu",
+        "start": 13.98,
+        "end": 15.5
       },
       {
-        "word": "و",
-        "start": 1.02,
-        "end": 1.18
+        "word": "kāmasukhallikānuyogo",
+        "start": 15.5,
+        "end": 17.32
       },
       {
-        "word": "Ching",
-        "start": 1.18,
-        "end": 1.68
+        "word": "hīno",
+        "start": 17.32,
+        "end": 17.32
+      },
+      {
+        "word": "gammo",
+        "start": 17.32,
+        "end": 17.32
+      },
+      {
+        "word": "pothujjaniko",
+        "start": 17.32,
+        "end": 17.32
+      },
+      {
+        "word": "anariyo",
+        "start": 17.32,
+        "end": 17.32
+      },
+      {
+        "word": "anatthasaṁhito,",
+        "start": 17.32,
+        "end": 17.32
+      },
+      {
+        "word": "yo",
+        "start": 17.66,
+        "end": 17.76
+      },
+      {
+        "word": "cāyaṁ",
+        "start": 17.76,
+        "end": 18.28
+      },
+      {
+        "word": "attakilamathānuyogo",
+        "start": 18.28,
+        "end": 18.94
+      },
+      {
+        "word": "dukkho",
+        "start": 18.94,
+        "end": 20.18
+      },
+      {
+        "word": "anariyo",
+        "start": 20.18,
+        "end": 20.5
+      },
+      {
+        "word": "anatthasaṁhito.",
+        "start": 22.7,
+        "end": 24.64
       }
     ]
   },
   "sn56.11_006": {
-    "duration": 7.8,
+    "text": "Ete kho, bhikkhave, ubho ante anupagamma majjhimā paṭipadā tathāgatena abhisambuddhā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati.",
+    "start": 25.7,
+    "end": 54.3,
+    "duration": 28.6,
     "words": [
       {
-        "word": "Desitang",
-        "start": 0.0,
-        "end": 1.4
+        "word": "Ete",
+        "start": 25.7,
+        "end": 25.8
       },
       {
-        "word": "dammaraje",
-        "start": 1.4,
-        "end": 3.0
+        "word": "kho,",
+        "start": 25.8,
+        "end": 26.66
       },
       {
-        "word": "nasama",
-        "start": 3.0,
-        "end": 4.28
+        "word": "bhikkhave,",
+        "start": 27.72,
+        "end": 27.86
       },
       {
-        "word": "sambodikitanang",
-        "start": 4.28,
-        "end": 7.46
+        "word": "ubho",
+        "start": 27.86,
+        "end": 27.86
+      },
+      {
+        "word": "ante",
+        "start": 27.86,
+        "end": 28.72
+      },
+      {
+        "word": "anupagamma",
+        "start": 28.72,
+        "end": 31.32
+      },
+      {
+        "word": "majjhimā",
+        "start": 31.32,
+        "end": 32.48
+      },
+      {
+        "word": "paṭipadā",
+        "start": 32.48,
+        "end": 33.58
+      },
+      {
+        "word": "tathāgatena",
+        "start": 33.74,
+        "end": 34.3
+      },
+      {
+        "word": "abhisambuddhā",
+        "start": 35.52,
+        "end": 38.22
+      },
+      {
+        "word": "cakkhukaraṇī",
+        "start": 38.22,
+        "end": 38.28
+      },
+      {
+        "word": "ñāṇakaraṇī",
+        "start": 38.28,
+        "end": 40.18
+      },
+      {
+        "word": "upasamāya",
+        "start": 40.6,
+        "end": 42.82
+      },
+      {
+        "word": "abhiññāya",
+        "start": 42.82,
+        "end": 43.94
+      },
+      {
+        "word": "sambodhāya",
+        "start": 52.26,
+        "end": 54.3
+      },
+      {
+        "word": "nibbānāya",
+        "start": 54.3,
+        "end": 54.3
+      },
+      {
+        "word": "saṁvattati.",
+        "start": 54.3,
+        "end": 54.3
       }
     ]
   },
   "sn56.11_007": {
-    "duration": 4.12,
+    "text": "Katamā ca sā, bhikkhave, majjhimā paṭipadā tathāgatena abhisambuddhā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati?",
+    "start": 54.3,
+    "end": 78.92,
+    "duration": 24.62,
     "words": [
       {
-        "word": "nāmi",
-        "start": 0.0,
-        "end": 0.94
+        "word": "Katamā",
+        "start": 54.3,
+        "end": 54.3
       },
       {
-        "word": "nāwe",
-        "start": 0.94,
-        "end": 1.8
+        "word": "ca",
+        "start": 54.3,
+        "end": 54.3
       },
       {
-        "word": "sotāng",
-        "start": 1.8,
-        "end": 2.76
+        "word": "sā,",
+        "start": 54.3,
+        "end": 55.32
       },
       {
-        "word": "sotāng",
-        "start": 2.76,
-        "end": 3.9
+        "word": "bhikkhave,",
+        "start": 55.32,
+        "end": 55.56
+      },
+      {
+        "word": "majjhimā",
+        "start": 55.56,
+        "end": 55.56
+      },
+      {
+        "word": "paṭipadā",
+        "start": 55.56,
+        "end": 55.86
+      },
+      {
+        "word": "tathāgatena",
+        "start": 55.86,
+        "end": 56.24
+      },
+      {
+        "word": "abhisambuddhā",
+        "start": 56.24,
+        "end": 58.26
+      },
+      {
+        "word": "cakkhukaraṇī",
+        "start": 58.26,
+        "end": 59.21
+      },
+      {
+        "word": "ñāṇakaraṇī",
+        "start": 70.5,
+        "end": 72.9
+      },
+      {
+        "word": "upasamāya",
+        "start": 72.9,
+        "end": 73.52
+      },
+      {
+        "word": "abhiññāya",
+        "start": 73.52,
+        "end": 74.5
+      },
+      {
+        "word": "sambodhāya",
+        "start": 74.5,
+        "end": 75.98
+      },
+      {
+        "word": "nibbānāya",
+        "start": 75.98,
+        "end": 76.54
+      },
+      {
+        "word": "saṁvattati?",
+        "start": 76.54,
+        "end": 78.92
       }
     ]
   },
   "sn56.11_008": {
-    "duration": 4.15,
+    "text": "Ayameva ariyo aṭṭhaṅgiko maggo, seyyathidaṁ—",
+    "start": 82.28,
+    "end": 88.66,
+    "duration": 6.38,
     "words": [
       {
-        "word": "Tam",
-        "start": 0.0,
-        "end": 0.7
+        "word": "Ayameva",
+        "start": 82.28,
+        "end": 82.68
       },
       {
-        "word": "moisturizer",
-        "start": 0.7,
-        "end": 1.22
+        "word": "ariyo",
+        "start": 82.68,
+        "end": 82.84
       },
       {
-        "word": "p美",
-        "start": 2.72,
-        "end": 4.12
+        "word": "aṭṭhaṅgiko",
+        "start": 82.84,
+        "end": 83.0
+      },
+      {
+        "word": "maggo,",
+        "start": 87.3,
+        "end": 88.66
+      },
+      {
+        "word": "seyyathidaṁ—",
+        "start": 88.66,
+        "end": 88.66
       }
     ]
   },
   "sn56.11_009": {
-    "duration": 4.06,
+    "text": "sammādiṭṭhi sammāsaṅkappo sammāvācā sammākammanto sammāājīvo sammāvāyāmo sammāsati sammāsamādhi.",
+    "start": 95.78,
+    "end": 125.84,
+    "duration": 30.06,
     "words": [
       {
-        "word": "kuea",
-        "start": 0.0,
-        "end": 1.16
+        "word": "sammādiṭṭhi",
+        "start": 95.78,
+        "end": 97.84
       },
       {
-        "word": "karana",
-        "start": 1.16,
-        "end": 2.06
+        "word": "sammāsaṅkappo",
+        "start": 97.84,
+        "end": 97.84
       },
       {
-        "word": "patena",
-        "start": 2.06,
-        "end": 3.54
+        "word": "sammāvācā",
+        "start": 122.98,
+        "end": 125.84
+      },
+      {
+        "word": "sammākammanto",
+        "start": 125.84,
+        "end": 125.84
+      },
+      {
+        "word": "sammāājīvo",
+        "start": 125.84,
+        "end": 125.84
+      },
+      {
+        "word": "sammāvāyāmo",
+        "start": 125.84,
+        "end": 125.84
+      },
+      {
+        "word": "sammāsati",
+        "start": 125.84,
+        "end": 125.84
+      },
+      {
+        "word": "sammāsamādhi.",
+        "start": 125.84,
+        "end": 125.84
       }
     ]
   },
   "sn56.11_010": {
-    "duration": 2.47,
+    "text": "Ayaṁ kho sā, bhikkhave, majjhimā paṭipadā tathāgatena abhisambuddhā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati.",
+    "start": 125.84,
+    "end": 149.02,
+    "duration": 23.18,
     "words": [
       {
-        "word": "Sangitangdang",
-        "start": 0.0,
-        "end": 2.1
+        "word": "Ayaṁ",
+        "start": 125.84,
+        "end": 125.84
+      },
+      {
+        "word": "kho",
+        "start": 125.84,
+        "end": 125.84
+      },
+      {
+        "word": "sā,",
+        "start": 125.84,
+        "end": 125.84
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 125.84,
+        "end": 126.12
+      },
+      {
+        "word": "majjhimā",
+        "start": 127.32,
+        "end": 129.86
+      },
+      {
+        "word": "paṭipadā",
+        "start": 129.86,
+        "end": 132.32
+      },
+      {
+        "word": "tathāgatena",
+        "start": 132.32,
+        "end": 134.12
+      },
+      {
+        "word": "abhisambuddhā",
+        "start": 134.12,
+        "end": 136.3
+      },
+      {
+        "word": "cakkhukaraṇī",
+        "start": 136.3,
+        "end": 138.3
+      },
+      {
+        "word": "ñāṇakaraṇī",
+        "start": 138.3,
+        "end": 140.32
+      },
+      {
+        "word": "upasamāya",
+        "start": 140.32,
+        "end": 141.84
+      },
+      {
+        "word": "abhiññāya",
+        "start": 141.84,
+        "end": 143.44
+      },
+      {
+        "word": "sambodhāya",
+        "start": 143.44,
+        "end": 145.38
+      },
+      {
+        "word": "nibbānāya",
+        "start": 145.38,
+        "end": 147.24
+      },
+      {
+        "word": "saṁvattati.",
+        "start": 147.24,
+        "end": 149.02
       }
     ]
   },
   "sn56.11_011": {
-    "duration": 575.98,
+    "text": "Idaṁ kho pana, bhikkhave, dukkhaṁ ariyasaccaṁ—",
+    "start": 149.24,
+    "end": 153.44,
+    "duration": 4.2,
     "words": [
       {
-        "word": "16",
-        "start": 2.42,
-        "end": 3.82
+        "word": "Idaṁ",
+        "start": 149.24,
+        "end": 149.5
       },
       {
-        "word": "p",
-        "start": 3.82,
-        "end": 4.48
+        "word": "kho",
+        "start": 149.5,
+        "end": 149.78
       },
       {
-        "word": "Swiss",
-        "start": 4.48,
-        "end": 4.48
+        "word": "pana,",
+        "start": 149.78,
+        "end": 150.48
       },
       {
-        "word": "book",
-        "start": 4.48,
-        "end": 4.48
+        "word": "bhikkhave,",
+        "start": 150.76,
+        "end": 152.12
       },
       {
-        "word": "O",
-        "start": 4.48,
-        "end": 4.48
+        "word": "dukkhaṁ",
+        "start": 152.18,
+        "end": 152.4
       },
       {
-        "word": "lord",
-        "start": 4.48,
-        "end": 5.52
-      },
-      {
-        "word": "Deepvi不想其代官",
-        "start": 5.52,
-        "end": 6.34
-      },
-      {
-        "word": "Dhe",
-        "start": 24.34,
-        "end": 25.74
-      },
-      {
-        "word": "MIN",
-        "start": 25.74,
-        "end": 27.14
-      },
-      {
-        "word": "buzzing",
-        "start": 27.14,
-        "end": 27.14
-      },
-      {
-        "word": "He",
-        "start": 27.14,
-        "end": 27.14
-      },
-      {
-        "word": "No",
-        "start": 27.14,
-        "end": 27.16
-      },
-      {
-        "word": "N",
-        "start": 27.16,
-        "end": 27.16
-      },
-      {
-        "word": "A",
-        "start": 27.16,
-        "end": 27.38
-      },
-      {
-        "word": "Bha",
-        "start": 30.0,
-        "end": 30.4
-      },
-      {
-        "word": "bhaji",
-        "start": 30.4,
-        "end": 31.1
-      },
-      {
-        "word": "te",
-        "start": 31.1,
-        "end": 31.44
-      },
-      {
-        "word": "nanda",
-        "start": 31.44,
-        "end": 32.18
-      },
-      {
-        "word": "se",
-        "start": 32.18,
-        "end": 32.54
-      },
-      {
-        "word": "vittan",
-        "start": 32.54,
-        "end": 33.4
-      },
-      {
-        "word": "bha",
-        "start": 33.4,
-        "end": 34.04
-      },
-      {
-        "word": "jo",
-        "start": 34.04,
-        "end": 34.58
-      },
-      {
-        "word": "caia,",
-        "start": 34.58,
-        "end": 35.52
-      },
-      {
-        "word": "Kame",
-        "start": 35.8,
-        "end": 36.56
-      },
-      {
-        "word": "sukha",
-        "start": 36.56,
-        "end": 37.64
-      },
-      {
-        "word": "masukali",
-        "start": 37.64,
-        "end": 39.04
-      },
-      {
-        "word": "kandu",
-        "start": 39.04,
-        "end": 40.04
-      },
-      {
-        "word": "yoko",
-        "start": 40.04,
-        "end": 40.82
-      },
-      {
-        "word": "i",
-        "start": 40.82,
-        "end": 41.46
-      },
-      {
-        "word": "no",
-        "start": 41.46,
-        "end": 42.02
-      },
-      {
-        "word": "ga",
-        "start": 42.02,
-        "end": 42.56
-      },
-      {
-        "word": "mo",
-        "start": 42.56,
-        "end": 43.1
-      },
-      {
-        "word": "Koto",
-        "start": 43.1,
-        "end": 44.06
-      },
-      {
-        "word": "janiko",
-        "start": 44.06,
-        "end": 45.16
-      },
-      {
-        "word": "anari",
-        "start": 45.16,
-        "end": 46.3
-      },
-      {
-        "word": "yoana",
-        "start": 46.3,
-        "end": 47.36
-      },
-      {
-        "word": "tasan",
-        "start": 47.36,
-        "end": 48.32
-      },
-      {
-        "word": "ni",
-        "start": 48.32,
-        "end": 48.78
-      },
-      {
-        "word": "to",
-        "start": 48.78,
-        "end": 49.12
-      },
-      {
-        "word": "jo",
-        "start": 49.12,
-        "end": 49.72
-      },
-      {
-        "word": "caia,",
-        "start": 49.72,
-        "end": 50.8
-      },
-      {
-        "word": "Atakila",
-        "start": 51.18,
-        "end": 52.26
-      },
-      {
-        "word": "matanu",
-        "start": 52.26,
-        "end": 53.52
-      },
-      {
-        "word": "yoko",
-        "start": 53.52,
-        "end": 54.28
-      },
-      {
-        "word": "duko",
-        "start": 54.28,
-        "end": 55.34
-      },
-      {
-        "word": "anari",
-        "start": 55.34,
-        "end": 56.44
-      },
-      {
-        "word": "yoana,",
-        "start": 56.44,
-        "end": 57.52
-      },
-      {
-        "word": "Tasan",
-        "start": 57.52,
-        "end": 58.52
-      },
-      {
-        "word": "ni",
-        "start": 58.52,
-        "end": 58.94
-      },
-      {
-        "word": "to",
-        "start": 58.94,
-        "end": 59.32
-      },
-      {
-        "word": "e",
-        "start": 59.32,
-        "end": 59.9
-      },
-      {
-        "word": "te",
-        "start": 59.9,
-        "end": 60.28
-      },
-      {
-        "word": "te",
-        "start": 60.28,
-        "end": 60.98
-      },
-      {
-        "word": "be",
-        "start": 60.98,
-        "end": 61.4
-      },
-      {
-        "word": "kawe",
-        "start": 61.4,
-        "end": 62.36
-      },
-      {
-        "word": "o",
-        "start": 62.36,
-        "end": 62.84
-      },
-      {
-        "word": "bohande,",
-        "start": 62.84,
-        "end": 64.08
-      },
-      {
-        "word": "Aravaka",
-        "start": 64.64,
-        "end": 65.36
-      },
-      {
-        "word": "mammaji",
-        "start": 65.36,
-        "end": 66.76
-      },
-      {
-        "word": "ma",
-        "start": 66.76,
-        "end": 67.2
-      },
-      {
-        "word": "patipada",
-        "start": 67.2,
-        "end": 68.38
-      },
-      {
-        "word": "datakate",
-        "start": 68.38,
-        "end": 69.96
-      },
-      {
-        "word": "nabhi",
-        "start": 69.96,
-        "end": 71.02
-      },
-      {
-        "word": "samboda,",
-        "start": 71.02,
-        "end": 72.28
-      },
-      {
-        "word": "Chaku",
-        "start": 72.82,
-        "end": 73.38
-      },
-      {
-        "word": "karaninya",
-        "start": 73.38,
-        "end": 74.94
-      },
-      {
-        "word": "karaninyo",
-        "start": 74.94,
-        "end": 76.8
-      },
-      {
-        "word": "pasamaya,",
-        "start": 76.8,
-        "end": 78.04
-      },
-      {
-        "word": "Abhinya",
-        "start": 78.24,
-        "end": 79.28
-      },
-      {
-        "word": "yasamboda",
-        "start": 79.28,
-        "end": 80.92
-      },
-      {
-        "word": "yani",
-        "start": 80.92,
-        "end": 81.88
-      },
-      {
-        "word": "bana",
-        "start": 81.88,
-        "end": 82.86
-      },
-      {
-        "word": "yasambva,",
-        "start": 82.86,
-        "end": 84.36
-      },
-      {
-        "word": "Atakila",
-        "start": 84.36,
-        "end": 85.1
-      },
-      {
-        "word": "matanu",
-        "start": 85.1,
-        "end": 86.32
-      },
-      {
-        "word": "yoko",
-        "start": 86.32,
-        "end": 87.58
-      },
-      {
-        "word": "duko",
-        "start": 87.58,
-        "end": 87.58
-      },
-      {
-        "word": "anari",
-        "start": 87.58,
-        "end": 87.6
-      },
-      {
-        "word": "yoana,",
-        "start": 87.6,
-        "end": 87.6
-      },
-      {
-        "word": "Tasan",
-        "start": 87.6,
-        "end": 87.6
-      },
-      {
-        "word": "ni",
-        "start": 87.6,
-        "end": 87.6
-      },
-      {
-        "word": "to",
-        "start": 87.6,
-        "end": 87.6
-      },
-      {
-        "word": "e",
-        "start": 87.6,
-        "end": 87.6
-      },
-      {
-        "word": "te",
-        "start": 87.6,
-        "end": 87.6
-      },
-      {
-        "word": "te",
-        "start": 87.6,
-        "end": 87.6
-      },
-      {
-        "word": "be",
-        "start": 87.6,
-        "end": 87.6
-      },
-      {
-        "word": "kawe",
-        "start": 87.6,
-        "end": 87.9
-      },
-      {
-        "word": "o",
-        "start": 87.9,
-        "end": 88.86
-      },
-      {
-        "word": "bohande,",
-        "start": 88.86,
-        "end": 88.92
-      },
-      {
-        "word": "Aravaka",
-        "start": 88.92,
-        "end": 88.92
-      },
-      {
-        "word": "mammaji",
-        "start": 88.92,
-        "end": 88.92
-      },
-      {
-        "word": "ma",
-        "start": 88.92,
-        "end": 89.22
-      },
-      {
-        "word": "patipada",
-        "start": 89.22,
-        "end": 90.46
-      },
-      {
-        "word": "datakate",
-        "start": 90.46,
-        "end": 92.12
-      },
-      {
-        "word": "nabhi",
-        "start": 92.12,
-        "end": 93.2
-      },
-      {
-        "word": "samboda,",
-        "start": 93.2,
-        "end": 94.28
-      },
-      {
-        "word": "Chaku",
-        "start": 94.96,
-        "end": 95.46
-      },
-      {
-        "word": "karaninya",
-        "start": 95.46,
-        "end": 96.98
-      },
-      {
-        "word": "karaninyo",
-        "start": 96.98,
-        "end": 98.84
-      },
-      {
-        "word": "pasamaya,",
-        "start": 98.84,
-        "end": 100.06
-      },
-      {
-        "word": "Abhinya",
-        "start": 100.26,
-        "end": 101.3
-      },
-      {
-        "word": "yasamboda",
-        "start": 101.3,
-        "end": 102.88
-      },
-      {
-        "word": "yani",
-        "start": 102.88,
-        "end": 103.78
-      },
-      {
-        "word": "bana",
-        "start": 103.78,
-        "end": 104.78
-      },
-      {
-        "word": "yasambva,",
-        "start": 104.78,
-        "end": 106.26
-      },
-      {
-        "word": "Atakila",
-        "start": 106.26,
-        "end": 107.12
-      },
-      {
-        "word": "nevahari",
-        "start": 107.12,
-        "end": 108.9
-      },
-      {
-        "word": "yoana",
-        "start": 108.9,
-        "end": 109.74
-      },
-      {
-        "word": "tangi",
-        "start": 109.74,
-        "end": 110.6
-      },
-      {
-        "word": "ko",
-        "start": 110.6,
-        "end": 111.0
-      },
-      {
-        "word": "ma",
-        "start": 111.0,
-        "end": 111.54
-      },
-      {
-        "word": "goze",
-        "start": 111.54,
-        "end": 112.56
-      },
-      {
-        "word": "atidan,",
-        "start": 112.56,
-        "end": 113.9
-      },
-      {
-        "word": "Samaji",
-        "start": 114.24,
-        "end": 115.44
-      },
-      {
-        "word": "te",
-        "start": 115.44,
-        "end": 115.86
-      },
-      {
-        "word": "samba",
-        "start": 115.86,
-        "end": 116.72
-      },
-      {
-        "word": "samba,",
-        "start": 116.72,
-        "end": 117.68
-      },
-      {
-        "word": "Posa",
-        "start": 118.2,
-        "end": 118.66
-      },
-      {
-        "word": "ma",
-        "start": 118.66,
-        "end": 119.38
-      },
-      {
-        "word": "wacha",
-        "start": 119.38,
-        "end": 120.3
-      },
-      {
-        "word": "samba,",
-        "start": 120.3,
-        "end": 121.72
-      },
-      {
-        "word": "Kamando",
-        "start": 121.92,
-        "end": 123.24
-      },
-      {
-        "word": "samba,",
-        "start": 123.24,
-        "end": 124.52
-      },
-      {
-        "word": "Haji",
-        "start": 124.6,
-        "end": 125.4
-      },
-      {
-        "word": "wo",
-        "start": 125.4,
-        "end": 125.78
-      },
-      {
-        "word": "samba,",
-        "start": 125.78,
-        "end": 127.14
-      },
-      {
-        "word": "Wahayamo",
-        "start": 127.36,
-        "end": 128.46
-      },
-      {
-        "word": "samba,",
-        "start": 128.46,
-        "end": 129.78
-      },
-      {
-        "word": "Sati",
-        "start": 130.0,
-        "end": 130.4
-      },
-      {
-        "word": "samba",
-        "start": 130.4,
-        "end": 131.34
-      },
-      {
-        "word": "samba,",
-        "start": 131.34,
-        "end": 132.18
-      },
-      {
-        "word": "Haji",
-        "start": 132.18,
-        "end": 132.54
-      },
-      {
-        "word": "ayangko",
-        "start": 132.54,
-        "end": 133.72
-      },
-      {
-        "word": "samba,",
-        "start": 133.72,
-        "end": 134.66
-      },
-      {
-        "word": "Kau",
-        "start": 134.96,
-        "end": 135.28
-      },
-      {
-        "word": "ay",
-        "start": 135.28,
-        "end": 135.44
-      },
-      {
-        "word": "maji",
-        "start": 135.44,
-        "end": 136.4
-      },
-      {
-        "word": "ma",
-        "start": 136.4,
-        "end": 136.78
-      },
-      {
-        "word": "patipada",
-        "start": 136.78,
-        "end": 137.94
-      },
-      {
-        "word": "datakate",
-        "start": 137.94,
-        "end": 139.5
-      },
-      {
-        "word": "nabhi",
-        "start": 139.5,
-        "end": 140.56
-      },
-      {
-        "word": "samboda,",
-        "start": 140.56,
-        "end": 141.64
-      },
-      {
-        "word": "Chaku",
-        "start": 142.3,
-        "end": 142.8
-      },
-      {
-        "word": "karaninya",
-        "start": 142.8,
-        "end": 144.34
-      },
-      {
-        "word": "karaninyo",
-        "start": 144.34,
-        "end": 146.14
-      },
-      {
-        "word": "pasamaya,",
-        "start": 146.14,
-        "end": 147.34
-      },
-      {
-        "word": "Abhinya",
-        "start": 147.58,
-        "end": 148.56
-      },
-      {
-        "word": "yasamboda",
-        "start": 148.56,
-        "end": 150.18
-      },
-      {
-        "word": "yani",
-        "start": 150.18,
-        "end": 151.08
-      },
-      {
-        "word": "bana",
-        "start": 151.08,
-        "end": 152.08
-      },
-      {
-        "word": "yasambva,",
-        "start": 152.08,
-        "end": 153.58
-      },
-      {
-        "word": "Atakila",
-        "start": 153.92,
-        "end": 154.42
-      },
-      {
-        "word": "matanu",
-        "start": 154.42,
-        "end": 155.44
-      },
-      {
-        "word": "yoko",
-        "start": 155.44,
-        "end": 155.58
-      },
-      {
-        "word": "bana",
-        "start": 155.58,
-        "end": 155.92
-      },
-      {
-        "word": "bakawe,",
-        "start": 155.92,
-        "end": 157.16
-      },
-      {
-        "word": "Tukana",
-        "start": 157.16,
-        "end": 158.26
-      },
-      {
-        "word": "riyasa",
-        "start": 158.26,
-        "end": 159.2
-      },
-      {
-        "word": "chanjati",
-        "start": 159.2,
-        "end": 160.78
-      },
-      {
-        "word": "piduka,",
-        "start": 160.78,
-        "end": 161.76
-      },
-      {
-        "word": "Jara",
-        "start": 162.1,
-        "end": 162.58
-      },
-      {
-        "word": "piduka,",
-        "start": 162.58,
-        "end": 163.82
-      },
-      {
-        "word": "maranam",
-        "start": 164.36,
-        "end": 165.04
-      },
-      {
-        "word": "piduka,",
-        "start": 165.04,
-        "end": 166.04
-      },
-      {
-        "word": "Sokapari",
-        "start": 166.48,
-        "end": 167.74
-      },
-      {
-        "word": "dewa",
-        "start": 167.74,
-        "end": 168.54
-      },
-      {
-        "word": "du",
-        "start": 168.54,
-        "end": 168.98
-      },
-      {
-        "word": "ka",
-        "start": 168.98,
-        "end": 169.28
-      },
-      {
-        "word": "domana,",
-        "start": 169.28,
-        "end": 170.38
-      },
-      {
-        "word": "Supaya",
-        "start": 170.76,
-        "end": 171.56
-      },
-      {
-        "word": "sa",
-        "start": 171.56,
-        "end": 172.16
-      },
-      {
-        "word": "piduka,",
-        "start": 172.16,
-        "end": 173.28
-      },
-      {
-        "word": "Haji",
-        "start": 173.86,
-        "end": 174.6
-      },
-      {
-        "word": "ahi",
-        "start": 174.6,
-        "end": 175.18
-      },
-      {
-        "word": "samba",
-        "start": 175.18,
-        "end": 176.04
-      },
-      {
-        "word": "yogo,",
-        "start": 176.04,
-        "end": 176.68
-      },
-      {
-        "word": "Luka",
-        "start": 177.22,
-        "end": 177.7
-      },
-      {
-        "word": "pihi",
-        "start": 177.7,
-        "end": 178.86
-      },
-      {
-        "word": "wepa",
-        "start": 178.86,
-        "end": 179.82
-      },
-      {
-        "word": "yogo,",
-        "start": 179.82,
-        "end": 180.62
-      },
-      {
-        "word": "Luka",
-        "start": 181.2,
-        "end": 181.34
-      },
-      {
-        "word": "yanti",
-        "start": 181.34,
-        "end": 182.6
-      },
-      {
-        "word": "chanda,",
-        "start": 182.6,
-        "end": 183.7
-      },
-      {
-        "word": "Lava",
-        "start": 183.7,
-        "end": 184.12
-      },
-      {
-        "word": "titham",
-        "start": 184.12,
-        "end": 184.96
-      },
-      {
-        "word": "biduka,",
-        "start": 184.96,
-        "end": 185.84
-      },
-      {
-        "word": "Sangit",
-        "start": 186.24,
-        "end": 187.28
-      },
-      {
-        "word": "te",
-        "start": 187.28,
-        "end": 187.66
-      },
-      {
-        "word": "napanjupa,",
-        "start": 187.66,
-        "end": 188.98
-      },
-      {
-        "word": "Danakanaduka,",
-        "start": 190.98,
-        "end": 192.1
-      },
-      {
-        "word": "Irangko",
-        "start": 192.64,
-        "end": 193.6
-      },
-      {
-        "word": "bana",
-        "start": 193.6,
-        "end": 194.14
-      },
-      {
-        "word": "bakawe,",
-        "start": 194.14,
-        "end": 195.32
-      },
-      {
-        "word": "Duka",
-        "start": 195.62,
-        "end": 196.08
-      },
-      {
-        "word": "sambu",
-        "start": 196.08,
-        "end": 196.78
-      },
-      {
-        "word": "da",
-        "start": 196.78,
-        "end": 197.0
-      },
-      {
-        "word": "yo,",
-        "start": 197.0,
-        "end": 197.46
-      },
-      {
-        "word": "Haji",
-        "start": 197.66,
-        "end": 198.1
-      },
-      {
-        "word": "yasambva",
-        "start": 198.1,
-        "end": 198.74
-      },
-      {
-        "word": "chanjati",
-        "start": 198.74,
-        "end": 199.8
-      },
-      {
-        "word": "piduka,",
-        "start": 199.8,
-        "end": 200.1
-      },
-      {
-        "word": "Yantan",
-        "start": 200.1,
-        "end": 200.66
-      },
-      {
-        "word": "habo",
-        "start": 200.66,
-        "end": 201.64
-      },
-      {
-        "word": "nobabikanandirak,",
-        "start": 201.64,
-        "end": 204.94
-      },
-      {
-        "word": "Kasa",
-        "start": 204.96,
-        "end": 205.28
-      },
-      {
-        "word": "hakatata,",
-        "start": 205.28,
-        "end": 206.44
-      },
-      {
-        "word": "Pratata",
-        "start": 207.0,
-        "end": 207.42
-      },
-      {
-        "word": "prabhinandini,",
-        "start": 207.42,
-        "end": 209.18
-      },
-      {
-        "word": "Sayati",
-        "start": 209.74,
-        "end": 210.44
-      },
-      {
-        "word": "dhan,",
-        "start": 210.44,
-        "end": 211.24
-      },
-      {
-        "word": "Ganatana,",
-        "start": 211.24,
-        "end": 212.76
-      },
-      {
-        "word": "Bawatanhavi,",
-        "start": 213.26,
-        "end": 214.88
-      },
-      {
-        "word": "Bawatanhavi,",
-        "start": 215.14,
-        "end": 216.74
-      },
-      {
-        "word": "Dango",
-        "start": 216.96,
-        "end": 217.5
-      },
-      {
-        "word": "bana",
-        "start": 217.5,
-        "end": 218.2
-      },
-      {
-        "word": "bakawe,",
-        "start": 218.2,
-        "end": 219.34
-      },
-      {
-        "word": "Duka",
-        "start": 219.5,
-        "end": 220.24
-      },
-      {
-        "word": "ni",
-        "start": 220.24,
-        "end": 220.52
-      },
-      {
-        "word": "rodo,",
-        "start": 220.52,
-        "end": 221.26
-      },
-      {
-        "word": "Haji",
-        "start": 221.76,
-        "end": 222.18
-      },
-      {
-        "word": "yasambva",
-        "start": 222.18,
-        "end": 222.84
-      },
-      {
-        "word": "chanjata,",
-        "start": 222.84,
-        "end": 224.08
-      },
-      {
-        "word": "Yantan",
-        "start": 225.09,
-        "end": 225.64
-      },
-      {
-        "word": "haya,",
-        "start": 225.64,
-        "end": 226.98
-      },
-      {
-        "word": "Haji",
-        "start": 227.14,
-        "end": 227.42
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 227.42,
-        "end": 230.1
-      },
-      {
-        "word": "Chako",
-        "start": 230.58,
-        "end": 231.12
-      },
-      {
-        "word": "pati",
-        "start": 231.12,
-        "end": 231.88
-      },
-      {
-        "word": "ni",
-        "start": 231.88,
-        "end": 232.18
-      },
-      {
-        "word": "sa",
-        "start": 232.18,
-        "end": 232.7
-      },
-      {
-        "word": "go,",
-        "start": 232.7,
-        "end": 233.26
-      },
-      {
-        "word": "Moti",
-        "start": 233.64,
-        "end": 234.28
-      },
-      {
-        "word": "yana",
-        "start": 234.28,
-        "end": 234.66
-      },
-      {
-        "word": "layo,",
-        "start": 234.66,
-        "end": 235.68
-      },
-      {
-        "word": "Irangko",
-        "start": 235.98,
-        "end": 236.92
-      },
-      {
-        "word": "bana",
-        "start": 236.92,
-        "end": 237.46
-      },
-      {
-        "word": "bakawe,",
-        "start": 237.46,
-        "end": 238.6
-      },
-      {
-        "word": "Duka",
-        "start": 238.6,
-        "end": 239.48
-      },
-      {
-        "word": "ni",
-        "start": 239.48,
-        "end": 239.84
-      },
-      {
-        "word": "rodo,",
-        "start": 239.84,
-        "end": 240.6
-      },
-      {
-        "word": "Gamini",
-        "start": 240.82,
-        "end": 241.84
-      },
-      {
-        "word": "pati",
-        "start": 241.84,
-        "end": 242.46
-      },
-      {
-        "word": "pata,",
-        "start": 242.46,
-        "end": 243.11
-      },
-      {
-        "word": "Hariyasa",
-        "start": 243.38,
-        "end": 244.1
-      },
-      {
-        "word": "chanjaya,",
-        "start": 244.1,
-        "end": 244.75
-      },
-      {
-        "word": "Mehwari",
-        "start": 245.66,
-        "end": 246.74
-      },
-      {
-        "word": "o,",
-        "start": 246.74,
-        "end": 247.42
-      },
-      {
-        "word": "Haji",
-        "start": 247.56,
-        "end": 248.0
-      },
-      {
-        "word": "kama,",
-        "start": 248.0,
-        "end": 248.65
-      },
-      {
-        "word": "Goseyati",
-        "start": 249.32,
-        "end": 251.12
-      },
-      {
-        "word": "dhan,",
-        "start": 251.12,
-        "end": 251.8
-      },
-      {
-        "word": "Sama",
-        "start": 252.12,
-        "end": 252.58
-      },
-      {
-        "word": "dithi,",
-        "start": 252.58,
-        "end": 253.23
-      },
-      {
-        "word": "Sama",
-        "start": 253.9,
-        "end": 254.4
-      },
-      {
-        "word": "sanka,",
-        "start": 254.4,
-        "end": 255.05
-      },
-      {
-        "word": "Sama",
-        "start": 255.86,
-        "end": 256.96
-      },
-      {
-        "word": "vaja,",
-        "start": 256.96,
-        "end": 258.04
-      },
-      {
-        "word": "Sama",
-        "start": 258.58,
-        "end": 259.1
-      },
-      {
-        "word": "kamantosama,",
-        "start": 259.1,
-        "end": 260.6
-      },
-      {
-        "word": "Haji",
-        "start": 262.18,
-        "end": 262.86
-      },
-      {
-        "word": "wo,",
-        "start": 262.86,
-        "end": 263.32
-      },
-      {
-        "word": "Sama",
-        "start": 263.76,
-        "end": 264.16
-      },
-      {
-        "word": "vaya,",
-        "start": 264.16,
-        "end": 264.81
-      },
-      {
-        "word": "Sama",
-        "start": 264.81,
-        "end": 265.99
-      },
-      {
-        "word": "santi",
-        "start": 265.99,
-        "end": 267.65
-      },
-      {
-        "word": "sama",
-        "start": 267.65,
-        "end": 268.33
-      },
-      {
-        "word": "sama,",
-        "start": 268.33,
-        "end": 269.21
-      },
-      {
-        "word": "Sama",
-        "start": 269.95,
-        "end": 269.95
-      },
-      {
-        "word": "dithi,",
-        "start": 269.95,
-        "end": 271.23
-      },
-      {
-        "word": "Dango",
-        "start": 271.23,
-        "end": 271.95
-      },
-      {
-        "word": "kaka,",
-        "start": 271.95,
-        "end": 272.73
-      },
-      {
-        "word": "Hariyasa",
-        "start": 272.99,
-        "end": 273.85
-      },
-      {
-        "word": "chanjata,",
-        "start": 273.85,
-        "end": 274.91
-      },
-      {
-        "word": "Mehwari",
-        "start": 275.17,
-        "end": 276.13
-      },
-      {
-        "word": "o,",
-        "start": 276.13,
-        "end": 276.31
-      },
-      {
-        "word": "Haji",
-        "start": 277.11,
-        "end": 278.29
-      },
-      {
-        "word": "yasambva",
-        "start": 278.29,
-        "end": 278.29
-      },
-      {
-        "word": "chanjata,",
-        "start": 278.29,
-        "end": 278.29
-      },
-      {
-        "word": "Yantan",
-        "start": 278.29,
-        "end": 278.29
-      },
-      {
-        "word": "haya,",
-        "start": 278.29,
-        "end": 278.97
-      },
-      {
-        "word": "Haji",
-        "start": 278.97,
-        "end": 278.99
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 278.99,
-        "end": 278.99
-      },
-      {
-        "word": "Haji",
-        "start": 278.99,
-        "end": 280.29
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 280.29,
-        "end": 280.29
-      },
-      {
-        "word": "Haji",
-        "start": 280.49,
-        "end": 280.59
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 280.59,
-        "end": 280.93
-      },
-      {
-        "word": "Sucakong",
-        "start": 280.93,
-        "end": 282.19
-      },
-      {
-        "word": "uda",
-        "start": 282.19,
-        "end": 282.63
-      },
-      {
-        "word": "pardinyana,",
-        "start": 282.63,
-        "end": 284.07
-      },
-      {
-        "word": "Uda",
-        "start": 284.57,
-        "end": 284.97
-      },
-      {
-        "word": "pardipanya,",
-        "start": 284.97,
-        "end": 286.45
-      },
-      {
-        "word": "Uda",
-        "start": 287.01,
-        "end": 287.25
-      },
-      {
-        "word": "pardipanya,",
-        "start": 287.25,
-        "end": 288.47
-      },
-      {
-        "word": "Uda",
-        "start": 289.03,
-        "end": 289.59
-      },
-      {
-        "word": "pardiyalo",
-        "start": 289.59,
-        "end": 291.05
-      },
-      {
-        "word": "ko,",
-        "start": 291.05,
-        "end": 291.67
-      },
-      {
-        "word": "Uda",
-        "start": 292.09,
-        "end": 292.43
-      },
-      {
-        "word": "parditango,",
-        "start": 292.43,
-        "end": 293.75
-      },
-      {
-        "word": "Pani",
-        "start": 294.17,
-        "end": 294.67
-      },
-      {
-        "word": "dhan,",
-        "start": 294.67,
-        "end": 295.13
-      },
-      {
-        "word": "Duka,",
-        "start": 295.31,
-        "end": 295.89
-      },
-      {
-        "word": "Hariyasa",
-        "start": 296.6,
-        "end": 297.13
-      },
-      {
-        "word": "chanjata,",
-        "start": 297.13,
-        "end": 298.25
-      },
-      {
-        "word": "Mehwari",
-        "start": 298.61,
-        "end": 298.61
-      },
-      {
-        "word": "o,",
-        "start": 298.61,
-        "end": 298.99
-      },
-      {
-        "word": "Haji",
-        "start": 299.27,
-        "end": 299.85
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 299.85,
-        "end": 301.13
-      },
-      {
-        "word": "Haji",
-        "start": 305.01,
-        "end": 306.07
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 306.07,
-        "end": 307.11
-      },
-      {
-        "word": "Haji",
-        "start": 307.17,
-        "end": 308.39
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 308.39,
-        "end": 308.77
-      },
-      {
-        "word": "Haji",
-        "start": 309.11,
-        "end": 309.17
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 309.17,
-        "end": 309.31
-      },
-      {
-        "word": "Haji",
-        "start": 343.35,
-        "end": 344.47
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 344.47,
-        "end": 344.47
-      },
-      {
-        "word": "Haji",
-        "start": 344.47,
-        "end": 344.47
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 344.47,
-        "end": 344.49
-      },
-      {
-        "word": "Haji",
-        "start": 344.49,
-        "end": 344.49
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 344.49,
-        "end": 344.55
-      },
-      {
-        "word": "Haji",
-        "start": 344.63,
-        "end": 344.97
-      },
-      {
-        "word": "sabirakandirodo,",
-        "start": 344.97,
-        "end": 345.25
-      },
-      {
-        "word": "Hariyasa",
-        "start": 345.25,
-        "end": 346.91
-      },
-      {
-        "word": "chanjata,",
-        "start": 346.91,
-        "end": 348.03
-      },
-      {
-        "word": "Mehwari",
-        "start": 348.19,
-        "end": 348.77
-      },
-      {
-        "word": "o,",
-        "start": 348.77,
-        "end": 349.33
-      },
-      {
-        "word": "Haji",
-        "start": 350.41,
-        "end": 350.97
-      },
-      {
-        "word": "sabirakandirodo",
-        "start": 350.97,
-        "end": 350.97
-      },
-      {
-        "word": "leaves,",
-        "start": 350.97,
-        "end": 350.97
-      },
-      {
-        "word": "Sucakong",
-        "start": 354.01,
-        "end": 355.13
-      },
-      {
-        "word": "uda",
-        "start": 355.13,
-        "end": 355.67
-      },
-      {
-        "word": "pardinyana,",
-        "start": 355.67,
-        "end": 356.31
-      },
-      {
-        "word": "Uda",
-        "start": 357.63,
-        "end": 358.03
-      },
-      {
-        "word": "pardipanya,",
-        "start": 358.03,
-        "end": 359.51
-      },
-      {
-        "word": "Uda",
-        "start": 360.07,
-        "end": 360.37
-      },
-      {
-        "word": "pardipanya,",
-        "start": 360.37,
-        "end": 361.31
-      },
-      {
-        "word": "Uda",
-        "start": 361.31,
-        "end": 361.31
-      },
-      {
-        "word": "pardipanya,",
-        "start": 361.31,
-        "end": 361.93
-      },
-      {
-        "word": "Uda",
-        "start": 362.17,
-        "end": 362.73
-      },
-      {
-        "word": "pardipanya,",
-        "start": 362.73,
-        "end": 363.77
-      },
-      {
-        "word": "Uda",
-        "start": 364.15,
-        "end": 365.55
-      },
-      {
-        "word": "pardipanya,",
-        "start": 365.55,
-        "end": 366.73
-      },
-      {
-        "word": "kāni",
-        "start": 366.73,
-        "end": 367.81
-      },
-      {
-        "word": "dandu",
-        "start": 367.81,
-        "end": 368.81
-      },
-      {
-        "word": "kāsamodāyo",
-        "start": 368.81,
-        "end": 370.25
-      },
-      {
-        "word": "ariyasa",
-        "start": 370.25,
-        "end": 371.25
-      },
-      {
-        "word": "champāhatā",
-        "start": 371.25,
-        "end": 373.29
-      },
-      {
-        "word": "bantim",
-        "start": 373.29,
-        "end": 374.21
-      },
-      {
-        "word": "ebe",
-        "start": 374.21,
-        "end": 374.87
-      },
-      {
-        "word": "keweko",
-        "start": 374.87,
-        "end": 376.17
-      },
-      {
-        "word": "mea",
-        "start": 376.17,
-        "end": 377.17
-      },
-      {
-        "word": "nusute",
-        "start": 377.17,
-        "end": 378.47
-      },
-      {
-        "word": "sudamme",
-        "start": 378.47,
-        "end": 379.83
-      },
-      {
-        "word": "sujākumudapādinjā",
-        "start": 379.83,
-        "end": 383.03
-      },
-      {
-        "word": "nangudapāripāniāudapādinwejaudapāriyā",
-        "start": 388.65,
-        "end": 390.05
-      },
-      {
-        "word": "kāni",
-        "start": 392.55,
-        "end": 393.95
-      },
-      {
-        "word": "dandu",
-        "start": 393.95,
-        "end": 394.85
-      },
-      {
-        "word": "kāsamodāyo",
-        "start": 394.85,
-        "end": 396.35
-      },
-      {
-        "word": "ariyasa",
-        "start": 396.35,
-        "end": 397.35
-      },
-      {
-        "word": "champāhatā",
-        "start": 397.35,
-        "end": 399.19
-      },
-      {
-        "word": "bantim",
-        "start": 399.19,
-        "end": 399.73
-      },
-      {
-        "word": "ebe",
-        "start": 399.73,
-        "end": 400.35
-      },
-      {
-        "word": "keweko",
-        "start": 400.35,
-        "end": 401.63
-      },
-      {
-        "word": "mea",
-        "start": 401.63,
-        "end": 402.69
-      },
-      {
-        "word": "nusute",
-        "start": 402.69,
-        "end": 404.01
-      },
-      {
-        "word": "sudamme",
-        "start": 404.01,
-        "end": 405.29
-      },
-      {
-        "word": "sujākumudapādinjā",
-        "start": 405.29,
-        "end": 408.45
-      },
-      {
-        "word": "nangudapāripāniāudapādinwejaudapāriyā",
-        "start": 413.99,
-        "end": 415.39
-      },
-      {
-        "word": "nangudapāripāniāudapāriyāudapāriyāudapāriyā",
-        "start": 418.63,
-        "end": 420.03
-      },
-      {
-        "word": "nangudapāripāniāudapāriyāudapāriyāudapāriyāudapāritāngo",
-        "start": 440.27,
-        "end": 441.03
-      },
-      {
-        "word": "Ariyasa",
-        "start": 471.03,
-        "end": 472.17
-      },
-      {
-        "word": "chan",
-        "start": 472.17,
-        "end": 472.87
-      },
-      {
-        "word": "saji",
-        "start": 472.87,
-        "end": 473.77
-      },
-      {
-        "word": "katanti",
-        "start": 473.77,
-        "end": 474.63
-      },
-      {
-        "word": "mebe",
-        "start": 474.63,
-        "end": 475.49
-      },
-      {
-        "word": "kawebome",
-        "start": 475.49,
-        "end": 477.39
-      },
-      {
-        "word": "nana",
-        "start": 477.39,
-        "end": 478.05
-      },
-      {
-        "word": "nusude",
-        "start": 478.05,
-        "end": 479.07
-      },
-      {
-        "word": "sudhame",
-        "start": 479.07,
-        "end": 480.19
-      },
-      {
-        "word": "sujago",
-        "start": 480.19,
-        "end": 481.47
-      },
-      {
-        "word": "Laparinya",
-        "start": 481.47,
-        "end": 483.45
-      },
-      {
-        "word": "nangudapari",
-        "start": 483.45,
-        "end": 485.35
-      },
-      {
-        "word": "panya",
-        "start": 485.35,
-        "end": 486.25
-      },
-      {
-        "word": "Udapari",
-        "start": 486.25,
-        "end": 487.69
-      },
-      {
-        "word": "meja",
-        "start": 487.69,
-        "end": 488.53
-      },
-      {
-        "word": "Udapari",
-        "start": 488.53,
-        "end": 490.07
-      },
-      {
-        "word": "aloko",
-        "start": 490.07,
-        "end": 491.23
-      },
-      {
-        "word": "Laparinya",
-        "start": 507.91,
-        "end": 509.31
-      },
-      {
-        "word": "nangudapari",
-        "start": 509.31,
-        "end": 510.71
-      },
-      {
-        "word": "panya",
-        "start": 510.71,
-        "end": 511.53
-      },
-      {
-        "word": "Udapari",
-        "start": 511.53,
-        "end": 513.03
-      },
-      {
-        "word": "meja",
-        "start": 513.03,
-        "end": 513.81
-      },
-      {
-        "word": "Udapari",
-        "start": 513.81,
-        "end": 515.39
-      },
-      {
-        "word": "aloko",
-        "start": 515.39,
-        "end": 516.63
-      },
-      {
-        "word": "Laparinya",
-        "start": 536.49,
-        "end": 537.89
-      },
-      {
-        "word": "nangudapari",
-        "start": 537.89,
-        "end": 539.29
-      },
-      {
-        "word": "panya",
-        "start": 539.29,
-        "end": 539.65
-      },
-      {
-        "word": "Udapari",
-        "start": 539.65,
-        "end": 541.55
-      },
-      {
-        "word": "panya",
-        "start": 541.55,
-        "end": 542.53
-      },
-      {
-        "word": "Udapari",
-        "start": 542.53,
-        "end": 543.89
-      },
-      {
-        "word": "panya",
-        "start": 543.89,
-        "end": 544.11
-      },
-      {
-        "word": "Udapari",
-        "start": 544.11,
-        "end": 544.11
-      },
-      {
-        "word": "aloko",
-        "start": 544.11,
-        "end": 545.09
-      },
-      {
-        "word": "Laparinya",
-        "start": 564.17,
-        "end": 565.57
-      },
-      {
-        "word": "nangudapari",
-        "start": 565.57,
-        "end": 566.97
-      },
-      {
-        "word": "panya",
-        "start": 566.97,
-        "end": 567.83
-      },
-      {
-        "word": "Udapari",
-        "start": 567.83,
-        "end": 569.29
-      },
-      {
-        "word": "meja",
-        "start": 569.29,
-        "end": 570.11
-      },
-      {
-        "word": "Udapari",
-        "start": 570.11,
-        "end": 571.61
-      },
-      {
-        "word": "aloko",
-        "start": 571.61,
-        "end": 572.85
-      },
-      {
-        "word": "Laparinya",
-        "start": 572.85,
-        "end": 573.57
-      },
-      {
-        "word": "nangudapari",
-        "start": 573.57,
-        "end": 574.81
-      },
-      {
-        "word": "panya",
-        "start": 574.81,
-        "end": 574.97
-      },
-      {
-        "word": "Udapari",
-        "start": 574.97,
-        "end": 575.65
-      },
-      {
-        "word": "panya",
-        "start": 575.65,
-        "end": 575.95
+        "word": "ariyasaccaṁ—",
+        "start": 152.4,
+        "end": 153.44
       }
     ]
   },
   "sn56.11_012": {
-    "duration": 334.02,
+    "text": "jātipi dukkhā, jarāpi dukkhā, byādhipi dukkho, maraṇampi dukkhaṁ, appiyehi sampayogo dukkho, piyehi vippayogo dukkho, yampicchaṁ na labhati tampi dukkhaṁ—saṅkhittena pañcupādānakkhandhā dukkhā.",
+    "start": 153.44,
+    "end": 205.7,
+    "duration": 52.26,
     "words": [
       {
-        "word": "Yawaki",
-        "start": 0.0,
-        "end": 1.1
+        "word": "jātipi",
+        "start": 153.44,
+        "end": 153.58
       },
       {
-        "word": "wanja",
-        "start": 1.1,
-        "end": 1.9
+        "word": "dukkhā,",
+        "start": 153.58,
+        "end": 154.64
       },
       {
-        "word": "mebe",
-        "start": 1.9,
-        "end": 2.7
+        "word": "jarāpi",
+        "start": 155.74,
+        "end": 156.74
       },
       {
-        "word": "kawe",
-        "start": 2.7,
-        "end": 3.68
+        "word": "dukkhā,",
+        "start": 156.74,
+        "end": 157.9
       },
       {
-        "word": "ime",
-        "start": 3.68,
-        "end": 4.44
+        "word": "byādhipi",
+        "start": 160.1,
+        "end": 160.62
       },
       {
-        "word": "suja",
-        "start": 4.44,
-        "end": 5.08
+        "word": "dukkho,",
+        "start": 160.62,
+        "end": 160.62
       },
       {
-        "word": "tussuari",
-        "start": 5.08,
-        "end": 6.38
+        "word": "maraṇampi",
+        "start": 160.62,
+        "end": 160.62
       },
       {
-        "word": "asa",
-        "start": 6.38,
-        "end": 6.98
+        "word": "dukkhaṁ,",
+        "start": 160.62,
+        "end": 160.62
       },
       {
-        "word": "che",
-        "start": 6.98,
-        "end": 7.4
+        "word": "appiyehi",
+        "start": 160.62,
+        "end": 163.06
       },
       {
-        "word": "su",
-        "start": 7.4,
-        "end": 7.92
+        "word": "sampayogo",
+        "start": 163.06,
+        "end": 165.3
       },
       {
-        "word": "me",
-        "start": 7.92,
-        "end": 8.28
+        "word": "dukkho,",
+        "start": 165.3,
+        "end": 167.32
       },
       {
-        "word": "mandi",
-        "start": 8.28,
-        "end": 9.16
+        "word": "piyehi",
+        "start": 167.32,
+        "end": 167.32
       },
       {
-        "word": "pari",
-        "start": 9.16,
-        "end": 9.68
+        "word": "vippayogo",
+        "start": 167.32,
+        "end": 169.26
       },
       {
-        "word": "watando",
-        "start": 9.68,
-        "end": 10.74
+        "word": "dukkho,",
+        "start": 169.26,
+        "end": 169.8
       },
       {
-        "word": "wa",
-        "start": 10.74,
-        "end": 11.28
+        "word": "yampicchaṁ",
+        "start": 170.46,
+        "end": 170.46
       },
       {
-        "word": "da",
-        "start": 11.28,
-        "end": 11.6
+        "word": "na",
+        "start": 170.46,
+        "end": 170.46
       },
       {
-        "word": "sakaran",
-        "start": 11.6,
-        "end": 12.92
+        "word": "labhati",
+        "start": 170.46,
+        "end": 170.52
       },
       {
-        "word": "yatavo",
-        "start": 12.92,
-        "end": 14.16
+        "word": "tampi",
+        "start": 176.9,
+        "end": 179.06
       },
       {
-        "word": "danyanada",
-        "start": 14.16,
-        "end": 15.98
+        "word": "dukkhaṁ—saṅkhittena",
+        "start": 198.22,
+        "end": 201.0
       },
       {
-        "word": "sananda",
-        "start": 15.98,
-        "end": 17.2
+        "word": "pañcupādānakkhandhā",
+        "start": 201.0,
+        "end": 203.16
       },
       {
-        "word": "sui",
-        "start": 17.2,
-        "end": 17.74
-      },
-      {
-        "word": "su",
-        "start": 17.74,
-        "end": 18.1
-      },
-      {
-        "word": "danahu",
-        "start": 18.1,
-        "end": 19.28
-      },
-      {
-        "word": "si",
-        "start": 19.28,
-        "end": 19.74
-      },
-      {
-        "word": "ne",
-        "start": 19.74,
-        "end": 20.04
-      },
-      {
-        "word": "watawa.",
-        "start": 20.04,
-        "end": 21.26
-      },
-      {
-        "word": "Yawaki",
-        "start": 51.26,
-        "end": 52.06
-      },
-      {
-        "word": "wanja",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "mebe",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "kawe",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "ime",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "suja",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "tussuari",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "asa",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "che",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "su",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "me",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "mandi",
-        "start": 52.06,
-        "end": 52.06
-      },
-      {
-        "word": "pari",
-        "start": 52.06,
-        "end": 52.32
-      },
-      {
-        "word": "watando",
-        "start": 52.32,
-        "end": 53.14
-      },
-      {
-        "word": "wa",
-        "start": 53.14,
-        "end": 53.92
-      },
-      {
-        "word": "da",
-        "start": 53.92,
-        "end": 54.2
-      },
-      {
-        "word": "sakaran",
-        "start": 54.2,
-        "end": 55.46
-      },
-      {
-        "word": "yatavo",
-        "start": 55.46,
-        "end": 56.7
-      },
-      {
-        "word": "danyanada",
-        "start": 56.7,
-        "end": 58.42
-      },
-      {
-        "word": "sananda",
-        "start": 58.42,
-        "end": 59.36
-      },
-      {
-        "word": "sui",
-        "start": 59.36,
-        "end": 60.06
-      },
-      {
-        "word": "su",
-        "start": 60.06,
-        "end": 60.3
-      },
-      {
-        "word": "danahu",
-        "start": 60.3,
-        "end": 61.52
-      },
-      {
-        "word": "si",
-        "start": 61.52,
-        "end": 62.06
-      },
-      {
-        "word": "ne",
-        "start": 62.06,
-        "end": 62.28
-      },
-      {
-        "word": "watawa.",
-        "start": 62.28,
-        "end": 62.9
-      },
-      {
-        "word": "Yawaki",
-        "start": 99.3,
-        "end": 100.7
-      },
-      {
-        "word": "wanja",
-        "start": 100.7,
-        "end": 100.9
-      },
-      {
-        "word": "mebe",
-        "start": 100.9,
-        "end": 101.66
-      },
-      {
-        "word": "kawe",
-        "start": 101.66,
-        "end": 106.42
-      },
-      {
-        "word": "ime",
-        "start": 106.42,
-        "end": 109.02
-      },
-      {
-        "word": "suja",
-        "start": 109.02,
-        "end": 109.76
-      },
-      {
-        "word": "tussuari",
-        "start": 109.76,
-        "end": 111.74
-      },
-      {
-        "word": "asa",
-        "start": 111.74,
-        "end": 111.74
-      },
-      {
-        "word": "che",
-        "start": 111.74,
-        "end": 111.76
-      },
-      {
-        "word": "su",
-        "start": 111.76,
-        "end": 111.76
-      },
-      {
-        "word": "me",
-        "start": 111.76,
-        "end": 111.76
-      },
-      {
-        "word": "mandi",
-        "start": 111.76,
-        "end": 111.76
-      },
-      {
-        "word": "pari",
-        "start": 111.76,
-        "end": 111.86
-      },
-      {
-        "word": "watando",
-        "start": 111.86,
-        "end": 111.86
-      },
-      {
-        "word": "wa",
-        "start": 111.86,
-        "end": 111.86
-      },
-      {
-        "word": "da",
-        "start": 111.86,
-        "end": 111.86
-      },
-      {
-        "word": "sakaran",
-        "start": 111.86,
-        "end": 111.88
-      },
-      {
-        "word": "yatavo",
-        "start": 111.88,
-        "end": 113.22
-      },
-      {
-        "word": "danyanada",
-        "start": 113.22,
-        "end": 114.56
-      },
-      {
-        "word": "sananda",
-        "start": 114.56,
-        "end": 116.02
-      },
-      {
-        "word": "sui",
-        "start": 116.02,
-        "end": 118.36
-      },
-      {
-        "word": "su",
-        "start": 118.36,
-        "end": 118.96
-      },
-      {
-        "word": "danahu",
-        "start": 118.96,
-        "end": 119.28
-      },
-      {
-        "word": "si",
-        "start": 119.28,
-        "end": 120.62
-      },
-      {
-        "word": "ne",
-        "start": 120.62,
-        "end": 120.62
-      },
-      {
-        "word": "watawa.",
-        "start": 120.62,
-        "end": 122.88
-      },
-      {
-        "word": "Yawaki",
-        "start": 128.98,
-        "end": 130.38
-      },
-      {
-        "word": "wanja",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "mebe",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "kawe",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "ime",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "suja",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "tussuari",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "asa",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "che",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "su",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "me",
-        "start": 130.38,
-        "end": 130.38
-      },
-      {
-        "word": "mandi",
-        "start": 130.38,
-        "end": 130.64
-      },
-      {
-        "word": "pari",
-        "start": 130.64,
-        "end": 132.16
-      },
-      {
-        "word": "watando",
-        "start": 132.16,
-        "end": 133.3
-      },
-      {
-        "word": "wa",
-        "start": 133.3,
-        "end": 133.64
-      },
-      {
-        "word": "da",
-        "start": 133.64,
-        "end": 134.36
-      },
-      {
-        "word": "sakaran",
-        "start": 134.36,
-        "end": 136.72
-      },
-      {
-        "word": "yatavo",
-        "start": 136.72,
-        "end": 136.72
-      },
-      {
-        "word": "danyanada",
-        "start": 136.72,
-        "end": 138.58
-      },
-      {
-        "word": "sananda",
-        "start": 138.58,
-        "end": 139.52
-      },
-      {
-        "word": "sui",
-        "start": 139.52,
-        "end": 140.24
-      },
-      {
-        "word": "su",
-        "start": 140.24,
-        "end": 140.24
-      },
-      {
-        "word": "danahu",
-        "start": 140.24,
-        "end": 141.86
-      },
-      {
-        "word": "si",
-        "start": 141.86,
-        "end": 141.86
-      },
-      {
-        "word": "ne",
-        "start": 141.86,
-        "end": 141.86
-      },
-      {
-        "word": "watawa.",
-        "start": 141.86,
-        "end": 143.0
-      },
-      {
-        "word": "Yawaki",
-        "start": 166.3,
-        "end": 166.78
-      },
-      {
-        "word": "wanja",
-        "start": 166.78,
-        "end": 167.26
-      },
-      {
-        "word": "mebe",
-        "start": 167.26,
-        "end": 167.3
-      },
-      {
-        "word": "kawe",
-        "start": 167.3,
-        "end": 167.72
-      },
-      {
-        "word": "ime",
-        "start": 167.72,
-        "end": 167.72
-      },
-      {
-        "word": "suja",
-        "start": 167.72,
-        "end": 167.72
-      },
-      {
-        "word": "tussuari",
-        "start": 167.72,
-        "end": 167.92
-      },
-      {
-        "word": "asa",
-        "start": 167.92,
-        "end": 167.92
-      },
-      {
-        "word": "che",
-        "start": 167.92,
-        "end": 167.92
-      },
-      {
-        "word": "su",
-        "start": 167.92,
-        "end": 167.92
-      },
-      {
-        "word": "me",
-        "start": 167.92,
-        "end": 167.92
-      },
-      {
-        "word": "mandi",
-        "start": 167.92,
-        "end": 168.28
-      },
-      {
-        "word": "pari",
-        "start": 168.28,
-        "end": 170.86
-      },
-      {
-        "word": "watando",
-        "start": 170.86,
-        "end": 170.86
-      },
-      {
-        "word": "wa",
-        "start": 170.86,
-        "end": 170.86
-      },
-      {
-        "word": "da",
-        "start": 170.86,
-        "end": 171.1
-      },
-      {
-        "word": "sakaran",
-        "start": 171.1,
-        "end": 171.12
-      },
-      {
-        "word": "yatavo",
-        "start": 171.12,
-        "end": 171.16
-      },
-      {
-        "word": "danyanada",
-        "start": 171.16,
-        "end": 171.16
-      },
-      {
-        "word": "sananda",
-        "start": 171.16,
-        "end": 172.6
-      },
-      {
-        "word": "sui",
-        "start": 172.6,
-        "end": 172.66
-      },
-      {
-        "word": "su",
-        "start": 172.66,
-        "end": 172.9
-      },
-      {
-        "word": "danahu",
-        "start": 172.9,
-        "end": 172.98
-      },
-      {
-        "word": "si",
-        "start": 172.98,
-        "end": 172.98
-      },
-      {
-        "word": "ne",
-        "start": 172.98,
-        "end": 172.98
-      },
-      {
-        "word": "watawa.",
-        "start": 172.98,
-        "end": 172.98
-      },
-      {
-        "word": "Yawaki",
-        "start": 172.98,
-        "end": 173.6
-      },
-      {
-        "word": "wanja",
-        "start": 173.6,
-        "end": 173.6
-      },
-      {
-        "word": "mebe",
-        "start": 173.6,
-        "end": 176.06
-      },
-      {
-        "word": "kawe",
-        "start": 176.06,
-        "end": 177.04
-      },
-      {
-        "word": "ime",
-        "start": 177.04,
-        "end": 180.68
-      },
-      {
-        "word": "suja",
-        "start": 180.68,
-        "end": 180.68
-      },
-      {
-        "word": "tussuari",
-        "start": 180.68,
-        "end": 182.54
-      },
-      {
-        "word": "asa",
-        "start": 182.54,
-        "end": 183.0
-      },
-      {
-        "word": "che",
-        "start": 183.0,
-        "end": 183.02
-      },
-      {
-        "word": "su",
-        "start": 183.02,
-        "end": 183.86
-      },
-      {
-        "word": "me",
-        "start": 183.86,
-        "end": 183.86
-      },
-      {
-        "word": "mandi",
-        "start": 183.86,
-        "end": 184.38
-      },
-      {
-        "word": "pari",
-        "start": 184.38,
-        "end": 186.18
-      },
-      {
-        "word": "watando",
-        "start": 186.18,
-        "end": 186.2
-      },
-      {
-        "word": "wa",
-        "start": 186.2,
-        "end": 186.2
-      },
-      {
-        "word": "da",
-        "start": 186.2,
-        "end": 186.42
-      },
-      {
-        "word": "sakaran",
-        "start": 186.42,
-        "end": 186.54
-      },
-      {
-        "word": "yatavo",
-        "start": 186.54,
-        "end": 186.98
-      },
-      {
-        "word": "danyanada",
-        "start": 186.98,
-        "end": 186.98
-      },
-      {
-        "word": "sananda",
-        "start": 186.98,
-        "end": 186.98
-      },
-      {
-        "word": "sui",
-        "start": 186.98,
-        "end": 187.54
-      },
-      {
-        "word": "su",
-        "start": 187.54,
-        "end": 187.54
-      },
-      {
-        "word": "danahu",
-        "start": 187.54,
-        "end": 187.54
-      },
-      {
-        "word": "si",
-        "start": 187.54,
-        "end": 188.52
-      },
-      {
-        "word": "ne",
-        "start": 188.52,
-        "end": 188.52
-      },
-      {
-        "word": "watawa.",
-        "start": 188.52,
-        "end": 188.52
-      },
-      {
-        "word": "Yawaki",
-        "start": 206.14,
-        "end": 207.2
-      },
-      {
-        "word": "wanja",
-        "start": 207.2,
-        "end": 207.38
-      },
-      {
-        "word": "mebe",
-        "start": 207.38,
-        "end": 207.6
-      },
-      {
-        "word": "kawe",
-        "start": 207.6,
-        "end": 207.78
-      },
-      {
-        "word": "ime",
-        "start": 207.78,
-        "end": 207.78
-      },
-      {
-        "word": "suja",
-        "start": 207.78,
-        "end": 207.8
-      },
-      {
-        "word": "tussuari",
-        "start": 207.8,
-        "end": 210.66
-      },
-      {
-        "word": "asa",
-        "start": 210.66,
-        "end": 211.72
-      },
-      {
-        "word": "che",
-        "start": 211.72,
-        "end": 213.76
-      },
-      {
-        "word": "su",
-        "start": 213.76,
-        "end": 213.8
-      },
-      {
-        "word": "me",
-        "start": 213.8,
-        "end": 213.8
-      },
-      {
-        "word": "mandi",
-        "start": 213.8,
-        "end": 214.3
-      },
-      {
-        "word": "pari",
-        "start": 214.3,
-        "end": 214.3
-      },
-      {
-        "word": "watando",
-        "start": 214.3,
-        "end": 214.3
-      },
-      {
-        "word": "wa",
-        "start": 214.3,
-        "end": 214.3
-      },
-      {
-        "word": "da",
-        "start": 214.3,
-        "end": 214.3
-      },
-      {
-        "word": "sakaran",
-        "start": 214.3,
-        "end": 214.3
-      },
-      {
-        "word": "yatavo",
-        "start": 214.3,
-        "end": 214.3
-      },
-      {
-        "word": "danyanada",
-        "start": 214.3,
-        "end": 214.3
-      },
-      {
-        "word": "sananda",
-        "start": 214.3,
-        "end": 214.3
-      },
-      {
-        "word": "sui",
-        "start": 214.3,
-        "end": 214.86
-      },
-      {
-        "word": "su",
-        "start": 214.86,
-        "end": 215.22
-      },
-      {
-        "word": "danahu",
-        "start": 215.22,
-        "end": 216.48
-      },
-      {
-        "word": "si",
-        "start": 216.48,
-        "end": 216.48
-      },
-      {
-        "word": "ne",
-        "start": 216.48,
-        "end": 216.48
-      },
-      {
-        "word": "watawa.",
-        "start": 216.48,
-        "end": 218.5
-      },
-      {
-        "word": "Yawaki",
-        "start": 218.52,
-        "end": 219.6
-      },
-      {
-        "word": "wanja",
-        "start": 219.6,
-        "end": 219.84
-      },
-      {
-        "word": "mebe",
-        "start": 219.84,
-        "end": 222.06
-      },
-      {
-        "word": "kawe",
-        "start": 222.06,
-        "end": 222.62
-      },
-      {
-        "word": "ime",
-        "start": 222.62,
-        "end": 223.6
-      },
-      {
-        "word": "suja",
-        "start": 223.6,
-        "end": 226.68
-      },
-      {
-        "word": "tussuari",
-        "start": 226.68,
-        "end": 226.68
-      },
-      {
-        "word": "asa",
-        "start": 226.68,
-        "end": 226.68
-      },
-      {
-        "word": "che",
-        "start": 226.68,
-        "end": 226.68
-      },
-      {
-        "word": "su",
-        "start": 226.68,
-        "end": 226.68
-      },
-      {
-        "word": "me",
-        "start": 226.68,
-        "end": 226.68
-      },
-      {
-        "word": "mandi",
-        "start": 226.68,
-        "end": 226.78
-      },
-      {
-        "word": "pari",
-        "start": 226.78,
-        "end": 232.02
-      },
-      {
-        "word": "watando",
-        "start": 232.02,
-        "end": 233.56
-      },
-      {
-        "word": "wa",
-        "start": 233.56,
-        "end": 233.56
-      },
-      {
-        "word": "da",
-        "start": 233.56,
-        "end": 238.16
-      },
-      {
-        "word": "sakaran",
-        "start": 238.16,
-        "end": 238.76
-      },
-      {
-        "word": "yatavo",
-        "start": 238.76,
-        "end": 239.9
-      },
-      {
-        "word": "danyanada",
-        "start": 239.9,
-        "end": 244.58
-      },
-      {
-        "word": "sananda",
-        "start": 244.58,
-        "end": 245.7
-      },
-      {
-        "word": "sui",
-        "start": 245.7,
-        "end": 245.7
-      },
-      {
-        "word": "su",
-        "start": 245.7,
-        "end": 245.7
-      },
-      {
-        "word": "danahu",
-        "start": 245.7,
-        "end": 246.76
-      },
-      {
-        "word": "si",
-        "start": 246.76,
-        "end": 246.78
-      },
-      {
-        "word": "ne",
-        "start": 246.78,
-        "end": 247.14
-      },
-      {
-        "word": "watawa.",
-        "start": 247.14,
-        "end": 248.04
-      },
-      {
-        "word": "Yawaki",
-        "start": 275.1,
-        "end": 276.5
-      },
-      {
-        "word": "wanja",
-        "start": 276.5,
-        "end": 277.9
-      },
-      {
-        "word": "mebe",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "kawe",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "ime",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "suja",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "tussuari",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "asa",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "che",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "su",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "me",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "mandi",
-        "start": 277.9,
-        "end": 277.9
-      },
-      {
-        "word": "pari",
-        "start": 277.9,
-        "end": 278.02
-      },
-      {
-        "word": "watando",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "wa",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "da",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "sakaran",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "yatavo",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "danyanada",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "sananda",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "sui",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "su",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "danahu",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "si",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "ne",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "watawa.",
-        "start": 278.02,
-        "end": 278.02
-      },
-      {
-        "word": "Yawaki",
-        "start": 282.24,
-        "end": 283.64
-      },
-      {
-        "word": "wanja",
-        "start": 283.64,
-        "end": 284.12
-      },
-      {
-        "word": "mebe",
-        "start": 284.12,
-        "end": 284.64
-      },
-      {
-        "word": "kawe",
-        "start": 284.64,
-        "end": 288.0
-      },
-      {
-        "word": "ime",
-        "start": 288.0,
-        "end": 288.0
-      },
-      {
-        "word": "suja",
-        "start": 288.0,
-        "end": 288.0
-      },
-      {
-        "word": "tussuari",
-        "start": 288.0,
-        "end": 289.18
-      },
-      {
-        "word": "asa",
-        "start": 289.18,
-        "end": 289.18
-      },
-      {
-        "word": "che",
-        "start": 289.18,
-        "end": 290.1
-      },
-      {
-        "word": "su",
-        "start": 290.1,
-        "end": 290.56
-      },
-      {
-        "word": "me",
-        "start": 290.56,
-        "end": 291.14
-      },
-      {
-        "word": "mandi",
-        "start": 291.14,
-        "end": 293.08
-      },
-      {
-        "word": "pari",
-        "start": 293.08,
-        "end": 297.5
-      },
-      {
-        "word": "watando",
-        "start": 297.5,
-        "end": 297.56
-      },
-      {
-        "word": "wa",
-        "start": 297.56,
-        "end": 305.42
-      },
-      {
-        "word": "da",
-        "start": 305.42,
-        "end": 306.02
-      },
-      {
-        "word": "sakaran",
-        "start": 306.02,
-        "end": 307.12
-      },
-      {
-        "word": "yatavo",
-        "start": 307.12,
-        "end": 308.0
-      },
-      {
-        "word": "danyanada",
-        "start": 308.0,
-        "end": 308.0
-      },
-      {
-        "word": "sananda",
-        "start": 308.0,
-        "end": 308.0
-      },
-      {
-        "word": "sui",
-        "start": 308.0,
-        "end": 308.0
-      },
-      {
-        "word": "su",
-        "start": 308.0,
-        "end": 308.0
-      },
-      {
-        "word": "danahu",
-        "start": 308.0,
-        "end": 308.0
-      },
-      {
-        "word": "si",
-        "start": 308.0,
-        "end": 308.0
-      },
-      {
-        "word": "ne",
-        "start": 308.0,
-        "end": 308.0
-      },
-      {
-        "word": "watawa.",
-        "start": 308.0,
-        "end": 308.0
-      },
-      {
-        "word": "kawagawaudanangudanese",
-        "start": 312.86,
-        "end": 314.26
-      },
-      {
-        "word": "yanja,",
-        "start": 314.26,
-        "end": 315.1
-      },
-      {
-        "word": "siwada",
-        "start": 315.48,
-        "end": 315.96
-      },
-      {
-        "word": "bho",
-        "start": 315.96,
-        "end": 316.52
-      },
-      {
-        "word": "kondan",
-        "start": 316.52,
-        "end": 317.34
-      },
-      {
-        "word": "yo",
-        "start": 317.34,
-        "end": 317.88
-      },
-      {
-        "word": "yanja,",
-        "start": 317.88,
-        "end": 318.96
-      },
-      {
-        "word": "siwada",
-        "start": 319.18,
-        "end": 319.64
-      },
-      {
-        "word": "bho",
-        "start": 319.64,
-        "end": 320.26
-      },
-      {
-        "word": "kondan",
-        "start": 320.26,
-        "end": 321.08
-      },
-      {
-        "word": "yo",
-        "start": 321.08,
-        "end": 321.58
-      },
-      {
-        "word": "dieti",
-        "start": 321.58,
-        "end": 322.32
-      },
-      {
-        "word": "hidangai",
-        "start": 322.32,
-        "end": 323.7
-      },
-      {
-        "word": "samadho",
-        "start": 323.7,
-        "end": 324.7
-      },
-      {
-        "word": "kondanya,",
-        "start": 324.7,
-        "end": 326.04
-      },
-      {
-        "word": "sahanya",
-        "start": 326.4,
-        "end": 327.3
-      },
-      {
-        "word": "kondan",
-        "start": 327.3,
-        "end": 328.32
-      },
-      {
-        "word": "yo",
-        "start": 328.32,
-        "end": 328.82
-      },
-      {
-        "word": "dewe",
-        "start": 328.82,
-        "end": 329.62
-      },
-      {
-        "word": "hana",
-        "start": 329.62,
-        "end": 330.32
-      },
-      {
-        "word": "manga",
-        "start": 330.32,
-        "end": 331.34
-      },
-      {
-        "word": "hositi.",
-        "start": 331.34,
-        "end": 332.94
+        "word": "dukkhā.",
+        "start": 205.28,
+        "end": 205.7
       }
     ]
   },
   "sn56.11_013": {
-    "duration": 4.87,
+    "text": "Idaṁ kho pana, bhikkhave, dukkhasamudayaṁ ariyasaccaṁ—",
+    "start": 207.64,
+    "end": 224.02,
+    "duration": 16.38,
     "words": [
       {
-        "word": "dáhārnmajเจَKA",
-        "start": 0.0,
-        "end": 1.6
+        "word": "Idaṁ",
+        "start": 207.64,
+        "end": 210.6
       },
       {
-        "word": "Pourете",
-        "start": 1.6,
-        "end": 2.3
+        "word": "kho",
+        "start": 210.6,
+        "end": 210.6
       },
       {
-        "word": "Map",
-        "start": 2.3,
-        "end": 2.6
+        "word": "pana,",
+        "start": 216.38,
+        "end": 217.38
       },
       {
-        "word": "love",
-        "start": 2.6,
-        "end": 2.92
+        "word": "bhikkhave,",
+        "start": 220.24,
+        "end": 221.16
+      },
+      {
+        "word": "dukkhasamudayaṁ",
+        "start": 221.42,
+        "end": 222.64
+      },
+      {
+        "word": "ariyasaccaṁ—",
+        "start": 222.64,
+        "end": 224.02
+      }
+    ]
+  },
+  "sn56.11_014": {
+    "text": "yāyaṁ taṇhā ponobbhavikā nandirāgasahagatā tatratatrābhinandinī, seyyathidaṁ—",
+    "start": 224.02,
+    "end": 227.7,
+    "duration": 3.68,
+    "words": [
+      {
+        "word": "yāyaṁ",
+        "start": 224.02,
+        "end": 225.1
+      },
+      {
+        "word": "taṇhā",
+        "start": 225.1,
+        "end": 226.3
+      },
+      {
+        "word": "ponobbhavikā",
+        "start": 226.3,
+        "end": 226.3
+      },
+      {
+        "word": "nandirāgasahagatā",
+        "start": 226.3,
+        "end": 226.3
+      },
+      {
+        "word": "tatratatrābhinandinī,",
+        "start": 226.3,
+        "end": 227.38
+      },
+      {
+        "word": "seyyathidaṁ—",
+        "start": 227.38,
+        "end": 227.7
+      }
+    ]
+  },
+  "sn56.11_015": {
+    "text": "kāmataṇhā, bhavataṇhā, vibhavataṇhā.",
+    "start": 255.2,
+    "end": 256.5,
+    "duration": 1.3,
+    "words": [
+      {
+        "word": "kāmataṇhā,",
+        "start": 255.2,
+        "end": 256.5
+      },
+      {
+        "word": "bhavataṇhā,",
+        "start": 256.5,
+        "end": 256.5
+      },
+      {
+        "word": "vibhavataṇhā.",
+        "start": 256.5,
+        "end": 256.5
+      }
+    ]
+  },
+  "sn56.11_016": {
+    "text": "Idaṁ kho pana, bhikkhave, dukkhanirodhaṁ ariyasaccaṁ—",
+    "start": 256.5,
+    "end": 263.22,
+    "duration": 6.72,
+    "words": [
+      {
+        "word": "Idaṁ",
+        "start": 256.5,
+        "end": 257.12
+      },
+      {
+        "word": "kho",
+        "start": 257.12,
+        "end": 257.38
+      },
+      {
+        "word": "pana,",
+        "start": 257.38,
+        "end": 258.16
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 258.3,
+        "end": 259.4
+      },
+      {
+        "word": "dukkhanirodhaṁ",
+        "start": 259.44,
+        "end": 260.98
+      },
+      {
+        "word": "ariyasaccaṁ—",
+        "start": 260.98,
+        "end": 263.22
+      }
+    ]
+  },
+  "sn56.11_017": {
+    "text": "yo tassāyeva taṇhāya asesavirāganirodho cāgo paṭinissaggo mutti anālayo.",
+    "start": 263.22,
+    "end": 299.78,
+    "duration": 36.56,
+    "words": [
+      {
+        "word": "yo",
+        "start": 263.22,
+        "end": 263.38
+      },
+      {
+        "word": "tassāyeva",
+        "start": 263.38,
+        "end": 264.32
+      },
+      {
+        "word": "taṇhāya",
+        "start": 290.76,
+        "end": 291.22
+      },
+      {
+        "word": "asesavirāganirodho",
+        "start": 291.22,
+        "end": 294.08
+      },
+      {
+        "word": "cāgo",
+        "start": 294.08,
+        "end": 294.98
+      },
+      {
+        "word": "paṭinissaggo",
+        "start": 294.98,
+        "end": 297.3
+      },
+      {
+        "word": "mutti",
+        "start": 297.3,
+        "end": 298.04
+      },
+      {
+        "word": "anālayo.",
+        "start": 298.04,
+        "end": 299.78
+      }
+    ]
+  },
+  "sn56.11_018": {
+    "text": "Idaṁ kho pana, bhikkhave, dukkhanirodhagāminī paṭipadā ariyasaccaṁ—",
+    "start": 299.88,
+    "end": 308.96,
+    "duration": 9.08,
+    "words": [
+      {
+        "word": "Idaṁ",
+        "start": 299.88,
+        "end": 300.38
+      },
+      {
+        "word": "kho",
+        "start": 300.38,
+        "end": 300.72
+      },
+      {
+        "word": "pana,",
+        "start": 300.72,
+        "end": 301.5
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 301.62,
+        "end": 302.78
+      },
+      {
+        "word": "dukkhanirodhagāminī",
+        "start": 302.78,
+        "end": 305.64
+      },
+      {
+        "word": "paṭipadā",
+        "start": 305.64,
+        "end": 306.92
+      },
+      {
+        "word": "ariyasaccaṁ—",
+        "start": 306.92,
+        "end": 308.96
+      }
+    ]
+  },
+  "sn56.11_019": {
+    "text": "ayameva ariyo aṭṭhaṅgiko maggo, seyyathidaṁ—",
+    "start": 308.96,
+    "end": 316.88,
+    "duration": 7.92,
+    "words": [
+      {
+        "word": "ayameva",
+        "start": 308.96,
+        "end": 310.06
+      },
+      {
+        "word": "ariyo",
+        "start": 310.06,
+        "end": 311.04
+      },
+      {
+        "word": "aṭṭhaṅgiko",
+        "start": 311.04,
+        "end": 312.7
+      },
+      {
+        "word": "maggo,",
+        "start": 312.7,
+        "end": 314.04
+      },
+      {
+        "word": "seyyathidaṁ—",
+        "start": 314.04,
+        "end": 316.88
+      }
+    ]
+  },
+  "sn56.11_020": {
+    "text": "sammādiṭṭhi sammāsaṅkappo sammāvācā sammākammanto sammāājīvo sammāvāyāmo sammāsati sammāsamādhi.",
+    "start": 316.88,
+    "end": 335.08,
+    "duration": 18.2,
+    "words": [
+      {
+        "word": "sammādiṭṭhi",
+        "start": 316.88,
+        "end": 317.54
+      },
+      {
+        "word": "sammāsaṅkappo",
+        "start": 317.54,
+        "end": 319.92
+      },
+      {
+        "word": "sammāvācā",
+        "start": 319.92,
+        "end": 322.02
+      },
+      {
+        "word": "sammākammanto",
+        "start": 322.02,
+        "end": 324.36
+      },
+      {
+        "word": "sammāājīvo",
+        "start": 324.36,
+        "end": 327.06
+      },
+      {
+        "word": "sammāvāyāmo",
+        "start": 327.06,
+        "end": 329.72
+      },
+      {
+        "word": "sammāsati",
+        "start": 329.72,
+        "end": 331.42
+      },
+      {
+        "word": "sammāsamādhi.",
+        "start": 332.96,
+        "end": 335.08
+      }
+    ]
+  },
+  "sn56.11_021": {
+    "text": "Idaṁ dukkhaṁ ariyasaccan'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 335.44,
+    "end": 355.4,
+    "duration": 19.96,
+    "words": [
+      {
+        "word": "Idaṁ",
+        "start": 335.44,
+        "end": 335.74
+      },
+      {
+        "word": "dukkhaṁ",
+        "start": 335.74,
+        "end": 336.72
+      },
+      {
+        "word": "ariyasaccan'ti",
+        "start": 336.72,
+        "end": 338.78
+      },
+      {
+        "word": "me,",
+        "start": 338.78,
+        "end": 339.42
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 339.72,
+        "end": 340.76
+      },
+      {
+        "word": "pubbe",
+        "start": 340.9,
+        "end": 341.46
+      },
+      {
+        "word": "ananussutesu",
+        "start": 341.46,
+        "end": 343.66
+      },
+      {
+        "word": "dhammesu",
+        "start": 343.66,
+        "end": 344.92
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 344.92,
+        "end": 346.08
+      },
+      {
+        "word": "udapādi,",
+        "start": 346.08,
+        "end": 347.2
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 347.34,
+        "end": 348.36
+      },
+      {
+        "word": "udapādi,",
+        "start": 348.36,
+        "end": 349.58
+      },
+      {
+        "word": "paññā",
+        "start": 349.84,
+        "end": 350.42
+      },
+      {
+        "word": "udapādi,",
+        "start": 350.42,
+        "end": 352.08
+      },
+      {
+        "word": "vijjā",
+        "start": 352.14,
+        "end": 352.8
+      },
+      {
+        "word": "udapādi,",
+        "start": 352.8,
+        "end": 354.46
+      },
+      {
+        "word": "āloko",
+        "start": 354.68,
+        "end": 355.3
+      },
+      {
+        "word": "udapādi.",
+        "start": 355.3,
+        "end": 355.4
+      }
+    ]
+  },
+  "sn56.11_022": {
+    "text": "Taṁ kho panidaṁ dukkhaṁ ariyasaccaṁ pariññeyyan'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 357.4,
+    "end": 382.1,
+    "duration": 24.7,
+    "words": [
+      {
+        "word": "Taṁ",
+        "start": 357.4,
+        "end": 357.52
+      },
+      {
+        "word": "kho",
+        "start": 357.52,
+        "end": 357.8
+      },
+      {
+        "word": "panidaṁ",
+        "start": 357.8,
+        "end": 359.06
+      },
+      {
+        "word": "dukkhaṁ",
+        "start": 359.06,
+        "end": 360.08
+      },
+      {
+        "word": "ariyasaccaṁ",
+        "start": 360.08,
+        "end": 361.92
+      },
+      {
+        "word": "pariññeyyan'ti",
+        "start": 361.92,
+        "end": 363.78
+      },
+      {
+        "word": "me,",
+        "start": 363.78,
+        "end": 364.4
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 364.7,
+        "end": 365.74
+      },
+      {
+        "word": "pubbe",
+        "start": 365.96,
+        "end": 366.42
+      },
+      {
+        "word": "ananussutesu",
+        "start": 366.42,
+        "end": 368.62
+      },
+      {
+        "word": "dhammesu",
+        "start": 368.62,
+        "end": 369.86
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 369.86,
+        "end": 370.98
+      },
+      {
+        "word": "udapādi,",
+        "start": 370.98,
+        "end": 372.18
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 372.42,
+        "end": 373.36
+      },
+      {
+        "word": "udapādi,",
+        "start": 373.36,
+        "end": 374.6
+      },
+      {
+        "word": "paññā",
+        "start": 374.74,
+        "end": 375.36
+      },
+      {
+        "word": "udapādi,",
+        "start": 375.36,
+        "end": 377.02
+      },
+      {
+        "word": "vijjā",
+        "start": 377.02,
+        "end": 377.76
+      },
+      {
+        "word": "udapādi,",
+        "start": 377.76,
+        "end": 379.34
+      },
+      {
+        "word": "āloko",
+        "start": 379.6,
+        "end": 380.24
+      },
+      {
+        "word": "udapādi.",
+        "start": 380.24,
+        "end": 382.1
+      }
+    ]
+  },
+  "sn56.11_023": {
+    "text": "Taṁ kho panidaṁ dukkhaṁ ariyasaccaṁ pariññātan'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 382.48,
+    "end": 407.5,
+    "duration": 25.02,
+    "words": [
+      {
+        "word": "Taṁ",
+        "start": 382.48,
+        "end": 382.48
+      },
+      {
+        "word": "kho",
+        "start": 382.48,
+        "end": 382.76
+      },
+      {
+        "word": "panidaṁ",
+        "start": 382.76,
+        "end": 384.08
+      },
+      {
+        "word": "dukkhaṁ",
+        "start": 384.08,
+        "end": 385.04
+      },
+      {
+        "word": "ariyasaccaṁ",
+        "start": 385.04,
+        "end": 386.8
+      },
+      {
+        "word": "pariññātan'ti",
+        "start": 386.8,
+        "end": 388.72
+      },
+      {
+        "word": "me,",
+        "start": 388.72,
+        "end": 389.34
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 389.64,
+        "end": 390.68
+      },
+      {
+        "word": "pubbe",
+        "start": 390.88,
+        "end": 391.36
+      },
+      {
+        "word": "ananussutesu",
+        "start": 391.36,
+        "end": 393.58
+      },
+      {
+        "word": "dhammesu",
+        "start": 393.58,
+        "end": 394.84
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 394.84,
+        "end": 395.96
+      },
+      {
+        "word": "udapādi,",
+        "start": 395.96,
+        "end": 397.34
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 397.36,
+        "end": 398.32
+      },
+      {
+        "word": "udapādi,",
+        "start": 398.32,
+        "end": 399.64
+      },
+      {
+        "word": "paññā",
+        "start": 399.78,
+        "end": 400.32
+      },
+      {
+        "word": "udapādi,",
+        "start": 400.32,
+        "end": 402.04
+      },
+      {
+        "word": "vijjā",
+        "start": 402.2,
+        "end": 402.76
+      },
+      {
+        "word": "udapādi,",
+        "start": 402.76,
+        "end": 404.42
+      },
+      {
+        "word": "āloko",
+        "start": 404.58,
+        "end": 405.28
+      },
+      {
+        "word": "udapādi.",
+        "start": 405.28,
+        "end": 407.5
+      }
+    ]
+  },
+  "sn56.11_024": {
+    "text": "Idaṁ dukkhasamudayaṁ ariyasaccan'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 407.6,
+    "end": 430.42,
+    "duration": 22.82,
+    "words": [
+      {
+        "word": "Idaṁ",
+        "start": 407.6,
+        "end": 407.88
+      },
+      {
+        "word": "dukkhasamudayaṁ",
+        "start": 407.88,
+        "end": 409.62
+      },
+      {
+        "word": "ariyasaccan'ti",
+        "start": 409.62,
+        "end": 411.82
+      },
+      {
+        "word": "me,",
+        "start": 411.82,
+        "end": 412.44
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 412.7,
+        "end": 413.74
+      },
+      {
+        "word": "pubbe",
+        "start": 413.92,
+        "end": 414.46
+      },
+      {
+        "word": "ananussutesu",
+        "start": 414.46,
+        "end": 416.68
+      },
+      {
+        "word": "dhammesu",
+        "start": 416.68,
+        "end": 417.92
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 417.92,
+        "end": 419.02
+      },
+      {
+        "word": "udapādi,",
+        "start": 419.02,
+        "end": 420.42
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 420.42,
+        "end": 421.5
+      },
+      {
+        "word": "udapādi,",
+        "start": 421.5,
+        "end": 422.78
+      },
+      {
+        "word": "paññā",
+        "start": 422.88,
+        "end": 423.56
+      },
+      {
+        "word": "udapādi,",
+        "start": 423.56,
+        "end": 425.16
+      },
+      {
+        "word": "vijjā",
+        "start": 425.26,
+        "end": 425.86
+      },
+      {
+        "word": "udapādi,",
+        "start": 425.86,
+        "end": 427.54
+      },
+      {
+        "word": "āloko",
+        "start": 427.76,
+        "end": 428.42
+      },
+      {
+        "word": "udapādi.",
+        "start": 428.42,
+        "end": 430.42
+      }
+    ]
+  },
+  "sn56.11_025": {
+    "text": "Taṁ kho panidaṁ dukkhasamudayaṁ ariyasaccaṁ pahātabban'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 430.42,
+    "end": 457.58,
+    "duration": 27.16,
+    "words": [
+      {
+        "word": "Taṁ",
+        "start": 430.42,
+        "end": 430.72
+      },
+      {
+        "word": "kho",
+        "start": 430.72,
+        "end": 431.34
+      },
+      {
+        "word": "panidaṁ",
+        "start": 431.34,
+        "end": 432.26
+      },
+      {
+        "word": "dukkhasamudayaṁ",
+        "start": 432.26,
+        "end": 434.1
+      },
+      {
+        "word": "ariyasaccaṁ",
+        "start": 434.1,
+        "end": 435.96
+      },
+      {
+        "word": "pahātabban'ti",
+        "start": 435.96,
+        "end": 437.94
+      },
+      {
+        "word": "me,",
+        "start": 437.94,
+        "end": 438.54
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 438.82,
+        "end": 439.84
+      },
+      {
+        "word": "pubbe",
+        "start": 440.12,
+        "end": 440.52
+      },
+      {
+        "word": "ananussutesu",
+        "start": 440.52,
+        "end": 442.76
+      },
+      {
+        "word": "dhammesu",
+        "start": 442.76,
+        "end": 444.02
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 444.02,
+        "end": 445.14
+      },
+      {
+        "word": "udapādi,",
+        "start": 445.14,
+        "end": 446.3
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 446.52,
+        "end": 447.52
+      },
+      {
+        "word": "udapādi,",
+        "start": 447.52,
+        "end": 448.82
+      },
+      {
+        "word": "paññā",
+        "start": 448.98,
+        "end": 449.56
+      },
+      {
+        "word": "udapādi,",
+        "start": 449.56,
+        "end": 451.3
+      },
+      {
+        "word": "vijjā",
+        "start": 451.3,
+        "end": 452.04
+      },
+      {
+        "word": "udapādi,",
+        "start": 452.04,
+        "end": 453.66
+      },
+      {
+        "word": "āloko",
+        "start": 457.46,
+        "end": 457.46
+      },
+      {
+        "word": "udapādi.",
+        "start": 457.46,
+        "end": 457.58
+      }
+    ]
+  },
+  "sn56.11_026": {
+    "text": "Taṁ kho panidaṁ dukkhasamudayaṁ ariyasaccaṁ pahīnan'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 457.58,
+    "end": 482.06,
+    "duration": 24.48,
+    "words": [
+      {
+        "word": "Taṁ",
+        "start": 457.58,
+        "end": 457.58
+      },
+      {
+        "word": "kho",
+        "start": 457.58,
+        "end": 457.58
+      },
+      {
+        "word": "panidaṁ",
+        "start": 457.58,
+        "end": 458.38
+      },
+      {
+        "word": "dukkhasamudayaṁ",
+        "start": 458.38,
+        "end": 460.14
+      },
+      {
+        "word": "ariyasaccaṁ",
+        "start": 460.14,
+        "end": 462.08
+      },
+      {
+        "word": "pahīnan'ti",
+        "start": 462.08,
+        "end": 463.44
+      },
+      {
+        "word": "me,",
+        "start": 463.44,
+        "end": 464.08
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 464.38,
+        "end": 465.38
+      },
+      {
+        "word": "pubbe",
+        "start": 465.6,
+        "end": 466.08
+      },
+      {
+        "word": "ananussutesu",
+        "start": 466.08,
+        "end": 468.26
+      },
+      {
+        "word": "dhammesu",
+        "start": 468.26,
+        "end": 469.5
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 469.5,
+        "end": 470.54
+      },
+      {
+        "word": "udapādi,",
+        "start": 470.54,
+        "end": 471.92
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 471.98,
+        "end": 473.02
+      },
+      {
+        "word": "udapādi,",
+        "start": 473.02,
+        "end": 474.28
+      },
+      {
+        "word": "paññā",
+        "start": 474.36,
+        "end": 474.94
+      },
+      {
+        "word": "udapādi,",
+        "start": 474.94,
+        "end": 476.62
+      },
+      {
+        "word": "vijjā",
+        "start": 476.68,
+        "end": 477.36
+      },
+      {
+        "word": "udapādi,",
+        "start": 477.36,
+        "end": 478.92
+      },
+      {
+        "word": "āloko",
+        "start": 479.22,
+        "end": 479.82
+      },
+      {
+        "word": "udapādi.",
+        "start": 479.82,
+        "end": 482.06
+      }
+    ]
+  },
+  "sn56.11_027": {
+    "text": "Idaṁ dukkhanirodhaṁ ariyasaccan'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 482.06,
+    "end": 504.62,
+    "duration": 22.56,
+    "words": [
+      {
+        "word": "Idaṁ",
+        "start": 482.06,
+        "end": 482.38
+      },
+      {
+        "word": "dukkhanirodhaṁ",
+        "start": 482.38,
+        "end": 484.42
+      },
+      {
+        "word": "ariyasaccan'ti",
+        "start": 484.42,
+        "end": 486.32
+      },
+      {
+        "word": "me,",
+        "start": 486.32,
+        "end": 486.98
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 487.26,
+        "end": 488.28
+      },
+      {
+        "word": "pubbe",
+        "start": 488.76,
+        "end": 489.02
+      },
+      {
+        "word": "ananussutesu",
+        "start": 489.02,
+        "end": 491.14
+      },
+      {
+        "word": "dhammesu",
+        "start": 491.14,
+        "end": 492.36
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 492.36,
+        "end": 493.42
+      },
+      {
+        "word": "udapādi,",
+        "start": 493.42,
+        "end": 494.78
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 494.86,
+        "end": 495.88
+      },
+      {
+        "word": "udapādi,",
+        "start": 495.88,
+        "end": 497.16
+      },
+      {
+        "word": "paññā",
+        "start": 497.22,
+        "end": 497.92
+      },
+      {
+        "word": "udapādi,",
+        "start": 497.92,
+        "end": 499.5
+      },
+      {
+        "word": "vijjā",
+        "start": 499.52,
+        "end": 500.2
+      },
+      {
+        "word": "udapādi,",
+        "start": 500.2,
+        "end": 501.84
+      },
+      {
+        "word": "āloko",
+        "start": 502.02,
+        "end": 502.84
+      },
+      {
+        "word": "udapādi.",
+        "start": 502.84,
+        "end": 504.62
+      }
+    ]
+  },
+  "sn56.11_028": {
+    "text": "Taṁ kho panidaṁ dukkhanirodhaṁ ariyasaccaṁ sacchikātabban'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 504.76,
+    "end": 531.18,
+    "duration": 26.42,
+    "words": [
+      {
+        "word": "Taṁ",
+        "start": 504.76,
+        "end": 505.06
+      },
+      {
+        "word": "kho",
+        "start": 505.06,
+        "end": 505.34
+      },
+      {
+        "word": "panidaṁ",
+        "start": 505.34,
+        "end": 506.56
+      },
+      {
+        "word": "dukkhanirodhaṁ",
+        "start": 506.56,
+        "end": 508.48
+      },
+      {
+        "word": "ariyasaccaṁ",
+        "start": 508.48,
+        "end": 510.26
+      },
+      {
+        "word": "sacchikātabban'ti",
+        "start": 510.26,
+        "end": 512.78
+      },
+      {
+        "word": "me,",
+        "start": 512.78,
+        "end": 513.46
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 513.52,
+        "end": 514.72
+      },
+      {
+        "word": "pubbe",
+        "start": 515.02,
+        "end": 515.44
+      },
+      {
+        "word": "ananussutesu",
+        "start": 515.44,
+        "end": 517.64
+      },
+      {
+        "word": "dhammesu",
+        "start": 517.64,
+        "end": 518.86
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 518.86,
+        "end": 520.1
+      },
+      {
+        "word": "udapādi,",
+        "start": 520.1,
+        "end": 521.3
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 521.3,
+        "end": 522.4
+      },
+      {
+        "word": "udapādi,",
+        "start": 522.4,
+        "end": 523.64
+      },
+      {
+        "word": "paññā",
+        "start": 523.78,
+        "end": 524.46
+      },
+      {
+        "word": "udapādi,",
+        "start": 524.46,
+        "end": 526.06
+      },
+      {
+        "word": "vijjā",
+        "start": 526.1,
+        "end": 526.76
+      },
+      {
+        "word": "udapādi,",
+        "start": 526.76,
+        "end": 528.38
+      },
+      {
+        "word": "āloko",
+        "start": 528.86,
+        "end": 529.34
+      },
+      {
+        "word": "udapādi.",
+        "start": 529.34,
+        "end": 531.18
+      }
+    ]
+  },
+  "sn56.11_029": {
+    "text": "Taṁ kho panidaṁ dukkhanirodhaṁ ariyasaccaṁ sacchikatan'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 531.28,
+    "end": 557.02,
+    "duration": 25.74,
+    "words": [
+      {
+        "word": "Taṁ",
+        "start": 531.28,
+        "end": 531.56
+      },
+      {
+        "word": "kho",
+        "start": 531.56,
+        "end": 531.9
+      },
+      {
+        "word": "panidaṁ",
+        "start": 531.9,
+        "end": 533.1
+      },
+      {
+        "word": "dukkhanirodhaṁ",
+        "start": 533.1,
+        "end": 535.06
+      },
+      {
+        "word": "ariyasaccaṁ",
+        "start": 535.06,
+        "end": 536.8
+      },
+      {
+        "word": "sacchikatan'ti",
+        "start": 536.8,
+        "end": 538.56
+      },
+      {
+        "word": "me,",
+        "start": 538.56,
+        "end": 539.24
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 539.52,
+        "end": 540.48
+      },
+      {
+        "word": "pubbe",
+        "start": 540.76,
+        "end": 541.2
+      },
+      {
+        "word": "ananussutesu",
+        "start": 541.2,
+        "end": 543.36
+      },
+      {
+        "word": "dhammesu",
+        "start": 543.36,
+        "end": 544.6
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 544.6,
+        "end": 545.64
+      },
+      {
+        "word": "udapādi,",
+        "start": 545.64,
+        "end": 547.04
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 547.14,
+        "end": 548.08
+      },
+      {
+        "word": "udapādi,",
+        "start": 548.08,
+        "end": 549.3
+      },
+      {
+        "word": "paññā",
+        "start": 549.46,
+        "end": 550.12
+      },
+      {
+        "word": "udapādi,",
+        "start": 550.84,
+        "end": 551.74
+      },
+      {
+        "word": "vijjā",
+        "start": 552.28,
+        "end": 552.44
+      },
+      {
+        "word": "udapādi,",
+        "start": 552.44,
+        "end": 554.36
+      },
+      {
+        "word": "āloko",
+        "start": 554.36,
+        "end": 555.04
+      },
+      {
+        "word": "udapādi.",
+        "start": 555.04,
+        "end": 557.02
+      }
+    ]
+  },
+  "sn56.11_030": {
+    "text": "Idaṁ dukkhanirodhagāminī paṭipadā ariyasaccan'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 557.02,
+    "end": 582.3,
+    "duration": 25.28,
+    "words": [
+      {
+        "word": "Idaṁ",
+        "start": 557.02,
+        "end": 557.5
+      },
+      {
+        "word": "dukkhanirodhagāminī",
+        "start": 557.5,
+        "end": 560.44
+      },
+      {
+        "word": "paṭipadā",
+        "start": 560.44,
+        "end": 561.7
+      },
+      {
+        "word": "ariyasaccan'ti",
+        "start": 561.7,
+        "end": 563.78
+      },
+      {
+        "word": "me,",
+        "start": 563.78,
+        "end": 564.4
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 564.64,
+        "end": 565.7
+      },
+      {
+        "word": "pubbe",
+        "start": 565.88,
+        "end": 566.36
+      },
+      {
+        "word": "ananussutesu",
+        "start": 566.36,
+        "end": 568.6
+      },
+      {
+        "word": "dhammesu",
+        "start": 568.6,
+        "end": 569.86
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 569.86,
+        "end": 571.28
+      },
+      {
+        "word": "udapādi,",
+        "start": 571.28,
+        "end": 572.36
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 573.7,
+        "end": 573.7
+      },
+      {
+        "word": "udapādi,",
+        "start": 573.7,
+        "end": 574.68
+      },
+      {
+        "word": "paññā",
+        "start": 574.82,
+        "end": 575.3
+      },
+      {
+        "word": "udapādi,",
+        "start": 575.3,
+        "end": 577.16
+      },
+      {
+        "word": "vijjā",
+        "start": 577.16,
+        "end": 577.76
+      },
+      {
+        "word": "udapādi,",
+        "start": 577.76,
+        "end": 579.48
+      },
+      {
+        "word": "āloko",
+        "start": 579.68,
+        "end": 580.36
+      },
+      {
+        "word": "udapādi.",
+        "start": 580.36,
+        "end": 582.3
+      }
+    ]
+  },
+  "sn56.11_031": {
+    "text": "Taṁ kho panidaṁ dukkhanirodhagāminī paṭipadā ariyasaccaṁ bhāvetabban'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 582.34,
+    "end": 610.8,
+    "duration": 28.46,
+    "words": [
+      {
+        "word": "Taṁ",
+        "start": 582.34,
+        "end": 582.6
+      },
+      {
+        "word": "kho",
+        "start": 582.6,
+        "end": 582.88
+      },
+      {
+        "word": "panidaṁ",
+        "start": 582.88,
+        "end": 584.12
+      },
+      {
+        "word": "dukkhanirodhagāminī",
+        "start": 584.12,
+        "end": 586.98
+      },
+      {
+        "word": "paṭipadā",
+        "start": 586.98,
+        "end": 588.28
+      },
+      {
+        "word": "ariyasaccaṁ",
+        "start": 588.28,
+        "end": 590.3
+      },
+      {
+        "word": "bhāvetabban'ti",
+        "start": 590.3,
+        "end": 592.42
+      },
+      {
+        "word": "me,",
+        "start": 592.42,
+        "end": 593.14
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 593.18,
+        "end": 594.78
+      },
+      {
+        "word": "pubbe",
+        "start": 594.84,
+        "end": 595.08
+      },
+      {
+        "word": "ananussutesu",
+        "start": 595.08,
+        "end": 597.22
+      },
+      {
+        "word": "dhammesu",
+        "start": 597.22,
+        "end": 598.48
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 598.48,
+        "end": 599.5
+      },
+      {
+        "word": "udapādi,",
+        "start": 599.5,
+        "end": 600.82
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 600.98,
+        "end": 601.86
+      },
+      {
+        "word": "udapādi,",
+        "start": 601.86,
+        "end": 603.28
+      },
+      {
+        "word": "paññā",
+        "start": 603.4,
+        "end": 604.02
+      },
+      {
+        "word": "udapādi,",
+        "start": 604.02,
+        "end": 605.6
+      },
+      {
+        "word": "vijjā",
+        "start": 605.66,
+        "end": 606.36
+      },
+      {
+        "word": "udapādi,",
+        "start": 606.36,
+        "end": 607.9
+      },
+      {
+        "word": "āloko",
+        "start": 608.08,
+        "end": 608.86
+      },
+      {
+        "word": "udapādi.",
+        "start": 608.86,
+        "end": 610.8
+      }
+    ]
+  },
+  "sn56.11_032": {
+    "text": "Taṁ kho panidaṁ dukkhanirodhagāminī paṭipadā ariyasaccaṁ bhāvitan'ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+    "start": 610.84,
+    "end": 639.5,
+    "duration": 28.66,
+    "words": [
+      {
+        "word": "Taṁ",
+        "start": 610.84,
+        "end": 611.08
+      },
+      {
+        "word": "kho",
+        "start": 611.08,
+        "end": 611.38
+      },
+      {
+        "word": "panidaṁ",
+        "start": 611.38,
+        "end": 612.6
+      },
+      {
+        "word": "dukkhanirodhagāminī",
+        "start": 612.6,
+        "end": 615.54
+      },
+      {
+        "word": "paṭipadā",
+        "start": 615.54,
+        "end": 616.84
+      },
+      {
+        "word": "ariyasaccaṁ",
+        "start": 616.84,
+        "end": 618.88
+      },
+      {
+        "word": "bhāvitan'ti",
+        "start": 618.88,
+        "end": 620.18
+      },
+      {
+        "word": "me,",
+        "start": 620.18,
+        "end": 620.8
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 620.86,
+        "end": 622.04
+      },
+      {
+        "word": "pubbe",
+        "start": 622.28,
+        "end": 622.76
+      },
+      {
+        "word": "ananussutesu",
+        "start": 622.76,
+        "end": 624.94
+      },
+      {
+        "word": "dhammesu",
+        "start": 624.94,
+        "end": 626.18
+      },
+      {
+        "word": "cakkhuṁ",
+        "start": 626.18,
+        "end": 627.24
+      },
+      {
+        "word": "udapādi,",
+        "start": 627.24,
+        "end": 628.6
+      },
+      {
+        "word": "ñāṇaṁ",
+        "start": 628.68,
+        "end": 629.68
+      },
+      {
+        "word": "udapādi,",
+        "start": 629.68,
+        "end": 630.98
+      },
+      {
+        "word": "paññā",
+        "start": 631.12,
+        "end": 631.76
+      },
+      {
+        "word": "udapādi,",
+        "start": 631.76,
+        "end": 633.36
+      },
+      {
+        "word": "vijjā",
+        "start": 633.4,
+        "end": 634.02
+      },
+      {
+        "word": "udapādi,",
+        "start": 634.02,
+        "end": 635.68
+      },
+      {
+        "word": "āloko",
+        "start": 635.86,
+        "end": 636.62
+      },
+      {
+        "word": "udapādi.",
+        "start": 637.0,
+        "end": 639.5
+      }
+    ]
+  },
+  "sn56.11_033": {
+    "text": "Yāvakīvañca me, bhikkhave, imesu catūsu ariyasaccesu evaṁ tiparivaṭṭaṁ dvādasākāraṁ yathābhūtaṁ ñāṇadassanaṁ na suvisuddhaṁ ahosi, neva tāvāhaṁ, bhikkhave, sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya anuttaraṁ sammāsambodhiṁ abhisambuddho'ti paccaññāsiṁ.",
+    "start": 640.14,
+    "end": 683.14,
+    "duration": 43.0,
+    "words": [
+      {
+        "word": "Yāvakīvañca",
+        "start": 640.14,
+        "end": 641.62
+      },
+      {
+        "word": "me,",
+        "start": 641.62,
+        "end": 642.38
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 642.68,
+        "end": 643.96
+      },
+      {
+        "word": "imesu",
+        "start": 644.08,
+        "end": 644.64
+      },
+      {
+        "word": "catūsu",
+        "start": 644.64,
+        "end": 645.54
+      },
+      {
+        "word": "ariyasaccesu",
+        "start": 645.54,
+        "end": 647.66
+      },
+      {
+        "word": "evaṁ",
+        "start": 647.66,
+        "end": 648.64
+      },
+      {
+        "word": "tiparivaṭṭaṁ",
+        "start": 648.64,
+        "end": 650.5
+      },
+      {
+        "word": "dvādasākāraṁ",
+        "start": 650.5,
+        "end": 653.0
+      },
+      {
+        "word": "yathābhūtaṁ",
+        "start": 653.0,
+        "end": 654.72
+      },
+      {
+        "word": "ñāṇadassanaṁ",
+        "start": 654.72,
+        "end": 656.84
+      },
+      {
+        "word": "na",
+        "start": 656.84,
+        "end": 657.0
+      },
+      {
+        "word": "suvisuddhaṁ",
+        "start": 657.0,
+        "end": 658.54
+      },
+      {
+        "word": "ahosi,",
+        "start": 658.54,
+        "end": 659.62
+      },
+      {
+        "word": "neva",
+        "start": 659.66,
+        "end": 660.16
+      },
+      {
+        "word": "tāvāhaṁ,",
+        "start": 660.16,
+        "end": 661.9
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 662.26,
+        "end": 663.14
+      },
+      {
+        "word": "sadevake",
+        "start": 663.28,
+        "end": 664.26
+      },
+      {
+        "word": "loke",
+        "start": 664.26,
+        "end": 665.26
+      },
+      {
+        "word": "samārake",
+        "start": 665.26,
+        "end": 666.84
+      },
+      {
+        "word": "sabrahmake",
+        "start": 666.84,
+        "end": 668.34
+      },
+      {
+        "word": "sassamaṇabrāhmaṇiyā",
+        "start": 668.34,
+        "end": 671.32
+      },
+      {
+        "word": "pajāya",
+        "start": 671.32,
+        "end": 672.38
+      },
+      {
+        "word": "sadevamanussāya",
+        "start": 672.38,
+        "end": 674.88
+      },
+      {
+        "word": "anuttaraṁ",
+        "start": 674.88,
+        "end": 676.44
+      },
+      {
+        "word": "sammāsambodhiṁ",
+        "start": 676.44,
+        "end": 679.06
+      },
+      {
+        "word": "abhisambuddho'ti",
+        "start": 679.06,
+        "end": 681.38
+      },
+      {
+        "word": "paccaññāsiṁ.",
+        "start": 681.38,
+        "end": 683.14
+      }
+    ]
+  },
+  "sn56.11_034": {
+    "text": "Yato ca kho me, bhikkhave, imesu catūsu ariyasaccesu evaṁ tiparivaṭṭaṁ dvādasākāraṁ yathābhūtaṁ ñāṇadassanaṁ suvisuddhaṁ ahosi, athāhaṁ, bhikkhave, sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya anuttaraṁ sammāsambodhiṁ abhisambuddho'ti paccaññāsiṁ.",
+    "start": 683.34,
+    "end": 724.44,
+    "duration": 41.1,
+    "words": [
+      {
+        "word": "Yato",
+        "start": 683.34,
+        "end": 683.44
+      },
+      {
+        "word": "ca",
+        "start": 683.44,
+        "end": 683.9
+      },
+      {
+        "word": "kho",
+        "start": 683.9,
+        "end": 684.38
+      },
+      {
+        "word": "me,",
+        "start": 684.38,
+        "end": 685.1
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 685.18,
+        "end": 686.66
+      },
+      {
+        "word": "imesu",
+        "start": 686.66,
+        "end": 687.28
+      },
+      {
+        "word": "catūsu",
+        "start": 687.28,
+        "end": 688.16
+      },
+      {
+        "word": "ariyasaccesu",
+        "start": 688.16,
+        "end": 690.3
+      },
+      {
+        "word": "evaṁ",
+        "start": 690.3,
+        "end": 691.22
+      },
+      {
+        "word": "tiparivaṭṭaṁ",
+        "start": 691.22,
+        "end": 693.34
+      },
+      {
+        "word": "dvādasākāraṁ",
+        "start": 693.34,
+        "end": 695.58
+      },
+      {
+        "word": "yathābhūtaṁ",
+        "start": 695.58,
+        "end": 697.28
+      },
+      {
+        "word": "ñāṇadassanaṁ",
+        "start": 697.28,
+        "end": 699.26
+      },
+      {
+        "word": "suvisuddhaṁ",
+        "start": 699.26,
+        "end": 700.84
+      },
+      {
+        "word": "ahosi,",
+        "start": 700.84,
+        "end": 701.88
+      },
+      {
+        "word": "athāhaṁ,",
+        "start": 702.08,
+        "end": 703.16
+      },
+      {
+        "word": "bhikkhave,",
+        "start": 703.4,
+        "end": 704.42
+      },
+      {
+        "word": "sadevake",
+        "start": 704.5,
+        "end": 705.48
+      },
+      {
+        "word": "loke",
+        "start": 705.48,
+        "end": 706.52
+      },
+      {
+        "word": "samārake",
+        "start": 706.52,
+        "end": 708.06
+      },
+      {
+        "word": "sabrahmake",
+        "start": 708.06,
+        "end": 709.62
+      },
+      {
+        "word": "sassamaṇabrāhmaṇiyā",
+        "start": 709.62,
+        "end": 712.58
+      },
+      {
+        "word": "pajāya",
+        "start": 712.58,
+        "end": 713.62
+      },
+      {
+        "word": "sadevamanussāya",
+        "start": 713.62,
+        "end": 716.16
+      },
+      {
+        "word": "anuttaraṁ",
+        "start": 716.16,
+        "end": 717.7
+      },
+      {
+        "word": "sammāsambodhiṁ",
+        "start": 717.7,
+        "end": 720.3
+      },
+      {
+        "word": "abhisambuddho'ti",
+        "start": 720.3,
+        "end": 722.52
+      },
+      {
+        "word": "paccaññāsiṁ.",
+        "start": 722.52,
+        "end": 724.44
+      }
+    ]
+  },
+  "sn56.11_035": {
+    "text": "Ñāṇañca pana me dassanaṁ udapādi:",
+    "start": 724.96,
+    "end": 728.98,
+    "duration": 4.02,
+    "words": [
+      {
+        "word": "Ñāṇañca",
+        "start": 724.96,
+        "end": 725.38
+      },
+      {
+        "word": "pana",
+        "start": 725.38,
+        "end": 725.8
+      },
+      {
+        "word": "me",
+        "start": 725.8,
+        "end": 726.22
+      },
+      {
+        "word": "dassanaṁ",
+        "start": 726.22,
+        "end": 727.72
+      },
+      {
+        "word": "udapādi:",
+        "start": 727.72,
+        "end": 728.98
+      }
+    ]
+  },
+  "sn56.11_036": {
+    "text": "akuppā me vimutti, ayamantimā jāti, natthi dāni punabbhavo'ti.",
+    "start": 729.32,
+    "end": 737.23,
+    "duration": 7.91,
+    "words": [
+      {
+        "word": "akuppā",
+        "start": 729.32,
+        "end": 729.92
+      },
+      {
+        "word": "me",
+        "start": 729.92,
+        "end": 730.26
+      },
+      {
+        "word": "vimutti,",
+        "start": 730.26,
+        "end": 731.76
+      },
+      {
+        "word": "ayamantimā",
+        "start": 731.8,
+        "end": 733.16
+      },
+      {
+        "word": "jāti,",
+        "start": 733.16,
+        "end": 734.1
+      },
+      {
+        "word": "natthi",
+        "start": 734.32,
+        "end": 734.78
+      },
+      {
+        "word": "dāni",
+        "start": 734.78,
+        "end": 735.48
+      },
+      {
+        "word": "punabbhavo'ti.",
+        "start": 735.48,
+        "end": 737.23
+      }
+    ]
+  },
+  "sn56.11_037": {
+    "text": "Idamavoca bhagavā.",
+    "start": 737.66,
+    "end": 739.9,
+    "duration": 2.24,
+    "words": [
+      {
+        "word": "Idamavoca",
+        "start": 737.66,
+        "end": 738.62
+      },
+      {
+        "word": "bhagavā.",
+        "start": 738.62,
+        "end": 739.9
+      }
+    ]
+  },
+  "sn56.11_038": {
+    "text": "Attamanā pañcavaggiyā bhikkhū bhagavato bhāsitaṁ abhinandunti.",
+    "start": 740.28,
+    "end": 748.66,
+    "duration": 8.38,
+    "words": [
+      {
+        "word": "Attamanā",
+        "start": 740.28,
+        "end": 741.1
+      },
+      {
+        "word": "pañcavaggiyā",
+        "start": 741.1,
+        "end": 743.1
+      },
+      {
+        "word": "bhikkhū",
+        "start": 743.1,
+        "end": 744.22
+      },
+      {
+        "word": "bhagavato",
+        "start": 744.22,
+        "end": 745.2
+      },
+      {
+        "word": "bhāsitaṁ",
+        "start": 745.2,
+        "end": 746.86
+      },
+      {
+        "word": "abhinandunti.",
+        "start": 746.86,
+        "end": 748.66
+      }
+    ]
+  },
+  "sn56.11_039": {
+    "text": "Imasmiñca pana veyyākaraṇasmiṁ bhaññamāne āyasmato koṇḍaññassa virajaṁ vītamalaṁ dhammacakkhuṁ udapādi:",
+    "start": 748.66,
+    "end": 763.4,
+    "duration": 14.74,
+    "words": [
+      {
+        "word": "Imasmiñca",
+        "start": 748.66,
+        "end": 749.64
+      },
+      {
+        "word": "pana",
+        "start": 749.64,
+        "end": 750.0
+      },
+      {
+        "word": "veyyākaraṇasmiṁ",
+        "start": 750.0,
+        "end": 752.72
+      },
+      {
+        "word": "bhaññamāne",
+        "start": 752.72,
+        "end": 754.04
+      },
+      {
+        "word": "āyasmato",
+        "start": 754.04,
+        "end": 755.68
+      },
+      {
+        "word": "koṇḍaññassa",
+        "start": 755.68,
+        "end": 757.66
+      },
+      {
+        "word": "virajaṁ",
+        "start": 757.66,
+        "end": 758.92
+      },
+      {
+        "word": "vītamalaṁ",
+        "start": 758.92,
+        "end": 760.18
+      },
+      {
+        "word": "dhammacakkhuṁ",
+        "start": 760.3,
+        "end": 762.04
+      },
+      {
+        "word": "udapādi:",
+        "start": 762.04,
+        "end": 763.4
+      }
+    ]
+  },
+  "sn56.11_040": {
+    "text": "yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhamman'ti.",
+    "start": 763.48,
+    "end": 771.4,
+    "duration": 7.92,
+    "words": [
+      {
+        "word": "yaṁ",
+        "start": 763.48,
+        "end": 763.72
+      },
+      {
+        "word": "kiñci",
+        "start": 763.72,
+        "end": 764.32
+      },
+      {
+        "word": "samudayadhammaṁ",
+        "start": 764.32,
+        "end": 766.52
+      },
+      {
+        "word": "sabbaṁ",
+        "start": 766.52,
+        "end": 767.46
+      },
+      {
+        "word": "taṁ",
+        "start": 768.14,
+        "end": 768.64
+      },
+      {
+        "word": "nirodhadhamman'ti.",
+        "start": 768.64,
+        "end": 771.4
+      }
+    ]
+  },
+  "sn56.11_041": {
+    "text": "Pavattite ca pana bhagavatā dhammacakke bhummā devā saddamanussāvesuṁ:",
+    "start": 771.54,
+    "end": 781.52,
+    "duration": 9.98,
+    "words": [
+      {
+        "word": "Pavattite",
+        "start": 771.54,
+        "end": 772.42
+      },
+      {
+        "word": "ca",
+        "start": 772.44,
+        "end": 773.06
+      },
+      {
+        "word": "pana",
+        "start": 773.06,
+        "end": 773.28
+      },
+      {
+        "word": "bhagavatā",
+        "start": 773.28,
+        "end": 774.28
+      },
+      {
+        "word": "dhammacakke",
+        "start": 774.28,
+        "end": 776.1
+      },
+      {
+        "word": "bhummā",
+        "start": 776.1,
+        "end": 777.2
+      },
+      {
+        "word": "devā",
+        "start": 778.08,
+        "end": 778.9
+      },
+      {
+        "word": "saddamanussāvesuṁ:",
+        "start": 778.9,
+        "end": 781.52
+      }
+    ]
+  },
+  "sn56.11_042": {
+    "text": "etaṁ bhagavatā bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmin'ti.",
+    "start": 782.0,
+    "end": 808.26,
+    "duration": 26.26,
+    "words": [
+      {
+        "word": "etaṁ",
+        "start": 782.0,
+        "end": 782.36
+      },
+      {
+        "word": "bhagavatā",
+        "start": 782.36,
+        "end": 783.46
+      },
+      {
+        "word": "bārāṇasiyaṁ",
+        "start": 783.46,
+        "end": 785.76
+      },
+      {
+        "word": "isipatane",
+        "start": 785.76,
+        "end": 786.66
+      },
+      {
+        "word": "migadāye",
+        "start": 786.66,
+        "end": 788.36
+      },
+      {
+        "word": "anuttaraṁ",
+        "start": 788.36,
+        "end": 790.16
+      },
+      {
+        "word": "dhammacakkaṁ",
+        "start": 790.16,
+        "end": 791.9
+      },
+      {
+        "word": "pavattitaṁ",
+        "start": 791.9,
+        "end": 793.36
+      },
+      {
+        "word": "appaṭivattiyaṁ",
+        "start": 793.36,
+        "end": 795.48
+      },
+      {
+        "word": "samaṇena",
+        "start": 795.48,
+        "end": 796.64
+      },
+      {
+        "word": "vā",
+        "start": 796.64,
+        "end": 797.1
+      },
+      {
+        "word": "brāhmaṇena",
+        "start": 797.1,
+        "end": 798.78
+      },
+      {
+        "word": "vā",
+        "start": 798.78,
+        "end": 799.22
+      },
+      {
+        "word": "devena",
+        "start": 799.22,
+        "end": 800.58
+      },
+      {
+        "word": "vā",
+        "start": 800.58,
+        "end": 801.06
+      },
+      {
+        "word": "mārena",
+        "start": 801.06,
+        "end": 802.46
+      },
+      {
+        "word": "vā",
+        "start": 802.46,
+        "end": 802.92
+      },
+      {
+        "word": "brahmunā",
+        "start": 802.92,
+        "end": 804.22
+      },
+      {
+        "word": "vā",
+        "start": 804.22,
+        "end": 804.68
+      },
+      {
+        "word": "kenaci",
+        "start": 804.68,
+        "end": 805.68
+      },
+      {
+        "word": "vā",
+        "start": 805.7,
+        "end": 806.24
+      },
+      {
+        "word": "lokasmin'ti.",
+        "start": 806.24,
+        "end": 808.26
+      }
+    ]
+  },
+  "sn56.11_043": {
+    "text": "Bhummānaṁ devānaṁ saddaṁ sutvā cātumahārājikā devā saddamanussāvesuṁ:",
+    "start": 808.32,
+    "end": 820.44,
+    "duration": 12.12,
+    "words": [
+      {
+        "word": "Bhummānaṁ",
+        "start": 808.32,
+        "end": 809.64
+      },
+      {
+        "word": "devānaṁ",
+        "start": 809.64,
+        "end": 811.14
+      },
+      {
+        "word": "saddaṁ",
+        "start": 811.14,
+        "end": 812.16
+      },
+      {
+        "word": "sutvā",
+        "start": 812.16,
+        "end": 812.94
+      },
+      {
+        "word": "cātumahārājikā",
+        "start": 813.3,
+        "end": 816.08
+      },
+      {
+        "word": "devā",
+        "start": 816.08,
+        "end": 816.98
+      },
+      {
+        "word": "saddamanussāvesuṁ:",
+        "start": 817.9,
+        "end": 820.44
+      }
+    ]
+  },
+  "sn56.11_044": {
+    "text": "etaṁ bhagavatā bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ, appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmin'ti.",
+    "start": 820.64,
+    "end": 917.72,
+    "duration": 97.08,
+    "words": [
+      {
+        "word": "etaṁ",
+        "start": 820.64,
+        "end": 821.16
+      },
+      {
+        "word": "bhagavatā",
+        "start": 821.16,
+        "end": 822.24
+      },
+      {
+        "word": "bārāṇasiyaṁ",
+        "start": 822.24,
+        "end": 823.54
+      },
+      {
+        "word": "isipatane",
+        "start": 823.54,
+        "end": 824.06
+      },
+      {
+        "word": "migadāye",
+        "start": 824.06,
+        "end": 824.06
+      },
+      {
+        "word": "anuttaraṁ",
+        "start": 824.06,
+        "end": 824.06
+      },
+      {
+        "word": "dhammacakkaṁ",
+        "start": 824.06,
+        "end": 824.56
+      },
+      {
+        "word": "pavattitaṁ,",
+        "start": 900.86,
+        "end": 903.1
+      },
+      {
+        "word": "appaṭivattiyaṁ",
+        "start": 903.44,
+        "end": 904.92
+      },
+      {
+        "word": "samaṇena",
+        "start": 904.92,
+        "end": 906.1
+      },
+      {
+        "word": "vā",
+        "start": 906.1,
+        "end": 906.58
+      },
+      {
+        "word": "brāhmaṇena",
+        "start": 906.58,
+        "end": 908.26
+      },
+      {
+        "word": "vā",
+        "start": 908.26,
+        "end": 908.76
+      },
+      {
+        "word": "devena",
+        "start": 908.76,
+        "end": 910.12
+      },
+      {
+        "word": "vā",
+        "start": 910.12,
+        "end": 910.7
+      },
+      {
+        "word": "mārena",
+        "start": 910.7,
+        "end": 911.98
+      },
+      {
+        "word": "vā",
+        "start": 911.98,
+        "end": 912.38
+      },
+      {
+        "word": "brahmunā",
+        "start": 912.38,
+        "end": 913.72
+      },
+      {
+        "word": "vā",
+        "start": 913.72,
+        "end": 914.22
+      },
+      {
+        "word": "kenaci",
+        "start": 914.22,
+        "end": 915.16
+      },
+      {
+        "word": "vā",
+        "start": 915.16,
+        "end": 915.68
+      },
+      {
+        "word": "lokasmin'ti.",
+        "start": 915.68,
+        "end": 917.72
+      }
+    ]
+  },
+  "sn56.11_045": {
+    "text": "Cātumahārājikānaṁ devānaṁ saddaṁ sutvā tāvatiṁsā devā saddamanussāvesuṁ.",
+    "start": 917.88,
+    "end": 951.48,
+    "duration": 33.6,
+    "words": [
+      {
+        "word": "Cātumahārājikānaṁ",
+        "start": 917.88,
+        "end": 919.1
+      },
+      {
+        "word": "devānaṁ",
+        "start": 945.62,
+        "end": 947.12
+      },
+      {
+        "word": "saddaṁ",
+        "start": 947.12,
+        "end": 948.4
+      },
+      {
+        "word": "sutvā",
+        "start": 948.4,
+        "end": 948.82
+      },
+      {
+        "word": "tāvatiṁsā",
+        "start": 948.82,
+        "end": 951.42
+      },
+      {
+        "word": "devā",
+        "start": 951.42,
+        "end": 951.42
+      },
+      {
+        "word": "saddamanussāvesuṁ.",
+        "start": 951.42,
+        "end": 951.48
+      }
+    ]
+  },
+  "sn56.11_046": {
+    "text": "Tāvatiṁsānaṁ devānaṁ saddaṁ sutvā yāmā devā saddamanussāvesuṁ.",
+    "start": 951.68,
+    "end": 973.5,
+    "duration": 21.82,
+    "words": [
+      {
+        "word": "Tāvatiṁsānaṁ",
+        "start": 951.68,
+        "end": 952.58
+      },
+      {
+        "word": "devānaṁ",
+        "start": 952.58,
+        "end": 952.96
+      },
+      {
+        "word": "saddaṁ",
+        "start": 952.96,
+        "end": 952.96
+      },
+      {
+        "word": "sutvā",
+        "start": 952.96,
+        "end": 953.18
+      },
+      {
+        "word": "yāmā",
+        "start": 953.18,
+        "end": 954.86
+      },
+      {
+        "word": "devā",
+        "start": 954.86,
+        "end": 956.54
+      },
+      {
+        "word": "saddamanussāvesuṁ.",
+        "start": 971.7,
+        "end": 973.5
+      }
+    ]
+  },
+  "sn56.11_047": {
+    "text": "Yāmānaṁ devānaṁ saddaṁ sutvā tusitā devā saddamanussāvesuṁ.",
+    "start": 974.18,
+    "end": 980.31,
+    "duration": 6.13,
+    "words": [
+      {
+        "word": "Yāmānaṁ",
+        "start": 974.18,
+        "end": 975.36
+      },
+      {
+        "word": "devānaṁ",
+        "start": 975.36,
+        "end": 976.6
+      },
+      {
+        "word": "saddaṁ",
+        "start": 976.6,
+        "end": 976.8
+      },
+      {
+        "word": "sutvā",
+        "start": 976.8,
+        "end": 976.98
+      },
+      {
+        "word": "tusitā",
+        "start": 976.98,
+        "end": 977.3
+      },
+      {
+        "word": "devā",
+        "start": 977.3,
+        "end": 977.86
+      },
+      {
+        "word": "saddamanussāvesuṁ.",
+        "start": 980.31,
+        "end": 980.31
+      }
+    ]
+  },
+  "sn56.11_048": {
+    "text": "Tusitānaṁ devānaṁ saddaṁ sutvā nimmānaratī devā saddamanussāvesuṁ.",
+    "start": 980.31,
+    "end": 980.31,
+    "duration": 0.0,
+    "words": [
+      {
+        "word": "Tusitānaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "devānaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "saddaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "sutvā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "nimmānaratī",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "devā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "saddamanussāvesuṁ.",
+        "start": 980.31,
+        "end": 980.31
+      }
+    ]
+  },
+  "sn56.11_049": {
+    "text": "Nimmānaratīnaṁ devānaṁ saddaṁ sutvā paranimmitavasavattī devā saddamanussāvesuṁ.",
+    "start": 980.31,
+    "end": 980.31,
+    "duration": 0.0,
+    "words": [
+      {
+        "word": "Nimmānaratīnaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "devānaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "saddaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "sutvā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "paranimmitavasavattī",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "devā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "saddamanussāvesuṁ.",
+        "start": 980.31,
+        "end": 980.31
+      }
+    ]
+  },
+  "sn56.11_050": {
+    "text": "Paranimmitavasavattīnaṁ devānaṁ saddaṁ sutvā brahmakāyikā devā saddamanussāvesuṁ:",
+    "start": 980.31,
+    "end": 980.31,
+    "duration": 0.0,
+    "words": [
+      {
+        "word": "Paranimmitavasavattīnaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "devānaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "saddaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "sutvā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "brahmakāyikā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "devā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "saddamanussāvesuṁ:",
+        "start": 980.31,
+        "end": 980.31
+      }
+    ]
+  },
+  "sn56.11_051": {
+    "text": "etaṁ bhagavatā bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmin'ti.",
+    "start": 980.31,
+    "end": 980.31,
+    "duration": 0.0,
+    "words": [
+      {
+        "word": "etaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "bhagavatā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "bārāṇasiyaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "isipatane",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "migadāye",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "anuttaraṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "dhammacakkaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "pavattitaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "appaṭivattiyaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "samaṇena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "vā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "brāhmaṇena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "vā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "devena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "vā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "mārena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "vā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "brahmunā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "vā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "kenaci",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "vā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "lokasmin'ti.",
+        "start": 980.31,
+        "end": 980.31
+      }
+    ]
+  },
+  "sn56.11_052": {
+    "text": "Itiha tena khaṇena tena layena tena muhuttena yāva brahmalokā saddo abbhuggacchi.",
+    "start": 980.31,
+    "end": 980.31,
+    "duration": 0.0,
+    "words": [
+      {
+        "word": "Itiha",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "tena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "khaṇena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "tena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "layena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "tena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "muhuttena",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "yāva",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "brahmalokā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "saddo",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "abbhuggacchi.",
+        "start": 980.31,
+        "end": 980.31
+      }
+    ]
+  },
+  "sn56.11_053": {
+    "text": "Ayañca dasasahassilokadhātu saṅkampi sampakampi sampavedhi, appamāṇo ca uḷāro obhāso loke pāturahosi atikkamma devānaṁ devānubhāvanti.",
+    "start": 980.31,
+    "end": 980.31,
+    "duration": 0.0,
+    "words": [
+      {
+        "word": "Ayañca",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "dasasahassilokadhātu",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "saṅkampi",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "sampakampi",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "sampavedhi,",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "appamāṇo",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "ca",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "uḷāro",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "obhāso",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "loke",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "pāturahosi",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "atikkamma",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "devānaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "devānubhāvanti.",
+        "start": 980.31,
+        "end": 980.31
+      }
+    ]
+  },
+  "sn56.11_054": {
+    "text": "Atha kho bhagavā imaṁ udānaṁ udānesi:",
+    "start": 980.31,
+    "end": 980.31,
+    "duration": 0.0,
+    "words": [
+      {
+        "word": "Atha",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "kho",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "bhagavā",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "imaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "udānaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "udānesi:",
+        "start": 980.31,
+        "end": 980.31
+      }
+    ]
+  },
+  "sn56.11_055": {
+    "text": "aññāsi vata bho, koṇḍañño, aññāsi vata bho, koṇḍañño'ti.",
+    "start": 980.31,
+    "end": 980.31,
+    "duration": 0.0,
+    "words": [
+      {
+        "word": "aññāsi",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "vata",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "bho,",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "koṇḍañño,",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "aññāsi",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "vata",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "bho,",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "koṇḍañño'ti.",
+        "start": 980.31,
+        "end": 980.31
+      }
+    ]
+  },
+  "sn56.11_056": {
+    "text": "Iti hidaṁ āyasmato koṇḍaññassa aññāsikoṇḍañño tveva nāmaṁ ahosīti.",
+    "start": 980.31,
+    "end": 980.31,
+    "duration": 0.0,
+    "words": [
+      {
+        "word": "Iti",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "hidaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "āyasmato",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "koṇḍaññassa",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "aññāsikoṇḍañño",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "tveva",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "nāmaṁ",
+        "start": 980.31,
+        "end": 980.31
+      },
+      {
+        "word": "ahosīti.",
+        "start": 980.31,
+        "end": 980.31
       }
     ]
   }

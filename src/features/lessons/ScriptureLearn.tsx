@@ -48,6 +48,8 @@ export default function ScriptureLearn() {
   const speak = (text: string) => speakPali(text)
   const isQuizType = step.type === 'match-listen' || step.type === 'match-reverse' || step.type === 'quiz'
   const isWriting = step.type === 'writing'
+  const isArrange = step.type === 'arrange'
+  const [arrangeOrder, setArrangeOrder] = useState<number[]>([])
 
   // 특수문자 (차후 타이핑 모드에서 사용)
   // const SPECIAL_CHARS = ['ā', 'ī', 'ū', 'ṃ', 'ṅ', 'ñ', 'ṭ', 'ḍ', 'ṇ', 'ḷ']
@@ -78,11 +80,11 @@ export default function ScriptureLearn() {
   const handleNext = () => {
     stopAudio()
     if (stepIdx + 1 >= STEPS.length) { nav('/lesson-complete'); return }
-    setStepIdx(i => i + 1); setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false)
+    setStepIdx(i => i + 1); setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false); setArrangeOrder([])
   }
   const handlePrev = () => {
     stopAudio()
-    if (stepIdx > 0) { setStepIdx(i => i - 1); setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false) }
+    if (stepIdx > 0) { setStepIdx(i => i - 1); setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false); setArrangeOrder([]) }
   }
   const checkWriting = () => {
     setWritingChecked(true)
@@ -280,11 +282,64 @@ export default function ScriptureLearn() {
           </div>
         )}
 
+        {/* 문장 배열 */}
+        {step.type === 'arrange' && (
+          <div className="flex-1 flex flex-col">
+            <p className="text-base font-bold mb-2">🧩 {step.instruction}</p>
+            <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>{step.translation}</p>
+
+            {/* 배치 슬롯 */}
+            <div className="flex flex-wrap gap-2 p-3 min-h-14 rounded-xl mb-4"
+              style={{ backgroundColor: 'var(--color-surface)', border: '2px dashed var(--color-border)' }}>
+              {arrangeOrder.map((idx, i) => (
+                <button key={i} onClick={() => setArrangeOrder(o => o.filter((_, j) => j !== i))}
+                  className="px-3 py-2 rounded-lg text-sm font-medium pali-text active:scale-95"
+                  style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}>
+                  {step.blocks[idx]}
+                </button>
+              ))}
+              {arrangeOrder.length === 0 && (
+                <p className="text-xs self-center mx-auto" style={{ color: 'var(--color-border)' }}>아래 블록을 탭하여 배열하세요</p>
+              )}
+            </div>
+
+            {/* 블록 */}
+            <div className="flex flex-wrap gap-2">
+              {step.blocks.map((block, i) => (
+                <button key={i}
+                  onClick={() => !arrangeOrder.includes(i) && !showResult && setArrangeOrder(o => [...o, i])}
+                  disabled={arrangeOrder.includes(i) || showResult}
+                  className="px-3 py-2 rounded-lg text-sm font-medium pali-text transition-all active:scale-95"
+                  style={{
+                    backgroundColor: arrangeOrder.includes(i) ? 'var(--color-border)' : 'var(--color-surface)',
+                    border: '2px solid var(--color-border)',
+                    opacity: arrangeOrder.includes(i) ? 0.3 : 1,
+                  }}>
+                  {block}
+                </button>
+              ))}
+            </div>
+
+            {/* 결과 */}
+            {showResult && (
+              <div className="mt-3 rounded-xl p-3" style={{
+                backgroundColor: JSON.stringify(arrangeOrder) === JSON.stringify(step.correctOrder) ? '#E8F5E9' : '#FFEBEE',
+              }}>
+                <p className="text-sm font-bold">
+                  {JSON.stringify(arrangeOrder) === JSON.stringify(step.correctOrder)
+                    ? '✅ Sādhu! 정확합니다!'
+                    : `❌ 정답: ${step.correctOrder.map(i => step.blocks[i]).join(' ')}`}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+
         <div className="min-h-32" />
       </div>
 
       <div className="fixed bottom-16 left-0 right-0 px-4 pb-3 pt-2 max-w-md mx-auto" style={{ backgroundColor: 'var(--color-bg)' }}>
-        {showResult && isQuizType && (
+        {showResult && (isQuizType || isArrange) && (
           <div className="rounded-xl p-2.5 mb-2" style={{ backgroundColor: isCorrectAnswer ? '#E8F5E9' : '#FFEBEE' }}>
             <p className="text-sm font-bold">{isCorrectAnswer ? '✅ Sādhu! 정답!' : '❌ 틀렸습니다'}</p>
           </div>
@@ -295,16 +350,17 @@ export default function ScriptureLearn() {
               style={{ border: '2px solid var(--color-border)' }}>← 이전</button>
           )}
           <button onClick={
-              isWriting && !writingChecked ? checkWriting
+              isArrange && !showResult ? () => { setShowResult(true); if (JSON.stringify(arrangeOrder) !== JSON.stringify((step as { correctOrder: number[] }).correctOrder)) setHearts(h => Math.max(0, h - 1)) }
+              : isWriting && !writingChecked ? checkWriting
               : isQuizType && !showResult ? handleCheck
               : handleNext
             }
             className="flex-1 py-3.5 rounded-xl text-white font-bold text-base active:scale-[0.97]"
             style={{ backgroundColor: 'var(--color-primary)' }}>
-            {isWriting && !writingChecked ? '확인' : isQuizType && !showResult ? '확인' : '다음 →'}
+            {isArrange && !showResult ? '확인' : isWriting && !writingChecked ? '확인' : isQuizType && !showResult ? '확인' : '다음 →'}
           </button>
           {/* 스킵 버튼 — 항상 */}
-          {(isQuizType || isWriting) && !showResult && !writingChecked && (
+          {(isQuizType || isWriting || isArrange) && !showResult && !writingChecked && (
             <button onClick={handleNext} className="px-3 py-3.5 rounded-xl text-xs"
               style={{ color: 'var(--color-text-secondary)' }}>건너뛰기</button>
           )}

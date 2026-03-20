@@ -26,6 +26,7 @@ export type StepType =
   | { type: 'match-listen'; instruction: string; word: string; pronKo: string; options: string[]; answer: number }
   | { type: 'match-reverse'; instruction: string; meaning: string; options: string[]; answer: number }
   | { type: 'writing'; instruction: string; meaning: string; pronKo: string; answer: string; hint?: string }
+  | { type: 'arrange'; instruction: string; translation: string; blocks: string[]; correctOrder: number[] }
 
 export const LESSON_SN56_11: StepType[] = [
   // ===== 경전 소개 =====
@@ -89,6 +90,10 @@ export const LESSON_SN56_11: StepType[] = [
     note: '✅ 두 번째 문장 완료! bhagavā가 다시 나왔죠?' },
   { type: 'quiz', question: '"bhikkhū"와 "bhikkhave"의 차이는?', options: ['bhikkhū=대격(~을), bhikkhave=호격(~이여)', '같은 뜻', 'bhikkhū=단수, bhikkhave=복수', 'bhikkhū=과거, bhikkhave=현재'], answer: 0, hint: '격이 다릅니다' },
   { type: 'quiz', question: '"āmantesi"는 어떤 시제?', options: ['현재', '과거', '미래', '명령'], answer: 1 },
+  { type: 'writing', instruction: '"비구들을"을 빠알리어로 써보세요', meaning: '비구들을 (대격 복수)', pronKo: '빅쿠~', answer: 'bhikkhū', hint: 'bhikkhu의 대격 복수' },
+  { type: 'writing', instruction: '"말씀하셨다"를 빠알리어로 써보세요', meaning: '말씀하셨다 (과거)', pronKo: '아~만떼시', answer: 'āmantesi' },
+  { type: 'arrange', instruction: '문장을 올바른 순서로 배열하세요', translation: '거기서 세존께서 다섯 비구에게 말씀하셨다',
+    blocks: ['āmantesi', 'bhagavā', 'bhikkhū', 'pañcavaggiye', 'tatra', 'kho'], correctOrder: [4, 5, 1, 3, 2, 0] },
   { type: 'speak', pali: V2, pronKo: '따뜨라 코 바가와~ 빤짜왁기예 빅쿠~ 아~만떼시:' },
 
   // ===== 3문장: 두 극단 (6단어) =====
@@ -120,6 +125,8 @@ export const LESSON_SN56_11: StepType[] = [
     note: '☸️ 붓다의 첫 설법이 시작됩니다! "두 극단을 따르지 말라"' },
   { type: 'quiz', question: '"na sevitabbā"의 뜻은?', options: ['따라야 한다', '따르지 말아야 할', '이미 따랐다', '따를 수 있다'], answer: 1 },
   { type: 'quiz', question: '"pabbajitena"의 -ena는?', options: ['주격 (~이/가)', '구격 (~에 의해)', '처격 (~에서)', '호격 (~이여)'], answer: 1 },
+  { type: 'writing', instruction: '"비구들이여"를 써보세요 (호격)', meaning: '비구들이여', pronKo: '빅카웨', answer: 'bhikkhave' },
+  { type: 'writing', instruction: '"극단들"을 써보세요', meaning: '극단들 (주격 복수)', pronKo: '안따~', answer: 'antā' },
 
   // ===== 4문장: 중도 (주요 단어) =====
   { type: 'teach', icon: '⚖️', word: 'majjhimā', pronKo: '맛지마~', meaning: '중간의, 중도의',
@@ -167,6 +174,9 @@ export const LESSON_SN56_11: StepType[] = [
     translation: V5K, highlight: ['ariyo','maggo','sammādiṭṭhi','sammāsati','sammāsamādhi'],
     note: '☸️ 팔정도! sammāsati(바른 마음챙김) = 사념처 수행 = 우리 최종 목표!' },
   { type: 'quiz', question: '"sammāsati"의 뜻은?', options: ['바른 견해', '바른 말', '바른 마음챙김', '바른 삼매'], answer: 2 },
+  { type: 'writing', instruction: '"중도"를 빠알리어로 써보세요', meaning: '중도 (중간의 길)', pronKo: '맛지마~ 빠띠빠다~', answer: 'majjhimā paṭipadā' },
+  { type: 'writing', instruction: '"성스러운 팔정도"를 써보세요', meaning: '성스러운 여덟 가지 길', pronKo: '아리요 앗탕기꼬 막고', answer: 'ariyo aṭṭhaṅgiko maggo' },
+  { type: 'writing', instruction: '"바른 마음챙김"을 써보세요', meaning: '바른 마음챙김 (정념)', pronKo: '삼마~사띠', answer: 'sammāsati' },
   { type: 'speak', pali: 'sammādiṭṭhi sammāsaṅkappo sammāvācā sammākammanto sammāājīvo sammāvāyāmo sammāsati sammāsamādhi',
     pronKo: '삼마~딧티 삼마~상깝뽀 삼마~와~짜~ 삼마~깜만또 삼마~아~지~워 삼마~와~야~모 삼마~사띠 삼마~사마~디' },
 
@@ -197,6 +207,10 @@ export const LESSON_SN56_11: StepType[] = [
     note: '☸️ 고성제: 생로병사(生老病死) = 붓다가 출가를 결심한 네 가지 고통!' },
   { type: 'quiz', question: '사성제 첫째 "고성제"의 핵심은?', options: ['행복이 최고', '생로병사가 모두 괴로움', '신을 믿어야', '고행이 답'], answer: 1 },
   { type: 'quiz', question: '"pi"의 뜻은?', options: ['~이다', '~않다', '~도 (also)', '~을/를'], answer: 2 },
+  { type: 'writing', instruction: '"괴로움"을 써보세요', meaning: '괴로움 (고)', pronKo: '둑캉', answer: 'dukkhaṃ' },
+  { type: 'writing', instruction: '"성스러운 진리"를 써보세요', meaning: '성제', pronKo: '아리야삿짱', answer: 'ariyasaccaṃ' },
+  { type: 'arrange', instruction: '문장을 배열하세요', translation: '한 때 세존께서 바라나시에 머무셨다',
+    blocks: ['viharati', 'bhagavā', 'ekaṃ', 'samayaṃ', 'bārāṇasiyaṃ'], correctOrder: [2, 3, 1, 4, 0] },
 
   // ===== 종합 퀴즈 =====
   { type: 'quiz', question: '전법륜경 첫 설법 장소는?', options: ['보드가야', '사위성', '바라나시 녹야원', '라자가하'], answer: 2 },
