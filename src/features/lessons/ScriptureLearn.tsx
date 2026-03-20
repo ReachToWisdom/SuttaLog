@@ -196,15 +196,33 @@ export default function ScriptureLearn() {
 
   const isQuizType = step.type === 'match-listen' || step.type === 'match-meaning' || step.type === 'match-reverse' || step.type === 'quiz'
 
-  const getAnswer = (): number => {
-    if ('answer' in step) return (step as { answer: number }).answer
-    return -1
+  // 보기 랜덤: 정답 텍스트로 비교 (인덱스 문제 해결)
+  const getAnswerText = (): string => {
+    if (!('answer' in step) || !('options' in step)) return ''
+    const s = step as { options: string[]; answer: number }
+    return s.options[s.answer]
   }
+
+  const shuffleArray = (arr: string[]): string[] => {
+    const shuffled = [...arr]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(((stepIdx * 7 + 3) * (i + 1) * 13 + i) % (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    return shuffled
+  }
+
+  // 셔플된 옵션 (stepIdx마다 고정)
+  const shuffledOpts = (() => {
+    if (!('options' in step)) return []
+    return shuffleArray((step as { options: string[] }).options)
+  })()
 
   const handleCheck = () => {
     if (selected === null) return
     setShowResult(true)
-    if (selected !== getAnswer()) setHearts(h => Math.max(0, h - 1))
+    const answerText = getAnswerText()
+    if (shuffledOpts[selected] !== answerText) setHearts(h => Math.max(0, h - 1))
   }
 
   const handleNext = () => {
@@ -213,6 +231,8 @@ export default function ScriptureLearn() {
     setSelected(null)
     setShowResult(false)
   }
+
+  const isCorrectAnswer = selected !== null && shuffledOpts[selected] === getAnswerText()
 
   // 하트 소진
   if (hearts <= 0) {
@@ -226,30 +246,14 @@ export default function ScriptureLearn() {
     )
   }
 
-  // 보기 랜덤 섞기 (stepIdx 기반 시드로 일관성 유지)
-  const shuffleOptions = (options: string[], answer: number): { shuffled: string[]; newAnswer: number } => {
-    const seed = stepIdx * 7 + 3
-    const indices = options.map((_, i) => i)
-    // Fisher-Yates with seed
-    for (let i = indices.length - 1; i > 0; i--) {
-      const j = ((seed * (i + 1) * 13) % (i + 1) + i + 1) % (i + 1)
-      ;[indices[i], indices[j]] = [indices[j], indices[i]]
-    }
-    return {
-      shuffled: indices.map(i => options[i]),
-      newAnswer: indices.indexOf(answer),
-    }
-  }
-
-  // 선택지 렌더링 헬퍼 (랜덤 순서)
-  const renderOptions = (options: string[]) => {
-    const answer = getAnswer()
-    const { shuffled, newAnswer } = shuffleOptions(options, answer)
+  // 선택지 렌더링 (셔플된 옵션, 정답은 텍스트로 비교)
+  const renderOptions = (_options: string[]) => {
+    const answerText = getAnswerText()
     return (
     <div className="space-y-2.5">
-      {shuffled.map((opt, i) => {
-        const isAnswer = showResult && i === newAnswer
-        const isWrong = showResult && selected === i && i !== newAnswer
+      {shuffledOpts.map((opt, i) => {
+        const isAnswer = showResult && opt === answerText
+        const isWrong = showResult && selected === i && opt !== answerText
         return (
           <button key={i} onClick={() => !showResult && setSelected(i)} disabled={showResult}
             className="w-full p-3.5 rounded-xl text-left text-sm font-medium transition-all active:scale-[0.98]"
@@ -369,17 +373,18 @@ export default function ScriptureLearn() {
           <div className="flex-1 flex flex-col">
             <p className="text-sm font-bold mb-4">{step.instruction}</p>
             <div className="space-y-2.5">
-              {step.options.map((opt, i) => {
-                const isAnswer = showResult && i === step.answer
-                const isWrong = showResult && selected === i && i !== step.answer
+              {shuffledOpts.map((opt, i) => {
+                const answerText = getAnswerText()
+                const isAns = showResult && opt === answerText
+                const isWrn = showResult && selected === i && opt !== answerText
                 return (
                   <button key={i} onClick={() => { if (!showResult) { setSelected(i); speak(opt) } }} disabled={showResult}
                     className="w-full p-3.5 rounded-xl text-center text-sm font-medium pali-text transition-all active:scale-[0.98]"
                     style={{
-                      backgroundColor: isAnswer ? '#E8F5E9' : isWrong ? '#FFEBEE' : 'var(--color-surface)',
-                      border: isAnswer ? '2px solid #4CAF50' : isWrong ? '2px solid #F44336' : selected === i ? '2px solid var(--color-primary)' : '1.5px solid var(--color-border)',
+                      backgroundColor: isAns ? '#E8F5E9' : isWrn ? '#FFEBEE' : 'var(--color-surface)',
+                      border: isAns ? '2px solid #4CAF50' : isWrn ? '2px solid #F44336' : selected === i ? '2px solid var(--color-primary)' : '1.5px solid var(--color-border)',
                     }}>
-                    {isAnswer && '✅ '}{isWrong && '❌ '}{opt}
+                    {isAns && '✅ '}{isWrn && '❌ '}{opt}
                   </button>
                 )
               })}
@@ -467,8 +472,8 @@ export default function ScriptureLearn() {
       {/* 하단 */}
       <div className="shrink-0 px-4 pb-20 pt-2">
         {showResult && isQuizType && (
-          <div className="rounded-xl p-2.5 mb-2" style={{ backgroundColor: selected === getAnswer() ? '#E8F5E9' : '#FFEBEE' }}>
-            <p className="text-sm font-bold">{selected === getAnswer() ? '✅ Sādhu! 정답!' : '❌ 틀렸습니다'}</p>
+          <div className="rounded-xl p-2.5 mb-2" style={{ backgroundColor: isCorrectAnswer ? '#E8F5E9' : '#FFEBEE' }}>
+            <p className="text-sm font-bold">{isCorrectAnswer ? '✅ Sādhu! 정답!' : '❌ 틀렸습니다'}</p>
           </div>
         )}
         <div className="flex gap-2">
