@@ -275,10 +275,10 @@ export default function ScriptureLearn() {
           </div>
         )}
 
-        <div className="flex-1 min-h-4" />
+        <div className="min-h-32" />
       </div>
 
-      <div className="shrink-0 px-4 pb-20 pt-2">
+      <div className="fixed bottom-16 left-0 right-0 px-4 pb-3 pt-2 max-w-md mx-auto" style={{ backgroundColor: 'var(--color-bg)' }}>
         {showResult && isQuizType && (
           <div className="rounded-xl p-2.5 mb-2" style={{ backgroundColor: isCorrectAnswer ? '#E8F5E9' : '#FFEBEE' }}>
             <p className="text-sm font-bold">{isCorrectAnswer ? '✅ Sādhu! 정답!' : '❌ 틀렸습니다'}</p>
