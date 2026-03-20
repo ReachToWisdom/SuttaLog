@@ -13,11 +13,18 @@ export default function ScriptureLearn() {
   const [hearts, setHearts] = useState(3)
   const [selected, setSelected] = useState<number | null>(null)
   const [showResult, setShowResult] = useState(false)
+  const [writingInput, setWritingInput] = useState('')
+  const [writingChecked, setWritingChecked] = useState(false)
+  const writingEnabled = localStorage.getItem('suttalog-writing') !== 'off'
 
   const step = STEPS[stepIdx]
   const progress = ((stepIdx + 1) / STEPS.length) * 100
   const speak = (text: string) => speakPali(text)
   const isQuizType = step.type === 'match-listen' || step.type === 'match-reverse' || step.type === 'quiz'
+  const isWriting = step.type === 'writing'
+
+  // 특수문자 키보드
+  const SPECIAL_CHARS = ['ā', 'ī', 'ū', 'ṃ', 'ṅ', 'ñ', 'ṭ', 'ḍ', 'ṇ', 'ḷ']
 
   const getAnswerText = (): string => {
     if (!('answer' in step) || !('options' in step)) return ''
@@ -42,10 +49,15 @@ export default function ScriptureLearn() {
   }
   const handleNext = () => {
     if (stepIdx + 1 >= STEPS.length) { nav('/lesson-complete'); return }
-    setStepIdx(i => i + 1); setSelected(null); setShowResult(false)
+    setStepIdx(i => i + 1); setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false)
   }
   const handlePrev = () => {
-    if (stepIdx > 0) { setStepIdx(i => i - 1); setSelected(null); setShowResult(false) }
+    if (stepIdx > 0) { setStepIdx(i => i - 1); setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false) }
+  }
+  const checkWriting = () => {
+    setWritingChecked(true)
+    const correct = 'answer' in step ? (step as { answer: string }).answer : ''
+    if (writingInput.trim().toLowerCase() !== correct.toLowerCase()) setHearts(h => Math.max(0, h - 1))
   }
   const isCorrectAnswer = selected !== null && shuffledOpts[selected] === getAnswerText()
 
@@ -205,6 +217,54 @@ export default function ScriptureLearn() {
           </div>
         )}
 
+        {/* 쓰기 (writing 모드 on일 때만, off면 자동 스킵) */}
+        {step.type === 'writing' && !writingEnabled && (() => { handleNext(); return null })()}
+        {step.type === 'writing' && writingEnabled && (
+          <div className="flex-1 flex flex-col">
+            <p className="text-base font-bold mb-2">{step.instruction}</p>
+            <p className="text-sm mb-1" style={{ color: 'var(--color-text-secondary)' }}>
+              뜻: {step.meaning} · 발음: {step.pronKo}
+            </p>
+            {step.hint && !writingChecked && <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>💡 {step.hint}</p>}
+
+            {/* 입력 필드 */}
+            <input type="text" value={writingInput}
+              onChange={e => setWritingInput(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && !writingChecked && checkWriting()}
+              placeholder="빠알리어를 입력하세요"
+              disabled={writingChecked}
+              className="w-full px-4 py-3 rounded-xl text-lg pali-text text-center"
+              style={{ backgroundColor: 'var(--color-surface)', border: writingChecked
+                ? (writingInput.trim().toLowerCase() === ((step as { answer: string }).answer).toLowerCase() ? '2px solid #4CAF50' : '2px solid #F44336')
+                : '2px solid var(--color-border)', color: 'var(--color-text)' }}
+            />
+
+            {/* 특수문자 키보드 */}
+            <div className="flex flex-wrap gap-1.5 mt-3 justify-center">
+              {SPECIAL_CHARS.map(ch => (
+                <button key={ch} onClick={() => !writingChecked && setWritingInput(v => v + ch)}
+                  className="w-9 h-9 rounded-lg text-sm font-bold pali-text active:scale-90"
+                  style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', color: 'var(--color-primary)' }}>
+                  {ch}
+                </button>
+              ))}
+            </div>
+
+            {/* 결과 */}
+            {writingChecked && (
+              <div className="mt-3 rounded-xl p-3" style={{
+                backgroundColor: writingInput.trim().toLowerCase() === ((step as { answer: string }).answer).toLowerCase() ? '#E8F5E9' : '#FFEBEE',
+              }}>
+                <p className="text-sm font-bold">
+                  {writingInput.trim().toLowerCase() === ((step as { answer: string }).answer).toLowerCase()
+                    ? '✅ Sādhu! 정확합니다!'
+                    : `❌ 정답: ${(step as { answer: string }).answer}`}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+
         <div className="flex-1 min-h-4" />
       </div>
 
@@ -219,12 +279,20 @@ export default function ScriptureLearn() {
             <button onClick={handlePrev} className="px-4 py-3.5 rounded-xl font-bold text-sm active:scale-[0.97]"
               style={{ border: '2px solid var(--color-border)' }}>← 이전</button>
           )}
-          <button onClick={isQuizType && !showResult ? handleCheck : handleNext}
-            disabled={isQuizType && selected === null && !showResult}
-            className="flex-1 py-3.5 rounded-xl text-white font-bold text-base disabled:opacity-40 active:scale-[0.97]"
+          <button onClick={
+              isWriting && !writingChecked ? checkWriting
+              : isQuizType && !showResult ? handleCheck
+              : handleNext
+            }
+            className="flex-1 py-3.5 rounded-xl text-white font-bold text-base active:scale-[0.97]"
             style={{ backgroundColor: 'var(--color-primary)' }}>
-            {isQuizType && !showResult ? '확인' : '다음 →'}
+            {isWriting && !writingChecked ? '확인' : isQuizType && !showResult ? '확인' : '다음 →'}
           </button>
+          {/* 스킵 버튼 — 항상 */}
+          {(isQuizType || isWriting) && !showResult && !writingChecked && (
+            <button onClick={handleNext} className="px-3 py-3.5 rounded-xl text-xs"
+              style={{ color: 'var(--color-text-secondary)' }}>건너뛰기</button>
+          )}
         </div>
       </div>
     </div>

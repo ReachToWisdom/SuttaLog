@@ -3,7 +3,14 @@ import { useState } from 'react'
 
 export default function SettingsPage() {
   const [soundOn, setSoundOn] = useState(localStorage.getItem('suttalog-sound') !== 'off')
+  const [writingOn, setWritingOn] = useState(localStorage.getItem('suttalog-writing') !== 'off')
   const [fontSize, setFontSize] = useState(Number(localStorage.getItem('suttalog-fontsize')) || 16)
+
+  const toggleWriting = () => {
+    const next = !writingOn
+    setWritingOn(next)
+    localStorage.setItem('suttalog-writing', next ? 'on' : 'off')
+  }
 
   const changeFontSize = (size: number) => {
     const clamped = Math.max(12, Math.min(24, size))
@@ -43,6 +50,22 @@ export default function SettingsPage() {
             style={{ backgroundColor: soundOn ? 'var(--color-accent)' : 'var(--color-border)' }}>
             <div className="absolute w-5 h-5 bg-white rounded-full top-1 transition-all"
               style={{ left: soundOn ? 24 : 4 }} />
+          </button>
+        </div>
+      </div>
+
+      {/* 쓰기 모드 */}
+      <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-sm font-semibold">✍️ 쓰기 모드</p>
+            <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>단어 스펠링 직접 입력 (특수문자 키보드 제공)</p>
+          </div>
+          <button onClick={toggleWriting}
+            className="w-12 h-7 rounded-full transition-all relative"
+            style={{ backgroundColor: writingOn ? 'var(--color-accent)' : 'var(--color-border)' }}>
+            <div className="absolute w-5 h-5 bg-white rounded-full top-1 transition-all"
+              style={{ left: writingOn ? 24 : 4 }} />
           </button>
         </div>
       </div>

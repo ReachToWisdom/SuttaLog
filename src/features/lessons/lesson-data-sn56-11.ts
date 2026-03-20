@@ -25,6 +25,7 @@ export type StepType =
   | { type: 'speak'; pali: string; pronKo: string }
   | { type: 'match-listen'; instruction: string; word: string; pronKo: string; options: string[]; answer: number }
   | { type: 'match-reverse'; instruction: string; meaning: string; options: string[]; answer: number }
+  | { type: 'writing'; instruction: string; meaning: string; pronKo: string; answer: string; hint?: string }
 
 export const LESSON_SN56_11: StepType[] = [
   // ===== 경전 소개 =====
@@ -61,6 +62,8 @@ export const LESSON_SN56_11: StepType[] = [
     note: '✅ 첫 문장 7단어 완료! 탭해서 복습하세요.' },
   { type: 'quiz', question: '"viharati"의 뜻은?', options: ['말하다', '머무시다', '걷다', '앉다'], answer: 1 },
   { type: 'quiz', question: '"migadāye"의 -e는 무슨 격?', options: ['주격', '대격', '처격', '속격'], answer: 2 },
+  { type: 'writing', instruction: '"세존"을 빠알리어로 써보세요', meaning: '세존 (붓다의 존칭)', pronKo: '바가와~', answer: 'bhagavā', hint: 'bh로 시작, ā로 끝남' },
+  { type: 'writing', instruction: '"머무시다"를 빠알리어로 써보세요', meaning: '머무시다 (동사 현재)', pronKo: '위하라띠', answer: 'viharati', hint: 'v로 시작' },
   { type: 'speak', pali: V1, pronKo: '에깡 사마양 바가와~ 바~라~나시양 위하라띠 이시빠따네 미가다~예.' },
 
   // ===== 2문장 (5단어) =====
