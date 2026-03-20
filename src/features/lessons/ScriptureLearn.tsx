@@ -5,6 +5,7 @@ import { speakPali } from '../../utils/pali-tts'
 import { LESSON_SN56_11, type StepType } from './lesson-data-sn56-11'
 import { LESSON_SN22_59 } from './lesson-data-sn22-59'
 import { LESSON_SN45_8 } from './lesson-data-sn45-8'
+import { LESSON_MN10 } from './lesson-data-mn10'
 
 type Step = StepType
 
@@ -13,6 +14,7 @@ const LESSON_MAP: Record<string, Step[]> = {
   'sn56-11': LESSON_SN56_11,
   'sn22-59': LESSON_SN22_59,
   'sn45-8': LESSON_SN45_8,
+  'mn10': LESSON_MN10,
 }
 
 export default function ScriptureLearn() {
