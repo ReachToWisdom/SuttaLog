@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* 테마 CSS 변수 */
+:root {
+  --color-primary: #D4760A;
+  --color-primary-light: #F5A623;
+  --color-accent: #2E7D32;
+  --color-accent-light: #4CAF50;
+  --color-bg: #FEFCF3;
+  --color-surface: #FFFFFF;
+  --color-text: #2C2C2C;
+  --color-text-secondary: #6B6B6B;
+  --color-border: #E0D5C0;
+  --font-pali: 'Noto Serif', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+[data-theme="dark"] {
+  --color-bg: #1A1A2E;
+  --color-surface: #252540;
+  --color-text: #E8E8E8;
+  --color-text-secondary: #A0A0B0;
+  --color-border: #3A3A5C;
+}
+
+[data-theme="sepia"] {
+  --color-bg: #F4ECD8;
+  --color-surface: #EDE4D0;
+  --color-text: #3E2723;
+  --color-text-secondary: #6D5D4B;
+  --color-border: #C8B99A;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 빠알리 텍스트 */
+.pali-text {
+  font-family: var(--font-pali);
+  line-height: 1.8;
+}
+
+/* 스크롤바 숨김 (모바일) */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* 바텀시트 */
+.bottom-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 40;
+}
+
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-surface);
+  border-radius: 16px 16px 0 0;
+  z-index: 50;
+  max-height: 70vh;
+  overflow-y: auto;
+}
