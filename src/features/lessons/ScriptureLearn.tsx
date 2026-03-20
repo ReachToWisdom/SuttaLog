@@ -20,8 +20,21 @@ const LESSON_MAP: Record<string, Step[]> = {
 export default function ScriptureLearn() {
   const nav = useNavigate()
   const { lessonId } = useParams<{ lessonId: string }>()
-  const STEPS = LESSON_MAP[lessonId || 'dhp1-alphabet'] || LESSON_SN56_11
-  const [stepIdx, setStepIdx] = useState(0)
+  const lid = lessonId || 'dhp1-alphabet'
+  const STEPS = LESSON_MAP[lid] || LESSON_SN56_11
+
+  // 이어 학습: localStorage에서 진도 복원
+  const savedStep = Number(localStorage.getItem(`suttalog-progress-${lid}`) || '0')
+  const [stepIdx, setStepIdxRaw] = useState(Math.min(savedStep, STEPS.length - 1))
+
+  // stepIdx 변경 시 자동 저장
+  const setStepIdx = (updater: number | ((prev: number) => number)) => {
+    setStepIdxRaw(prev => {
+      const next = typeof updater === 'function' ? updater(prev) : updater
+      localStorage.setItem(`suttalog-progress-${lid}`, String(next))
+      return next
+    })
+  }
   const [hearts, setHearts] = useState(3)
   const [selected, setSelected] = useState<number | null>(null)
   const [showResult, setShowResult] = useState(false)

@@ -14,8 +14,7 @@ export default function Home() {
   // 온보딩 레벨에 따른 시작 경로 결정
   // level 0 → 1과, level 1 → 2과(sn22-59), level 2 → 3과(sn45-8)
   // 현재 2과/3과 미구현이므로 모두 1과로 폴백
-  const level = localStorage.getItem('suttalog-level') || '0'
-  // courseMap은 학습 경로 목록에서 직접 사용
+  // level은 온보딩에서 저장한 시작 레벨 (현재 진도 추적은 각 과별 localStorage로)
 
   return (
     <div className="px-4 pt-6 space-y-5">
@@ -53,26 +52,34 @@ export default function Home() {
         <p className="text-xs font-semibold mb-2" style={{ color: 'var(--color-text-secondary)' }}>☸️ 학습 경로</p>
         <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
           {[
-            { num: '1과', title: '전법륜경 (사성제·팔정도)', idx: 0, route: '/learn/scripture/dhp1-alphabet' },
-            { num: '2과', title: '무아경 (오온·무아)', idx: 1, route: '/learn/scripture/sn22-59' },
-            { num: '3과', title: '팔정도경 (수행의 길)', idx: 2, route: '/learn/scripture/sn45-8' },
-            { num: '4과', title: '사념처경 (수행법) 🎯', idx: 3, route: '/learn/scripture/mn10' },
+            { num: '1과', title: '전법륜경 (사성제·팔정도)', key: 'dhp1-alphabet', route: '/learn/scripture/dhp1-alphabet', total: 37 },
+            { num: '2과', title: '무아경 (오온·무아)', key: 'sn22-59', route: '/learn/scripture/sn22-59', total: 21 },
+            { num: '3과', title: '팔정도경 (수행의 길)', key: 'sn45-8', route: '/learn/scripture/sn45-8', total: 20 },
+            { num: '4과', title: '사념처경 (수행법) 🎯', key: 'mn10', route: '/learn/scripture/mn10', total: 20 },
           ].map((item, i) => {
-            const lvl = Number(level)
-            const active = item.idx === lvl
-            const status = active ? '시작 ▶' : item.idx < lvl ? '미학습' : '미학습'
+            const saved = Number(localStorage.getItem(`suttalog-progress-${item.key}`) || '0')
+            const pct = Math.round((saved / item.total) * 100)
+            const hasProgress = saved > 0
+            const completed = saved >= item.total - 1
+            const status = completed ? '완료 ✓' : hasProgress ? `이어하기 ${pct}%` : '미학습'
+            const isActive = hasProgress && !completed
             return (
             <button key={i} onClick={() => nav(item.route)}
               className={`w-full flex items-center gap-3 py-3 ${i > 0 ? 'border-t' : ''} active:scale-[0.98] transition-all text-left`}
               style={{ borderColor: 'var(--color-border)' }}>
               <span className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0"
-                style={{ backgroundColor: active ? 'var(--color-primary)' : 'var(--color-border)' }}>
-                {active ? '▶' : i + 1}
+                style={{ backgroundColor: completed ? 'var(--color-accent)' : isActive ? 'var(--color-primary)' : 'var(--color-border)' }}>
+                {completed ? '✓' : isActive ? '▶' : i + 1}
               </span>
               <div className="flex-1 min-w-0">
-                <p className={`text-sm ${active ? 'font-bold' : 'font-medium'}`}>{item.num}: {item.title}</p>
+                <p className={`text-sm ${isActive ? 'font-bold' : 'font-medium'}`}>{item.num}: {item.title}</p>
+                {hasProgress && !completed && (
+                  <div className="h-1 rounded-full mt-1 overflow-hidden" style={{ backgroundColor: 'var(--color-border)' }}>
+                    <div className="h-full rounded-full" style={{ width: `${pct}%`, backgroundColor: 'var(--color-primary)' }} />
+                  </div>
+                )}
               </div>
-              <span className="text-xs" style={{ color: active ? 'var(--color-primary)' : 'var(--color-text-secondary)' }}>{status}</span>
+              <span className="text-xs" style={{ color: completed ? 'var(--color-accent)' : isActive ? 'var(--color-primary)' : 'var(--color-text-secondary)' }}>{status}</span>
             </button>
           )})}
         </div>
