@@ -15,16 +15,7 @@ export default function Home() {
   // level 0 → 1과, level 1 → 2과(sn22-59), level 2 → 3과(sn45-8)
   // 현재 2과/3과 미구현이므로 모두 1과로 폴백
   const level = localStorage.getItem('suttalog-level') || '0'
-  const courseMap: Record<string, { path: string; label: string; desc: string }> = {
-    '0': { path: '/learn/scripture/dhp1-alphabet', label: '제1과: 전법륜경', desc: '사성제와 팔정도 · 첫 설법' },
-    '1': { path: '/learn/scripture/sn22-59', label: '제2과: 무아경', desc: '오온과 무아' },
-    '2': { path: '/learn/scripture/sn45-8', label: '제3과: 팔정도 분별경', desc: '팔정도 각 항목 분석' },
-    '3': { path: '/learn/scripture/mn10', label: '제4과: 사념처경', desc: '사념처 수행법 (준비 중)' },
-  }
-  const course = courseMap[level] || courseMap['0']
-  const startPath = course.path
-  const startLabel = course.label
-  const startDesc = course.desc
+  // courseMap은 학습 경로 목록에서 직접 사용
 
   return (
     <div className="px-4 pt-6 space-y-5">
