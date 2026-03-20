@@ -85,7 +85,7 @@ export default function Home() {
             const active = item.idx === lvl
             const skipped = item.idx < lvl
             const locked = item.idx > lvl
-            const status = active ? '시작' : skipped ? '건너뜀' : '잠김'
+            const status = active ? '시작' : skipped ? '이미 앎' : '잠김'
             return (
             <div key={i} className={`flex items-center gap-3 py-2.5 ${i > 0 ? 'border-t' : ''}`}
               style={{ borderColor: 'var(--color-border)', opacity: active || skipped ? 1 : locked ? 0.4 : 1 }}>
