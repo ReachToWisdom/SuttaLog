@@ -15,9 +15,16 @@ export default function Home() {
   // level 0 → 1과, level 1 → 2과(sn22-59), level 2 → 3과(sn45-8)
   // 현재 2과/3과 미구현이므로 모두 1과로 폴백
   const level = localStorage.getItem('suttalog-level') || '0'
-  const startPath = level === '2' ? '/learn/scripture/sn45-8' : level === '1' ? '/learn/scripture/sn22-59' : '/learn/scripture/dhp1-alphabet'
-  const startLabel = level === '2' ? '제3과: 팔정도 분별경' : level === '1' ? '제2과: 무아경' : '제1과: 전법륜경 기초'
-  const startDesc = level === '2' ? '팔정도 각 항목 분석' : level === '1' ? '오온과 무아' : '사성제와 팔정도 · 첫 설법'
+  const courseMap: Record<string, { path: string; label: string; desc: string }> = {
+    '0': { path: '/learn/scripture/dhp1-alphabet', label: '제1과: 전법륜경', desc: '사성제와 팔정도 · 첫 설법' },
+    '1': { path: '/learn/scripture/sn22-59', label: '제2과: 무아경', desc: '오온과 무아' },
+    '2': { path: '/learn/scripture/sn45-8', label: '제3과: 팔정도 분별경', desc: '팔정도 각 항목 분석' },
+    '3': { path: '/learn/scripture/mn10', label: '제4과: 사념처경', desc: '사념처 수행법 (준비 중)' },
+  }
+  const course = courseMap[level] || courseMap['0']
+  const startPath = course.path
+  const startLabel = course.label
+  const startDesc = course.desc
 
   return (
     <div className="px-4 pt-6 space-y-5">
@@ -76,19 +83,20 @@ export default function Home() {
           ].map((item, i) => {
             const lvl = Number(level)
             const active = item.idx === lvl
-            const done = item.idx < lvl
-            const status = active ? '시작' : done ? '완료' : '잠김'
+            const skipped = item.idx < lvl
+            const locked = item.idx > lvl
+            const status = active ? '시작' : skipped ? '건너뜀' : '잠김'
             return (
             <div key={i} className={`flex items-center gap-3 py-2.5 ${i > 0 ? 'border-t' : ''}`}
-              style={{ borderColor: 'var(--color-border)', opacity: active || done ? 1 : 0.4 }}>
+              style={{ borderColor: 'var(--color-border)', opacity: active || skipped ? 1 : locked ? 0.4 : 1 }}>
               <span className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0"
-                style={{ backgroundColor: active ? 'var(--color-primary)' : done ? 'var(--color-accent)' : 'var(--color-border)' }}>
-                {active ? '▶' : done ? '✓' : '🔒'}
+                style={{ backgroundColor: active ? 'var(--color-primary)' : skipped ? 'var(--color-border)' : 'var(--color-border)' }}>
+                {active ? '▶' : skipped ? '—' : '🔒'}
               </span>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-semibold">{item.num}: {item.title}</p>
               </div>
-              <span className="text-xs" style={{ color: active ? 'var(--color-primary)' : done ? 'var(--color-accent)' : 'var(--color-text-secondary)' }}>{status}</span>
+              <span className="text-xs" style={{ color: active ? 'var(--color-primary)' : 'var(--color-text-secondary)' }}>{status}</span>
             </div>
           )})}
         </div>

@@ -1,18 +1,19 @@
 // 학습맵 (보리수 경로 스킬트리)
 import { useNavigate } from 'react-router-dom'
 
+// 레벨에 따라 동적으로 상태 결정
+const level = Number(localStorage.getItem('suttalog-level') || '0')
+
 const SKILLS = [
-  { id: 10, title: '복주석서', desc: 'Ṭīkā 논증 구조', icon: '📕', status: 'locked', crown: 0, source: 'Ṭīkā' },
-  { id: 9, title: '주석서', desc: 'Aṭṭhakathā 해석학', icon: '📗', status: 'locked', crown: 0, source: 'Aṭṭhakathā' },
-  { id: 8, title: '원전 해석', desc: '긴 경전 독해', icon: '📜', status: 'locked', crown: 0, source: 'MN · DN' },
-  { id: 7, title: '경전 독해', desc: '정형구/반복공식', icon: '📖', status: 'locked', crown: 0, source: 'SN · AN' },
-  { id: 6, title: '산디/합성어', desc: '연음 규칙, samāsa', icon: '🔗', status: 'locked', crown: 0, source: 'Sutta Nipāta' },
-  { id: 5, title: '동사 활용', desc: '현재/과거/미래', icon: '🏃', status: 'locked', crown: 0, source: 'Sutta Nipāta' },
-  { id: 4, title: '격변화', desc: '8격 체계', icon: '🔀', status: 'locked', crown: 0, source: 'Itivuttaka' },
-  { id: 3, title: '문장 구조', desc: 'SOV 어순, 기초 문법', icon: '📝', status: 'locked', crown: 0, source: 'Dhammapada' },
-  { id: 2, title: '기초 단어', desc: '핵심 100단어', icon: '💬', status: 'locked', crown: 0, source: 'Dhammapada' },
-  { id: 1, title: '알파벳/발음', desc: 'ā ī ū ṃ ṅ ñ ṭ ḍ ṇ ḷ', icon: '🔤', status: 'current', crown: 0, source: 'Dhammapada 1게' },
-]
+  { id: 4, title: '사념처경', desc: '사념처 수행법 🎯', icon: '🧘', route: '/learn/scripture/mn10', source: 'MN 10' },
+  { id: 3, title: '팔정도 분별경', desc: '팔정도 각 항목 분석', icon: '☸️', route: '/learn/scripture/sn45-8', source: 'SN 45.8' },
+  { id: 2, title: '무아경', desc: '오온과 무아', icon: '🔍', route: '/learn/scripture/sn22-59', source: 'SN 22.59' },
+  { id: 1, title: '전법륜경', desc: '사성제와 팔정도 · 첫 설법', icon: '☸️', route: '/learn/scripture/dhp1-alphabet', source: 'SN 56.11' },
+].map(s => ({
+  ...s,
+  status: (s.id - 1) === level ? 'current' as const : (s.id - 1) < level ? 'skipped' as const : 'locked' as const,
+  crown: 0,
+}))
 
 function CrownStars({ count, max = 5 }: { count: number; max?: number }) {
   return (
@@ -31,7 +32,7 @@ export default function StudyMap() {
         <h1 className="text-xl font-bold">📖 학습맵</h1>
         <span className="text-sm px-3 py-1 rounded-full"
           style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}>
-          레벨 1
+          {level + 1}과 진행 중
         </span>
       </div>
 
@@ -43,7 +44,8 @@ export default function StudyMap() {
         {SKILLS.map((skill) => {
           const isLocked = skill.status === 'locked'
           const isCurrent = skill.status === 'current'
-          const isDone = skill.status === 'done'
+          const isSkipped = skill.status === 'skipped'
+          const isDone = false // 아직 실제 완료 추적 없음
 
           return (
             <div key={skill.id} className="relative flex items-start gap-4 mb-1">
@@ -53,21 +55,21 @@ export default function StudyMap() {
                   isCurrent ? 'ring-4 ring-offset-2' : ''
                 } ${isLocked ? 'opacity-40' : ''}`}
                 style={{
-                  backgroundColor: isDone ? 'var(--color-accent)' : isCurrent ? 'var(--color-primary)' : 'var(--color-border)',
+                  backgroundColor: isDone ? 'var(--color-accent)' : isCurrent ? 'var(--color-primary)' : isSkipped ? 'var(--color-border)' : 'var(--color-border)',
                   outlineColor: isCurrent ? 'var(--color-primary)' : undefined,
                 }}
               >
-                {isLocked ? '🔒' : skill.icon}
+                {isLocked ? '🔒' : isSkipped ? '—' : skill.icon}
               </div>
 
               {/* 스킬 정보 */}
               <button
-                onClick={() => !isLocked && nav(`/skill/${skill.id}`)}
+                onClick={() => !isLocked && nav(skill.route)}
                 className={`flex-1 rounded-xl p-3 text-left transition-all ${!isLocked ? 'active:scale-[0.98]' : ''}`}
                 style={{
                   backgroundColor: 'var(--color-surface)',
                   border: isCurrent ? '2px solid var(--color-primary)' : '1px solid var(--color-border)',
-                  opacity: isLocked ? 0.5 : 1,
+                  opacity: isLocked ? 0.5 : isSkipped ? 0.6 : 1,
                 }}
                 disabled={isLocked}
               >

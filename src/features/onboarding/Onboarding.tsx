@@ -78,9 +78,10 @@ export default function Onboarding({ onComplete }: Props) {
             <h2 className="text-xl font-bold mb-2">현재 빠알리어<br/>수준은?</h2>
             <p className="text-sm mb-6" style={{ color: 'var(--color-text-secondary)' }}>적합한 시작점을 안내합니다</p>
             {[
-              { icon: '🌱', label: '처음이에요', desc: '발음과 기초 단어부터', level: '1과: 전법륜경 기초' },
+              { icon: '🌱', label: '처음이에요', desc: '발음과 기초 단어부터', level: '1과: 전법륜경' },
               { icon: '🌿', label: '조금 알아요', desc: '기본 불교 용어 가능', level: '2과: 무아경' },
               { icon: '🌳', label: '경전 읽기 가능', desc: '문법을 다지고 싶어요', level: '3과: 팔정도경' },
+              { icon: '🏔️', label: '사념처 수행자', desc: '사념처경을 원문으로', level: '4과: 사념처경' },
             ].map((item, i) => (
               <button key={i} onClick={() => setLevel(i)}
                 className="w-full flex items-start gap-4 p-4 mb-3 rounded-xl text-left transition-all active:scale-[0.98]"
