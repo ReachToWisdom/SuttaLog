@@ -518,23 +518,10 @@ body {
    스마트폰 비율 고정 + 데스크톱 프레임
    ═══════════════════════════════════════════ */
 
-/* 모바일: 실제 화면 크기 사용 */
+/* 앱 컨테이너 */
 #root {
   max-width: 430px;
   margin: 0 auto;
-  height: 100dvh;
+  min-height: 100dvh;
   position: relative;
-  overflow: hidden;
-}
-
-/* 데스크톱: 스마트폰 프레임 고정 (430x932) */
-@media (min-width: 431px) {
-  html { background: #E8E0D0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-  #root {
-    height: 932px;
-    max-height: 95vh;
-    border-radius: 32px;
-    box-shadow: 0 0 0 8px #1a1a1a, 0 0 40px rgba(0,0,0,0.2);
-    overflow: hidden;
-  }
 }

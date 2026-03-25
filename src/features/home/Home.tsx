@@ -47,10 +47,10 @@ export default function Home() {
   const totalPct = Math.round(COURSES.reduce((s, c) => s + (getProgress(c.id) / c.total) * 100, 0) / COURSES.length)
 
   return (
-    <div className="flex flex-col px-4 pt-4 pb-16 h-full overflow-hidden">
+    <div className="pb-24 px-4 pt-5 max-w-lg mx-auto">
 
       {/* ── 인사 카드 ── */}
-      <div className="rounded-2xl p-3.5 mb-3 shrink-0 intro-fade-up" style={{ background: g.bg, color: g.tc, boxShadow: 'var(--shadow-md)' }}>
+      <div className="rounded-2xl p-3.5 mb-3  intro-fade-up" style={{ background: g.bg, color: g.tc, boxShadow: 'var(--shadow-md)' }}>
         <div className="flex items-center gap-3">
           <span className="text-2xl">{g.emoji}</span>
           <div>
@@ -62,12 +62,12 @@ export default function Home() {
 
       {/* ── 히어로: 현재 학습 ── */}
       <button onClick={() => nav(`/learn/scripture/${current.id}`)}
-        className="w-full rounded-2xl text-left mb-3 shrink-0 intro-fade-up-delay active:scale-[0.98] transition-transform"
+        className="w-full rounded-2xl text-left mb-3  intro-fade-up-delay active:scale-[0.98] transition-transform"
         style={{ background: 'var(--color-primary-gradient)', boxShadow: '0 4px 16px rgba(192,107,10,0.3)', border: 'none', padding: 0 }}>
         <div className="relative overflow-hidden rounded-2xl p-4">
           <div className="absolute -top-8 -right-8 w-28 h-28 rounded-full opacity-15" style={{ background: 'radial-gradient(circle, #fff 0%, transparent 70%)' }} />
           <div className="flex items-center gap-3 relative z-10">
-            <div className="relative flex-shrink-0">
+            <div className="relative flex-">
               <svg width="56" height="56" style={{ transform: 'rotate(-90deg)' }}>
                 <circle cx="28" cy="28" r={R} fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="3.5" />
                 <circle cx="28" cy="28" r={R} fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="3.5" strokeLinecap="round"
@@ -83,7 +83,7 @@ export default function Home() {
                 <div className="h-full rounded-full" style={{ width: `${currentPct}%`, background: 'linear-gradient(90deg, rgba(255,255,255,0.5), rgba(255,255,255,0.9))' }} />
               </div>
             </div>
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+            <div className="flex- w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function Home() {
       </button>
 
       {/* ── 통계 3칸 ── */}
-      <div className="grid grid-cols-3 gap-2 mb-3 shrink-0">
+      <div className="grid grid-cols-3 gap-2 mb-3 ">
         {[
           { icon: '📚', label: '완료', value: `${completed}과`, bg: 'rgba(192,107,10,0.1)' },
           { icon: '🔥', label: '학습일', value: `${getStudyDates().size}일`, bg: 'rgba(239,83,80,0.1)' },
@@ -107,10 +107,10 @@ export default function Home() {
       </div>
 
       {/* ── 명구 (컴팩트) ── */}
-      <div className="rounded-xl overflow-hidden mb-3 shrink-0"
+      <div className="rounded-xl overflow-hidden mb-3 "
         style={{ background: 'var(--color-surface-elevated)', border: '1px solid var(--color-border-light)' }}>
         <div className="flex">
-          <div className="w-0.5 flex-shrink-0" style={{ background: 'linear-gradient(180deg, var(--color-primary-light), var(--color-primary-dark))' }} />
+          <div className="w-0.5 flex-" style={{ background: 'linear-gradient(180deg, var(--color-primary-light), var(--color-primary-dark))' }} />
           <div className="px-3 py-2.5 flex-1">
             <p className="pali-text text-sm font-semibold" style={{ color: 'var(--color-primary)', fontSize: '14px' }}>{quote.pali}</p>
             <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-secondary)' }}>{quote.ko}</p>
@@ -118,9 +118,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── 캘린더 (남은 공간 채움) ── */}
-      <div className="flex-1 min-h-0">
-        <StudyCalendar />
+      {/* ── 캘린더 ── */}
+      <StudyCalendar />
+
+      {/* 푸터 */}
+      <div className="pt-5 pb-3 text-center">
+        <p className="text-[10px]" style={{ color: 'var(--color-text-tertiary)' }}>제작: 혜통</p>
       </div>
     </div>
   )
@@ -139,9 +142,9 @@ function StudyCalendar() {
   const today = new Date().toISOString().slice(0, 10)
 
   return (
-    <div className="rounded-2xl p-3 h-full flex flex-col"
+    <div className="rounded-2xl p-4"
       style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-sm)' }}>
-      <div className="flex items-center justify-between mb-2 shrink-0">
+      <div className="flex items-center justify-between mb-2 ">
         <button onClick={() => setViewDate(new Date(year, month - 1, 1))}
           className="w-7 h-7 flex items-center justify-center rounded-full active:scale-90"
           style={{ color: 'var(--color-text-secondary)' }}>
@@ -158,13 +161,13 @@ function StudyCalendar() {
           </svg>
         </button>
       </div>
-      <div className="grid grid-cols-7 gap-0.5 mb-0.5 shrink-0">
+      <div className="grid grid-cols-7 gap-0.5 mb-0.5 ">
         {WEEKDAYS.map(d => (
           <div key={d} className="text-center text-[9px] font-semibold py-0.5"
             style={{ color: d === '일' ? '#EF5350' : d === '토' ? '#42A5F5' : 'var(--color-text-tertiary)' }}>{d}</div>
         ))}
       </div>
-      <div className="grid grid-cols-7 gap-0.5 flex-1">
+      <div className="grid grid-cols-7 gap-1">
         {Array.from({ length: firstDow }, (_, i) => <div key={`e${i}`} />)}
         {Array.from({ length: daysInMonth }, (_, i) => {
           const day = i + 1
@@ -173,7 +176,7 @@ function StudyCalendar() {
           const isToday = dateStr === today
           return (
             <div key={day}
-              className="flex flex-col items-center justify-center rounded-lg text-[11px] font-medium"
+              className="aspect-square flex flex-col items-center justify-center rounded-lg text-xs font-medium"
               style={{
                 backgroundColor: hasStudy ? 'color-mix(in srgb, var(--color-primary) 15%, transparent)' : 'transparent',
                 border: isToday ? '1.5px solid var(--color-primary)' : '1.5px solid transparent',

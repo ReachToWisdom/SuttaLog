@@ -10,10 +10,8 @@ export default function Layout() {
   }, [location.pathname])
 
   return (
-    <div className="h-full flex flex-col" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>
-      <main className="flex-1 overflow-y-auto overflow-x-hidden">
-        <Outlet />
-      </main>
+    <div className="min-h-dvh" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>
+      <Outlet />
       <BottomNav />
     </div>
   )
