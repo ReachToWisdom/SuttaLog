@@ -47,7 +47,7 @@ export default function Home() {
   const totalPct = Math.round(COURSES.reduce((s, c) => s + (getProgress(c.id) / c.total) * 100, 0) / COURSES.length)
 
   return (
-    <div className="flex flex-col px-4 pt-4 pb-16" style={{ height: 'calc(100dvh - 56px)' }}>
+    <div className="flex flex-col px-4 pt-4 pb-16 h-full overflow-hidden">
 
       {/* ── 인사 카드 ── */}
       <div className="rounded-2xl p-3.5 mb-3 shrink-0 intro-fade-up" style={{ background: g.bg, color: g.tc, boxShadow: 'var(--shadow-md)' }}>
