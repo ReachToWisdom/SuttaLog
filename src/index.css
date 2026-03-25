@@ -1,52 +1,65 @@
 @import "tailwindcss";
 
-/* 테마 CSS 변수 */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Pretendard+Variable:wght@300;400;500;600;700&display=swap');
+
+/* ── CSS 변수 (SuttaLog3 기반) ── */
 :root {
-  --color-primary: #D4760A;
-  --color-primary-light: #F5A623;
+  --color-primary: #C06B0A;
+  --color-primary-light: #E8993A;
+  --color-primary-dark: #8F4F08;
+  --color-primary-gradient: linear-gradient(135deg, #D4820E 0%, #E8993A 100%);
+  --color-primary-glow: rgba(192, 107, 10, 0.15);
   --color-accent: #2E7D32;
   --color-accent-light: #4CAF50;
-  --color-bg: #FEFCF3;
+  --color-error: #C62828;
+  --color-bg: #FBF8F0;
   --color-surface: #FFFFFF;
-  --color-text: #2C2C2C;
-  --color-text-secondary: #6B6B6B;
-  --color-border: #E0D5C0;
+  --color-surface-elevated: #FFFDF7;
+  --color-surface-hover: #F7F2E8;
+  --color-text: #1E1B16;
+  --color-text-secondary: #6D6556;
+  --color-text-tertiary: #9C9488;
+  --color-border: #E4DDD0;
+  --color-border-light: #F0EBE2;
+  --color-divider: #EDE8DF;
+  --color-overlay: rgba(30, 27, 22, 0.4);
   --font-pali: 'Noto Serif', Georgia, 'Times New Roman', serif;
-  --font-ui: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-  --pali-fontsize: 16px;
+  --font-ui: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --pali-fontsize: 18px;
+  --shadow-sm: 0 1px 2px rgba(30, 27, 22, 0.06);
+  --shadow-md: 0 2px 8px rgba(30, 27, 22, 0.08), 0 1px 2px rgba(30, 27, 22, 0.04);
+  --shadow-lg: 0 4px 16px rgba(30, 27, 22, 0.1), 0 2px 4px rgba(30, 27, 22, 0.04);
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-xl: 20px; --radius-full: 9999px;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="dark"] {
-  --color-bg: #1A1A2E;
-  --color-surface: #252540;
-  --color-text: #E8E8E8;
-  --color-text-secondary: #A0A0B0;
-  --color-border: #3A3A5C;
+  --color-primary: #E8993A; --color-primary-light: #F2B560; --color-primary-dark: #C06B0A;
+  --color-primary-gradient: linear-gradient(135deg, #E8993A 0%, #F2B560 100%);
+  --color-accent: #66BB6A; --color-error: #EF5350;
+  --color-bg: #141210; --color-surface: #1E1C18; --color-surface-elevated: #28261F;
+  --color-text: #EDE8DF; --color-text-secondary: #A8A196; --color-text-tertiary: #7A756C;
+  --color-border: #3A362E; --color-border-light: #2E2B24; --color-divider: #332F26;
 }
 
-[data-theme="sepia"] {
-  --color-bg: #F4ECD8;
-  --color-surface: #EDE4D0;
-  --color-text: #3E2723;
-  --color-text-secondary: #6D5D4B;
-  --color-border: #C8B99A;
-}
+/* ── 기본 요소 ── */
+html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
 
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   font-family: var(--font-ui);
   background-color: var(--color-bg);
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
-  /* iOS safe area */
+  line-height: 1.6;
+  -webkit-user-select: none; user-select: none;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
-  /* 스마트폰 비율 고정 */
   overflow-x: hidden;
 }
 
-/* 앱 컨테이너 — 스마트폰 비율 */
 #root {
   max-width: 430px;
   margin: 0 auto;
@@ -54,43 +67,60 @@ html, body {
   position: relative;
 }
 
-/* 데스크톱에서 스마트폰 프레임 */
-@media (min-width: 431px) {
-  html { background: #E8E0D0; }
-  #root {
-    box-shadow: 0 0 40px rgba(0,0,0,0.1);
-    border-left: 1px solid var(--color-border);
-    border-right: 1px solid var(--color-border);
-  }
-}
+::selection { background-color: rgba(212, 130, 14, 0.25); }
 
-/* 빠알리 텍스트 */
+/* ── 빠알리 텍스트 ── */
 .pali-text {
   font-family: var(--font-pali);
-  line-height: 1.8;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
   font-size: var(--pali-fontsize);
+  word-break: keep-all;
 }
 
-/* 스크롤바 숨김 (모바일) */
+/* ── 애니메이션 ── */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes introFadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fadeIn { animation: fadeIn 250ms ease-out both; }
+.animate-slideUp { animation: slideUp 400ms ease-out both; }
+.intro-fade-up { animation: introFadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.intro-fade-up-delay { animation: introFadeUp 0.6s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.intro-fade-up-delay2 { animation: introFadeUp 0.6s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* ── 버튼 ── */
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 10px 20px; border-radius: var(--radius-full);
+  background: var(--color-primary-gradient); color: #fff;
+  font-weight: 600; font-size: 0.875rem; border: none; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(192, 107, 10, 0.3);
+  transition: all var(--transition-fast);
+}
+.btn-primary:active { transform: scale(0.97); }
+
+/* ── 카드 ── */
+.card-shadow { box-shadow: var(--shadow-md); }
+
+/* ── 하단 바 프로스트 ── */
+.bottom-bar-frost {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: color-mix(in srgb, var(--color-bg) 80%, transparent);
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+
+/* ── 스크롤바 ── */
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: var(--radius-full); }
 
-/* 바텀시트 */
-.bottom-sheet-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 40;
+/* ── 데스크톱 프레임 ── */
+@media (min-width: 431px) {
+  html { background: #E8E0D0; }
+  #root { box-shadow: 0 0 40px rgba(0,0,0,0.1); border-left: 1px solid var(--color-border); border-right: 1px solid var(--color-border); }
 }
 
-.bottom-sheet {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--color-surface);
-  border-radius: 16px 16px 0 0;
-  z-index: 50;
-  max-height: 70vh;
-  overflow-y: auto;
-}
+.pb-safe { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
