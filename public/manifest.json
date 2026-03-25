@@ -1,6 +1,6 @@
 {
-  "name": "SuttaLog - 빠알리어 경전 학습",
-  "short_name": "SuttaLog",
+  "name": "빠알리어 공부1",
+  "short_name": "빠알리어 공부1",
   "start_url": "/SuttaLog/",
   "display": "standalone",
   "background_color": "#FEFCF3",

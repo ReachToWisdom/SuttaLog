@@ -5,14 +5,13 @@ import BottomNav from './BottomNav'
 export default function Layout() {
   const location = useLocation()
 
-  // 페이지 이동 시 TTS 중단
   useEffect(() => {
     speechSynthesis.cancel()
   }, [location.pathname])
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>
-      <main className="pb-20 min-h-screen max-w-md mx-auto">
+    <div className="min-h-dvh flex flex-col" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>
+      <main className="flex-1 pb-16 overflow-y-auto">
         <Outlet />
       </main>
       <BottomNav />

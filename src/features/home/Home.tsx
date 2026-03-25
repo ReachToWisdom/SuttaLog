@@ -20,7 +20,7 @@ export default function Home() {
     <div className="px-4 pt-6 space-y-5">
       {/* 헤더 */}
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-bold" style={{ color: 'var(--color-primary)' }}>🪷 SuttaLog</h1>
+        <h1 className="text-lg font-bold" style={{ color: 'var(--color-primary)' }}>🪷 빠알리어 공부</h1>
         <div className="flex items-center gap-3 text-sm">
           <span>🔥 0</span>
           <span>💎 0</span>

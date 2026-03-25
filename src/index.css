@@ -32,12 +32,36 @@
   --color-border: #C8B99A;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
   font-family: var(--font-ui);
   background-color: var(--color-bg);
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
+  /* iOS safe area */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  /* 스마트폰 비율 고정 */
+  overflow-x: hidden;
+}
+
+/* 앱 컨테이너 — 스마트폰 비율 */
+#root {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+}
+
+/* 데스크톱에서 스마트폰 프레임 */
+@media (min-width: 431px) {
+  html { background: #E8E0D0; }
+  #root {
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+  }
 }
 
 /* 빠알리 텍스트 */
