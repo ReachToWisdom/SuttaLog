@@ -1,4 +1,5 @@
-// 홈 화면 — SuttaLog3 프리미엄 디자인 기반
+// 홈 화면 — SuttaLog2 스타일
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const COURSES = [
@@ -112,6 +113,9 @@ export default function Home() {
         ))}
       </div>
 
+      {/* ── 학습 캘린더 ── */}
+      <StudyCalendar />
+
       {/* ── 오늘의 명구 ── */}
       <div className="rounded-2xl overflow-hidden mb-4 intro-fade-up-delay2"
         style={{ background: 'var(--color-surface-elevated)', boxShadow: 'var(--shadow-md)', border: '1px solid var(--color-border-light)' }}>
@@ -166,6 +170,75 @@ export default function Home() {
             )
           })}
         </div>
+      </div>
+    </div>
+  )
+}
+
+// ── 학습 캘린더 ──
+const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토']
+
+function getStudyDates(): Set<string> {
+  const dates: string[] = JSON.parse(localStorage.getItem('suttalog-study-dates') || '[]')
+  return new Set(dates)
+}
+
+function StudyCalendar() {
+  const [viewDate, setViewDate] = useState(new Date())
+  const year = viewDate.getFullYear()
+  const month = viewDate.getMonth()
+  const studyDates = getStudyDates()
+  const firstDow = new Date(year, month, 1).getDay()
+  const daysInMonth = new Date(year, month + 1, 0).getDate()
+  const today = new Date().toISOString().slice(0, 10)
+
+  return (
+    <div className="rounded-2xl p-4 mb-4"
+      style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-sm)' }}>
+      <div className="flex items-center justify-between mb-3">
+        <button onClick={() => setViewDate(new Date(year, month - 1, 1))}
+          className="w-8 h-8 flex items-center justify-center rounded-full active:scale-90"
+          style={{ color: 'var(--color-text-secondary)' }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <p className="text-sm font-bold">{year}년 {month + 1}월</p>
+        <button onClick={() => setViewDate(new Date(year, month + 1, 1))}
+          className="w-8 h-8 flex items-center justify-center rounded-full active:scale-90"
+          style={{ color: 'var(--color-text-secondary)' }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
+      <div className="grid grid-cols-7 gap-1 mb-1">
+        {WEEKDAYS.map(d => (
+          <div key={d} className="text-center text-[10px] font-semibold py-1"
+            style={{ color: d === '일' ? '#EF5350' : d === '토' ? '#42A5F5' : 'var(--color-text-tertiary)' }}>{d}</div>
+        ))}
+      </div>
+      <div className="grid grid-cols-7 gap-1">
+        {Array.from({ length: firstDow }, (_, i) => <div key={`e${i}`} className="aspect-square" />)}
+        {Array.from({ length: daysInMonth }, (_, i) => {
+          const day = i + 1
+          const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+          const hasStudy = studyDates.has(dateStr)
+          const isToday = dateStr === today
+          return (
+            <div key={day}
+              className="aspect-square flex flex-col items-center justify-center rounded-xl text-xs font-medium"
+              style={{
+                backgroundColor: hasStudy ? 'color-mix(in srgb, var(--color-primary) 15%, transparent)' : 'transparent',
+                border: isToday ? '2px solid var(--color-primary)' : '2px solid transparent',
+                color: hasStudy ? 'var(--color-primary)' : 'var(--color-text-secondary)',
+                fontWeight: hasStudy ? 700 : 400,
+              }}>
+              {day}
+              {hasStudy && <span className="w-1 h-1 rounded-full mt-0.5" style={{ backgroundColor: 'var(--color-primary)' }} />}
+            </div>
+          )
+        })}
       </div>
     </div>
   )

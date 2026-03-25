@@ -79,6 +79,10 @@ export default function ScriptureLearn() {
   }
   const handleNext = () => {
     stopAudio()
+    // 캘린더에 오늘 학습 기록
+    const today = new Date().toISOString().slice(0, 10)
+    const dates: string[] = JSON.parse(localStorage.getItem('suttalog-study-dates') || '[]')
+    if (!dates.includes(today)) { dates.push(today); localStorage.setItem('suttalog-study-dates', JSON.stringify(dates)) }
     if (stepIdx + 1 >= STEPS.length) { nav('/lesson-complete'); return }
     setStepIdx(i => i + 1); setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false); setArrangeOrder([])
   }
