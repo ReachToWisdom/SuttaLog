@@ -6,10 +6,8 @@ const V1Ko = '붓당 사라낭 갓차미.'
 const V1K = '저는 붓다께 귀의합니다.'
 const V2 = 'Dhammaṃ saraṇaṃ gacchāmi.'
 const V2Ko = '담망 사라낭 갓차미.'
-const V2K = '저는 담마(법)에 귀의합니다.'
 const V3 = 'Saṅghaṃ saraṇaṃ gacchāmi.'
 const V3Ko = '상강 사라낭 갓차미.'
-const V3K = '저는 상가(승가)에 귀의합니다.'
 
 const V_FULL =
   'Buddhaṃ saraṇaṃ gacchāmi.\nDhammaṃ saraṇaṃ gacchāmi.\nSaṅghaṃ saraṇaṃ gacchāmi.\n' +
