@@ -50,7 +50,18 @@ export default function ScriptureLearn() {
       return next
     })
   }
-  const [hearts, setHearts] = useState(3)
+  const [hearts, setHearts] = useState(5)
+  const [prevHearts, setPrevHearts] = useState(5)
+  const [heartShakeIdx, setHeartShakeIdx] = useState<number | null>(null)
+
+  useEffect(() => {
+    if (hearts < prevHearts) {
+      setHeartShakeIdx(hearts)
+      const t = setTimeout(() => setHeartShakeIdx(null), 600)
+      return () => clearTimeout(t)
+    }
+    setPrevHearts(hearts)
+  }, [hearts, prevHearts])
   const [selected, setSelected] = useState<number | null>(null)
   const [showResult, setShowResult] = useState(false)
   const [writingInput, setWritingInput] = useState('')
@@ -114,9 +125,15 @@ export default function ScriptureLearn() {
   if (hearts <= 0) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>
-        <span className="text-5xl">😔</span>
+        <span className="text-6xl">🥀</span>
         <h2 className="text-xl font-bold mt-4">연꽃잎을 모두 잃었습니다</h2>
-        <button onClick={() => nav('/')} className="mt-6 px-6 py-3 rounded-xl text-white font-bold" style={{ backgroundColor: 'var(--color-primary)' }}>홈으로</button>
+        <p className="text-sm mt-2" style={{ color: 'var(--color-text-secondary)' }}>다시 도전해 보세요 🙏</p>
+        <button
+          onClick={() => { setStepIdx(0); setHearts(5); setPrevHearts(5); setSelected(null); setShowResult(false) }}
+          className="mt-6 w-full px-6 py-3 rounded-xl text-white font-bold"
+          style={{ backgroundColor: 'var(--color-primary)' }}
+        >처음부터 다시</button>
+        <button onClick={() => nav('/')} className="mt-3 w-full px-6 py-3 rounded-xl font-bold" style={{ border: '1px solid var(--color-border)' }}>홈으로</button>
       </div>
     )
   }
@@ -151,7 +168,13 @@ export default function ScriptureLearn() {
           <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progress}%`, backgroundColor: 'var(--color-primary)' }} />
         </div>
         <div className="flex gap-0.5 shrink-0">
-          {[0, 1, 2].map(i => (<span key={i} className={`text-base ${i < hearts ? '' : 'opacity-20 grayscale'}`}>🪷</span>))}
+          {[0, 1, 2, 3, 4].map(i => (
+              <span
+                key={i}
+                className={`text-base transition-all duration-300 ${i < hearts ? 'heart-pulse' : 'opacity-15 grayscale scale-75'} ${heartShakeIdx === i ? 'heart-shake' : ''}`}
+                style={{ animationDelay: i < hearts ? `${i * 0.2}s` : undefined }}
+              >🪷</span>
+            ))}
         </div>
       </div>
 
