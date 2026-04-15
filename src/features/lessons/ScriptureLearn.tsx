@@ -7,6 +7,13 @@ import { LESSON_SN56_11, type StepType } from './lesson-data-sn56-11'
 import { LESSON_SN22_59 } from './lesson-data-sn22-59'
 import { LESSON_SN45_8 } from './lesson-data-sn45-8'
 import { LESSON_MN10 } from './lesson-data-mn10'
+import { LESSON_NAMO } from './lesson-data-namo'
+import { LESSON_TRISARANA } from './lesson-data-trisarana'
+import { LESSON_PANCASILA } from './lesson-data-pancasila'
+import { LESSON_TISARANA_GUNA } from './lesson-data-tisarana-guna'
+import { LESSON_MANGALA } from './lesson-data-mangala'
+import { LESSON_METTA } from './lesson-data-metta'
+import { LESSON_RATANA } from './lesson-data-ratana'
 
 type Step = StepType
 
@@ -16,6 +23,13 @@ const LESSON_MAP: Record<string, Step[]> = {
   'sn22-59': LESSON_SN22_59,
   'sn45-8': LESSON_SN45_8,
   'mn10': LESSON_MN10,
+  'namo': LESSON_NAMO,
+  'trisarana': LESSON_TRISARANA,
+  'pancasila': LESSON_PANCASILA,
+  'tisarana-guna': LESSON_TISARANA_GUNA,
+  'mangala': LESSON_MANGALA,
+  'metta': LESSON_METTA,
+  'ratana': LESSON_RATANA,
 }
 
 export default function ScriptureLearn() {

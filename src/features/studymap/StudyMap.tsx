@@ -5,10 +5,17 @@ import { useNavigate } from 'react-router-dom'
 const level = Number(localStorage.getItem('suttalog-level') || '0')
 
 const SKILLS = [
-  { id: 4, title: '사념처경', desc: '사념처 수행법 🎯', icon: '🧘', route: '/learn/scripture/mn10', source: 'MN 10' },
-  { id: 3, title: '팔정도 분별경', desc: '팔정도 각 항목 분석', icon: '☸️', route: '/learn/scripture/sn45-8', source: 'SN 45.8' },
-  { id: 2, title: '무아경', desc: '오온과 무아', icon: '🔍', route: '/learn/scripture/sn22-59', source: 'SN 22.59' },
-  { id: 1, title: '전법륜경', desc: '사성제와 팔정도 · 첫 설법', icon: '☸️', route: '/learn/scripture/dhp1-alphabet', source: 'SN 56.11' },
+  { id: 11, title: '마음챙김의 확립 경', desc: '사념처 수행법 🎯', icon: '🧘', route: '/learn/scripture/mn10', source: 'MN 10' },
+  { id: 10, title: '보배경', desc: '삼보의 공덕과 가피', icon: '💎', route: '/learn/scripture/ratana', source: 'Snp 2.1' },
+  { id: 9, title: '무아의 특징경', desc: '오온과 무아', icon: '🔍', route: '/learn/scripture/sn22-59', source: 'SN 22.59' },
+  { id: 8, title: '자애경', desc: '자애의 마음 수행', icon: '💛', route: '/learn/scripture/metta', source: 'Snp 1.8' },
+  { id: 7, title: '초전법륜경', desc: '사성제와 팔정도 · 첫 설법', icon: '☸️', route: '/learn/scripture/sn56-11', source: 'SN 56.11' },
+  { id: 6, title: '축복경', desc: '최상의 축복 38가지', icon: '🌸', route: '/learn/scripture/mangala', source: 'Snp 2.4' },
+  { id: 5, title: '도분별경', desc: '팔정도 각 항목 분석', icon: '☸️', route: '/learn/scripture/sn45-8', source: 'SN 45.8' },
+  { id: 4, title: '삼보공덕', desc: '붓다·담마·상가의 공덕', icon: '🙏', route: '/learn/scripture/tisarana-guna', source: 'AN 11.12' },
+  { id: 3, title: '오계', desc: '다섯 가지 수행 규칙', icon: '📿', route: '/learn/scripture/pancasila', source: 'AN 8.39' },
+  { id: 2, title: '삼귀의', desc: '붓다·담마·상가에 귀의', icon: '🪷', route: '/learn/scripture/trisarana', source: 'Khp 1' },
+  { id: 1, title: '나모땃사', desc: '세존께 경배', icon: '🙏', route: '/learn/scripture/namo', source: '전통 예경문' },
 ].map(s => ({
   ...s,
   status: (s.id - 1) === level ? 'current' as const : (s.id - 1) < level ? 'skipped' as const : 'locked' as const,
@@ -59,19 +66,18 @@ export default function StudyMap() {
                   outlineColor: isCurrent ? 'var(--color-primary)' : undefined,
                 }}
               >
-                {isLocked ? '🔒' : isSkipped ? '—' : skill.icon}
+                {isSkipped ? '✓' : skill.icon}
               </div>
 
               {/* 스킬 정보 */}
               <button
-                onClick={() => !isLocked && nav(skill.route)}
-                className={`flex-1 rounded-xl p-3 text-left transition-all ${!isLocked ? 'active:scale-[0.98]' : ''}`}
+                onClick={() => nav(skill.route)}
+                className="flex-1 rounded-xl p-3 text-left transition-all active:scale-[0.98]"
                 style={{
                   backgroundColor: 'var(--color-surface)',
                   border: isCurrent ? '2px solid var(--color-primary)' : '1px solid var(--color-border)',
-                  opacity: isLocked ? 0.5 : isSkipped ? 0.6 : 1,
+                  opacity: isLocked ? 0.6 : isSkipped ? 0.7 : 1,
                 }}
-                disabled={isLocked}
               >
                 <div className="flex items-center justify-between">
                   <div>
