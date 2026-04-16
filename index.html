@@ -29,23 +29,18 @@
           ? __BUILD_TIME__
           : Date.now().toString()
 
-        // 등록 전에 캡처 — 기존 SW가 있을 때만 true (업데이트 vs 최초 설치 구분)
+        // 등록 전에 캡처 — 기존 SW 컨트롤러 여부 (최초 설치 vs 업데이트 구분)
         const hadController = !!navigator.serviceWorker.controller
 
-        navigator.serviceWorker.register(
-          '/SuttaLog/sw.js?v=' + buildTime
-        ).then(reg => {
-          // 기존 SW가 있던 경우에만 reload (최초 설치 시 반복 새로고침 방지)
-          reg.addEventListener('updatefound', () => {
-            const newWorker = reg.installing
-            if (!newWorker) return
-            newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'activated' && hadController) {
-                window.location.reload()
-              }
-            })
-          })
+        // controllerchange: SW 컨트롤러가 실제로 교체될 때만 발생
+        // hadController=false(최초 설치)이면 reload 안 함 → 무한 루프 차단
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (hadController) {
+            window.location.reload()
+          }
         })
+
+        navigator.serviceWorker.register('/SuttaLog/sw.js?v=' + buildTime)
       }
     </script>
   </body>
