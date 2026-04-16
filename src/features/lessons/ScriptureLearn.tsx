@@ -1,8 +1,9 @@
 // 경전 중심 Duolingo식 학습 UI (데이터는 별도 파일)
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { speakPali } from '../../utils/pali-tts'
 import WritingCanvas from '../../components/WritingCanvas'
+import LotusHeart from '../../components/LotusHeart'
 import { LESSON_SN56_11, type StepType } from './lesson-data-sn56-11'
 import { LESSON_SN22_59 } from './lesson-data-sn22-59'
 import { LESSON_SN45_8 } from './lesson-data-sn45-8'
@@ -32,11 +33,41 @@ const LESSON_MAP: Record<string, Step[]> = {
   'ratana': LESSON_RATANA,
 }
 
+// 단어 설명 단계 설정에 따라 스텝 필터링
+function filterStepsByWordMode(steps: Step[]): Step[] {
+  const mode = localStorage.getItem('suttalog-word-mode') || 'all'
+  if (mode === 'all') return steps
+
+  const limit = Number(localStorage.getItem('suttalog-word-limit') || '3')
+  const globalCounts: Record<string, number> = JSON.parse(
+    localStorage.getItem('suttalog-word-counts') || '{}'
+  )
+  const seenInLesson = new Set<string>()
+
+  return steps.filter(step => {
+    if (step.type !== 'teach') return true
+    const word = step.word.toLowerCase().trim()
+
+    if (mode === 'first') {
+      if (seenInLesson.has(word)) return false
+      seenInLesson.add(word)
+      return true
+    }
+
+    if (mode === 'limit') {
+      return (globalCounts[word] || 0) < limit
+    }
+
+    return true
+  })
+}
+
 export default function ScriptureLearn() {
   const nav = useNavigate()
   const { lessonId } = useParams<{ lessonId: string }>()
   const lid = lessonId || 'dhp1-alphabet'
-  const STEPS = LESSON_MAP[lid] || LESSON_SN56_11
+  const RAW_STEPS = LESSON_MAP[lid] || LESSON_SN56_11
+  const STEPS = filterStepsByWordMode(RAW_STEPS)
 
   // 이어 학습: localStorage에서 진도 복원
   const savedStep = Number(localStorage.getItem(`suttalog-progress-${lid}`) || '0')
@@ -50,8 +81,10 @@ export default function ScriptureLearn() {
       return next
     })
   }
-  const [hearts, setHearts] = useState(5)
-  const [prevHearts, setPrevHearts] = useState(5)
+  // SSOT: 연꽃 개수는 설정에서 읽음 (기본 5)
+  const MAX_HEARTS = Number(localStorage.getItem('suttalog-hearts-count') || '5')
+  const [hearts, setHearts] = useState(MAX_HEARTS)
+  const [prevHearts, setPrevHearts] = useState(MAX_HEARTS)
   const [heartShakeIdx, setHeartShakeIdx] = useState<number | null>(null)
 
   useEffect(() => {
@@ -66,6 +99,7 @@ export default function ScriptureLearn() {
   const [showResult, setShowResult] = useState(false)
   const [writingInput, setWritingInput] = useState('')
   const [writingChecked, setWritingChecked] = useState(false)
+  const [showTOC, setShowTOC] = useState(false)
   const writingEnabled = localStorage.getItem('suttalog-writing') !== 'off'
 
   const step = STEPS[stepIdx]
@@ -104,6 +138,15 @@ export default function ScriptureLearn() {
   }
   const handleNext = () => {
     stopAudio()
+    // teach 스텝 완료 시 전역 단어 학습 횟수 기록
+    if (step.type === 'teach') {
+      const word = step.word.toLowerCase().trim()
+      const counts: Record<string, number> = JSON.parse(
+        localStorage.getItem('suttalog-word-counts') || '{}'
+      )
+      counts[word] = (counts[word] || 0) + 1
+      localStorage.setItem('suttalog-word-counts', JSON.stringify(counts))
+    }
     // 캘린더에 오늘 학습 기록
     const today = new Date().toISOString().slice(0, 10)
     const dates: string[] = JSON.parse(localStorage.getItem('suttalog-study-dates') || '[]')
@@ -129,7 +172,7 @@ export default function ScriptureLearn() {
         <h2 className="text-xl font-bold mt-4">연꽃잎을 모두 잃었습니다</h2>
         <p className="text-sm mt-2" style={{ color: 'var(--color-text-secondary)' }}>다시 도전해 보세요 🙏</p>
         <button
-          onClick={() => { setStepIdx(0); setHearts(5); setPrevHearts(5); setSelected(null); setShowResult(false) }}
+          onClick={() => { setStepIdx(0); setHearts(MAX_HEARTS); setPrevHearts(MAX_HEARTS); setSelected(null); setShowResult(false) }}
           className="mt-6 w-full px-6 py-3 rounded-xl text-white font-bold"
           style={{ backgroundColor: 'var(--color-primary)' }}
         >처음부터 다시</button>
@@ -163,20 +206,110 @@ export default function ScriptureLearn() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>
       <div className="shrink-0 flex items-center gap-2 px-4 pt-3 pb-2">
-        <button onClick={() => nav(-1)} className="text-lg">✕</button>
+        <button onClick={() => nav('/')} className="text-lg">✕</button>
         <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ backgroundColor: 'var(--color-border)' }}>
           <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progress}%`, backgroundColor: 'var(--color-primary)' }} />
         </div>
+        {/* 목차 버튼 */}
+        <button
+          onClick={() => setShowTOC(true)}
+          className="w-8 h-8 flex items-center justify-center rounded-full active:scale-90 transition-transform shrink-0"
+          style={{ color: 'var(--color-text-secondary)' }}
+          aria-label="목차"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+            <line x1="3" y1="6" x2="3.01" y2="6" />
+            <line x1="3" y1="12" x2="3.01" y2="12" />
+            <line x1="3" y1="18" x2="3.01" y2="18" />
+          </svg>
+        </button>
         <div className="flex gap-0.5 shrink-0">
-          {[0, 1, 2, 3, 4].map(i => (
-              <span
-                key={i}
-                className={`text-base transition-all duration-300 ${i < hearts ? 'heart-pulse' : 'opacity-15 grayscale scale-75'} ${heartShakeIdx === i ? 'heart-shake' : ''}`}
-                style={{ animationDelay: i < hearts ? `${i * 0.2}s` : undefined }}
-              >🪷</span>
-            ))}
+          {Array.from({ length: MAX_HEARTS }, (_, i) => (
+            <LotusHeart
+              key={i}
+              active={i < hearts}
+              shake={heartShakeIdx === i}
+              delay={i * 0.2}
+              size={24}
+            />
+          ))}
         </div>
       </div>
+
+      {/* === 스텝 목차 오버레이 === */}
+      {showTOC && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center"
+          style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
+          onClick={() => setShowTOC(false)}>
+          <div className="w-full max-w-lg rounded-t-3xl overflow-hidden"
+            style={{ backgroundColor: 'var(--color-bg)', maxHeight: '70vh' }}
+            onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between px-5 pt-5 pb-3">
+              <h3 className="text-base font-bold">스텝 목차</h3>
+              <button onClick={() => setShowTOC(false)}
+                className="w-8 h-8 flex items-center justify-center rounded-full active:scale-90 transition-transform"
+                style={{ color: 'var(--color-text-secondary)' }}>✕</button>
+            </div>
+            <div className="overflow-y-auto px-3 pb-6" style={{ maxHeight: 'calc(70vh - 60px)' }}>
+              {STEPS.map((s, i) => {
+                const typeIcon = s.type === 'intro' ? '📖'
+                  : s.type === 'teach' ? '📝'
+                  : s.type === 'teach-grammar' ? '📐'
+                  : s.type === 'quiz' ? '❓'
+                  : s.type === 'match-listen' ? '🔊'
+                  : s.type === 'match-reverse' ? '🎯'
+                  : s.type === 'writing' ? '✍️'
+                  : s.type === 'speak' ? '🎤'
+                  : s.type === 'arrange' ? '🧩'
+                  : s.type === 'verse' ? '☸️' : '•'
+                const label = s.type === 'intro' ? s.title
+                  : s.type === 'teach' ? `${s.word} — ${s.meaning}`
+                  : s.type === 'teach-grammar' ? s.title
+                  : s.type === 'quiz' ? `퀴즈: ${s.question.slice(0, 28)}…`
+                  : s.type === 'match-listen' ? `듣기: ${s.instruction.slice(0, 28)}`
+                  : s.type === 'match-reverse' ? `뜻맞추기: ${s.meaning}`
+                  : s.type === 'writing' ? `쓰기: ${s.answer}`
+                  : s.type === 'speak' ? `따라읽기: ${s.pali.slice(0, 28)}`
+                  : s.type === 'arrange' ? `배열: ${s.instruction.slice(0, 28)}`
+                  : s.type === 'verse' ? `경전: ${s.pali.slice(0, 28)}…`
+                  : `스텝 ${i + 1}`
+                const isCur = i === stepIdx
+                return (
+                  <button key={i}
+                    onClick={() => {
+                      stopAudio()
+                      setStepIdx(i)
+                      setSelected(null)
+                      setShowResult(false)
+                      setWritingInput('')
+                      setWritingChecked(false)
+                      setArrangeOrder([])
+                      setShowTOC(false)
+                    }}
+                    className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all duration-200 active:scale-[0.98]"
+                    style={{
+                      backgroundColor: isCur ? 'color-mix(in srgb, var(--color-primary) 10%, var(--color-surface))' : 'transparent',
+                      border: isCur ? '1px solid var(--color-primary)' : '1px solid transparent',
+                    }}>
+                    <span className="text-sm shrink-0">{typeIcon}</span>
+                    <span className="text-xs font-medium truncate flex-1"
+                      style={{ color: isCur ? 'var(--color-primary)' : 'var(--color-text)' }}>
+                      {i + 1}. {label}
+                    </span>
+                    {isCur && (
+                      <span className="text-[10px] font-bold shrink-0" style={{ color: 'var(--color-primary)' }}>현재</span>
+                    )}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="flex-1 flex flex-col overflow-y-auto px-4 pt-2">
         {step.type === 'intro' && (

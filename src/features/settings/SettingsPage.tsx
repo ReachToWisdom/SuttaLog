@@ -20,6 +20,40 @@ export default function SettingsPage() {
   const [writingOn, setWritingOn] = useState(localStorage.getItem('suttalog-writing') !== 'off')
   const [fontSize, setFontSize] = useState(Number(localStorage.getItem('suttalog-fontsize')) || 16)
 
+  // SSOT: 연꽃(목숨) 개수 — 기본값 5, 범위 1~10
+  const [heartsCount, setHeartsCount] = useState(Number(localStorage.getItem('suttalog-hearts-count') || '5'))
+
+  const changeHeartsCount = (n: number) => {
+    const clamped = Math.max(1, Math.min(10, n))
+    setHeartsCount(clamped)
+    localStorage.setItem('suttalog-hearts-count', String(clamped))
+  }
+
+  // 단어 설명 단계 설정
+  // 'all'   : 모두 표시 (기본)
+  // 'first' : 과 내 첫 등장만 (중복 단어 스킵)
+  // 'limit' : 전체 x회 이상 학습한 단어 스킵
+  const [wordMode, setWordMode] = useState<'all' | 'first' | 'limit'>(
+    (localStorage.getItem('suttalog-word-mode') as 'all' | 'first' | 'limit') || 'all'
+  )
+  const [wordLimit, setWordLimit] = useState(Number(localStorage.getItem('suttalog-word-limit') || '3'))
+
+  const changeWordMode = (mode: 'all' | 'first' | 'limit') => {
+    setWordMode(mode)
+    localStorage.setItem('suttalog-word-mode', mode)
+  }
+
+  const changeWordLimit = (n: number) => {
+    const clamped = Math.max(1, Math.min(20, n))
+    setWordLimit(clamped)
+    localStorage.setItem('suttalog-word-limit', String(clamped))
+  }
+
+  const resetWordCounts = () => {
+    localStorage.removeItem('suttalog-word-counts')
+    alert('단어 학습 횟수가 초기화되었습니다.')
+  }
+
   const toggleWriting = () => {
     const next = !writingOn
     setWritingOn(next)
@@ -66,6 +100,30 @@ export default function SettingsPage() {
               style={{ left: soundOn ? 24 : 4 }} />
           </button>
         </div>
+      </div>
+
+      {/* 연꽃(목숨) 개수 */}
+      <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
+        <p className="text-sm font-semibold mb-1">🪷 연꽃 개수 (목숨)</p>
+        <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+          오답 시 차감되는 연꽃 개수 (1~10)
+        </p>
+        <div className="flex items-center gap-3">
+          <button onClick={() => changeHeartsCount(heartsCount - 1)}
+            className="w-9 h-9 rounded-full flex items-center justify-center text-lg font-bold active:scale-90"
+            style={{ backgroundColor: 'var(--color-border)' }}>−</button>
+          <div className="flex-1 flex items-center justify-center gap-1">
+            {Array.from({ length: heartsCount }, (_, i) => (
+              <span key={i} className="text-base">🪷</span>
+            ))}
+          </div>
+          <button onClick={() => changeHeartsCount(heartsCount + 1)}
+            className="w-9 h-9 rounded-full flex items-center justify-center text-lg font-bold active:scale-90"
+            style={{ backgroundColor: 'var(--color-border)' }}>+</button>
+        </div>
+        <p className="text-center mt-2 text-sm font-bold" style={{ color: 'var(--color-primary)' }}>
+          {heartsCount}개
+        </p>
       </div>
 
       {/* 동기화 */}
@@ -128,6 +186,67 @@ export default function SettingsPage() {
               style={{ left: writingOn ? 24 : 4 }} />
           </button>
         </div>
+      </div>
+
+      {/* 단어 설명 단계 */}
+      <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
+        <p className="text-sm font-semibold mb-1">📚 단어 설명 단계</p>
+        <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+          경전 학습 중 단어 해설(teach) 스텝 표시 기준
+        </p>
+
+        {/* 모드 선택 */}
+        <div className="space-y-2">
+          {([
+            { key: 'all',   icon: '📖', label: '모두 표시', desc: '모든 단어 해설 표시 (기본값)' },
+            { key: 'first', icon: '1️⃣', label: '과 내 첫 등장만', desc: '같은 과에서 이미 설명한 단어 제외' },
+            { key: 'limit', icon: '🔢', label: '학습 횟수 제한', desc: '전체 학습에서 x회 이상 본 단어 제외' },
+          ] as const).map(({ key, icon, label, desc }) => (
+            <button
+              key={key}
+              onClick={() => changeWordMode(key)}
+              className="w-full flex items-center gap-3 p-3 rounded-xl text-left transition-all"
+              style={{
+                backgroundColor: wordMode === key ? 'color-mix(in srgb, var(--color-primary) 10%, var(--color-surface))' : 'var(--color-bg)',
+                border: wordMode === key ? '1.5px solid var(--color-primary)' : '1.5px solid var(--color-border)',
+              }}
+            >
+              <span className="text-lg">{icon}</span>
+              <div className="flex-1">
+                <p className="text-sm font-semibold" style={{ color: wordMode === key ? 'var(--color-primary)' : 'var(--color-text)' }}>{label}</p>
+                <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-secondary)' }}>{desc}</p>
+              </div>
+              <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
+                style={{ border: `2px solid ${wordMode === key ? 'var(--color-primary)' : 'var(--color-border)'}`, backgroundColor: wordMode === key ? 'var(--color-primary)' : 'transparent' }}>
+                {wordMode === key && <div className="w-2 h-2 rounded-full bg-white" />}
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* 횟수 제한 스텝퍼 */}
+        {wordMode === 'limit' && (
+          <div className="mt-3 pt-3 flex items-center gap-3" style={{ borderTop: '1px solid var(--color-border)' }}>
+            <p className="text-sm flex-1">제외 기준 횟수</p>
+            <button onClick={() => changeWordLimit(wordLimit - 1)}
+              className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg"
+              style={{ backgroundColor: 'var(--color-border)' }}>−</button>
+            <span className="text-base font-bold w-8 text-center" style={{ color: 'var(--color-primary)' }}>{wordLimit}</span>
+            <button onClick={() => changeWordLimit(wordLimit + 1)}
+              className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg"
+              style={{ backgroundColor: 'var(--color-border)' }}>+</button>
+            <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>회 이상 시 제외</span>
+          </div>
+        )}
+
+        {/* 학습 횟수 초기화 */}
+        {wordMode !== 'all' && (
+          <button onClick={resetWordCounts}
+            className="mt-3 w-full py-2 rounded-xl text-xs font-medium"
+            style={{ border: '1px solid var(--color-border)', color: 'var(--color-text-secondary)' }}>
+            🔄 단어 학습 횟수 초기화
+          </button>
+        )}
       </div>
 
       {/* 글자 크기 */}
