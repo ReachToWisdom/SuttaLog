@@ -29,15 +29,18 @@
           ? __BUILD_TIME__
           : Date.now().toString()
 
+        // 등록 전에 캡처 — 기존 SW가 있을 때만 true (업데이트 vs 최초 설치 구분)
+        const hadController = !!navigator.serviceWorker.controller
+
         navigator.serviceWorker.register(
           '/SuttaLog/sw.js?v=' + buildTime
         ).then(reg => {
-          // 새 서비스워커 감지 시 자동 reload
+          // 기존 SW가 있던 경우에만 reload (최초 설치 시 반복 새로고침 방지)
           reg.addEventListener('updatefound', () => {
             const newWorker = reg.installing
             if (!newWorker) return
             newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+              if (newWorker.state === 'activated' && hadController) {
                 window.location.reload()
               }
             })
