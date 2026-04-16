@@ -181,19 +181,26 @@ export default function ScriptureLearn() {
     )
   }
 
-  const renderOptions = () => {
+  // layout='fill': 선택지가 세로 공간을 균등 분할 (퀴즈 화면)
+  // layout='stack': 고정 높이로 위에서 쌓기
+  const renderOptions = (layout: 'fill' | 'stack' = 'stack') => {
     const answerText = getAnswerText()
     return (
-      <div className="space-y-2.5">
+      <div className={layout === 'fill' ? 'flex-1 flex flex-col gap-3 pb-1' : 'space-y-3'}>
         {shuffledOpts.map((opt, i) => {
           const isAns = showResult && opt === answerText
           const isWrn = showResult && selected === i && opt !== answerText
+          const isSelected = selected === i && !showResult
           return (
             <button key={i} onClick={() => !showResult && setSelected(i)} disabled={showResult}
-              className="w-full p-3.5 rounded-xl text-left text-sm font-medium transition-all active:scale-[0.98]"
+              className={[
+                layout === 'fill'
+                  ? 'flex-1 w-full px-4 rounded-2xl text-left text-base font-medium transition-all active:scale-[0.98] flex items-center min-h-[58px]'
+                  : 'w-full p-4 rounded-2xl text-left text-base font-medium transition-all active:scale-[0.98]',
+              ].join(' ')}
               style={{
-                backgroundColor: isAns ? '#E8F5E9' : isWrn ? '#FFEBEE' : 'var(--color-surface)',
-                border: isAns ? '2px solid #4CAF50' : isWrn ? '2px solid #F44336' : selected === i ? '2px solid var(--color-primary)' : '1.5px solid var(--color-border)',
+                backgroundColor: isAns ? '#E8F5E9' : isWrn ? '#FFEBEE' : isSelected ? 'color-mix(in srgb, var(--color-primary) 8%, var(--color-surface))' : 'var(--color-surface)',
+                border: isAns ? '2px solid #4CAF50' : isWrn ? '2px solid #F44336' : isSelected ? '2px solid var(--color-primary)' : '1.5px solid var(--color-border)',
               }}>
               {isAns && '✅ '}{isWrn && '❌ '}{opt}
             </button>
@@ -207,7 +214,7 @@ export default function ScriptureLearn() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>
       <div className="shrink-0 flex items-center gap-2 px-4 pt-3 pb-2">
         <button onClick={() => nav('/')} className="text-lg">✕</button>
-        <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ backgroundColor: 'var(--color-border)' }}>
+        <div className="flex-1 h-2.5 rounded-full overflow-hidden" style={{ backgroundColor: 'var(--color-border)' }}>
           <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progress}%`, backgroundColor: 'var(--color-primary)' }} />
         </div>
         {/* 목차 버튼 */}
@@ -358,22 +365,22 @@ export default function ScriptureLearn() {
           <div className="flex-1 flex flex-col">
             <p className="text-sm font-bold mb-3">{step.instruction}</p>
             <button onClick={() => speak(step.word)} className="w-20 h-20 mx-auto rounded-full flex items-center justify-center text-3xl active:scale-95 mb-4" style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}>🔊</button>
-            {renderOptions()}
+            {renderOptions('fill')}
           </div>
         )}
 
         {step.type === 'match-reverse' && (
           <div className="flex-1 flex flex-col">
             <p className="text-sm font-bold mb-4">{step.instruction}</p>
-            {renderOptions()}
+            {renderOptions('fill')}
           </div>
         )}
 
         {step.type === 'quiz' && (
           <div className="flex-1 flex flex-col">
-            <p className="text-base font-bold mb-3">{step.question}</p>
+            <p className="text-base font-bold mb-4">{step.question}</p>
             {step.hint && !showResult && <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>💡 {step.hint}</p>}
-            {renderOptions()}
+            {renderOptions('fill')}
           </div>
         )}
 
