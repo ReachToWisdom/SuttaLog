@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/SuttaLog/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <!-- 브라우저 캐시 완전 방지 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="theme-color" content="#D4760A" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="/SuttaLog/manifest.json" />
+    <title>빠알리어 공부1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/SuttaLog/assets/index-DaUluWe3.js"></script>
+    <link rel="stylesheet" crossorigin href="/SuttaLog/assets/index-0w6MdHRh.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- 서비스워커 등록 — 빌드 타임스탬프로 캐시 버전 관리 -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        // BUILD_TIME은 vite.config.ts의 define으로 빌드 시 주입됨
+        // 개발 환경에서는 Date.now() 사용
+        const buildTime = typeof __BUILD_TIME__ !== 'undefined'
+          ? __BUILD_TIME__
+          : Date.now().toString()
+
+        navigator.serviceWorker.register(
+          '/SuttaLog/sw.js?v=' + buildTime
+        ).then(reg => {
+          // 새 서비스워커 감지 시 자동 reload
+          reg.addEventListener('updatefound', () => {
+            const newWorker = reg.installing
+            if (!newWorker) return
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+                window.location.reload()
+              }
+            })
+          })
+        })
+      }
+    </script>
+  </body>
+</html>
