@@ -6,10 +6,9 @@ const params = new URL(self.location.href).searchParams
 const CACHE_VERSION = params.get('v') || 'v1'
 const CACHE_NAME = `suttalog-${CACHE_VERSION}`
 
-// 설치 — 즉시 활성화
-self.addEventListener('install', () => {
-  self.skipWaiting()
-})
+// 설치 — waiting 상태로 머묾. 다음 세션에서 자연 적용.
+// skipWaiting을 쓰면 즉시 activate → controllerchange → 강제 reload 루프가 생김.
+self.addEventListener('install', () => {})
 
 // 활성화 — 이전 버전 캐시 전부 삭제
 self.addEventListener('activate', event => {

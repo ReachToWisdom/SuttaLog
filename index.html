@@ -22,26 +22,35 @@
     <script type="module" src="/src/main.tsx"></script>
     <!-- 서비스워커 등록 — 빌드 타임스탬프로 캐시 버전 관리 -->
     <script>
-      if ('serviceWorker' in navigator) {
-        // BUILD_TIME은 vite.config.ts의 define으로 빌드 시 주입됨
-        // 개발 환경에서는 Date.now() 사용
-        const buildTime = typeof __BUILD_TIME__ !== 'undefined'
-          ? __BUILD_TIME__
-          : Date.now().toString()
+      (function () {
+        if (!('serviceWorker' in navigator)) return
 
-        // 등록 전에 캡처 — 기존 SW 컨트롤러 여부 (최초 설치 vs 업데이트 구분)
-        const hadController = !!navigator.serviceWorker.controller
+        var h = location.hostname
+        var isDev =
+          h === 'localhost' ||
+          h === '127.0.0.1' ||
+          h === '0.0.0.0' ||
+          /^192\.168\./.test(h) ||
+          /^10\./.test(h) ||
+          h.endsWith('.local')
 
-        // controllerchange: SW 컨트롤러가 실제로 교체될 때만 발생
-        // hadController=false(최초 설치)이면 reload 안 함 → 무한 루프 차단
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-          if (hadController) {
-            window.location.reload()
+        if (isDev) {
+          // dev: SW 등록하지 않음 + 기존 SW/캐시 자동 해제 → controllerchange reload 루프 차단
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            regs.forEach(function (r) { r.unregister() })
+          })
+          if (window.caches) {
+            caches.keys().then(function (keys) { keys.forEach(function (k) { caches.delete(k) }) })
           }
-        })
+          return
+        }
 
+        // production: SW 등록만. 강제 reload는 하지 않음.
+        // 새 빌드는 사용자가 페이지를 닫았다 다시 열 때 자연스럽게 적용됨.
+        // (controllerchange + reload 조합은 GitHub Pages 캐시와 만나면 reload 루프가 생김)
+        var buildTime = typeof __BUILD_TIME__ !== 'undefined' ? __BUILD_TIME__ : Date.now().toString()
         navigator.serviceWorker.register('/SuttaLog/sw.js?v=' + buildTime)
-      }
+      })()
     </script>
   </body>
 </html>
