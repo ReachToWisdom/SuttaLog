@@ -432,7 +432,7 @@ export default function ScriptureLearn() {
         )}
 
         {step.type === 'speak' && (
-          <div className="flex-1 flex flex-col items-center justify-center text-center">
+          <div className="flex-1 flex flex-col items-center text-center pt-6">
             <p className="text-sm mb-4">🎤 따라 읽어보세요</p>
             <div className="rounded-2xl p-5 w-full" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
               <p className="pali-text text-sm font-semibold" style={{ color: 'var(--color-primary)' }}>{step.pali}</p>
@@ -445,7 +445,7 @@ export default function ScriptureLearn() {
         )}
 
         {step.type === 'teach-grammar' && (
-          <div className="flex-1 flex flex-col items-center justify-center px-2">
+          <div className="flex-1 flex flex-col items-center px-2 pt-4">
             <span className="text-4xl mb-3">📐</span>
             <h2 className="text-lg font-bold">{step.title}</h2>
             <div className="mt-4 rounded-2xl p-4 w-full" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
