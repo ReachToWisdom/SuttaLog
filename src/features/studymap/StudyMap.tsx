@@ -1,4 +1,5 @@
 // 학습맵 (보리수 경로 스킬트리)
+import { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // 레벨에 따라 동적으로 상태 결정
@@ -32,6 +33,12 @@ function CrownStars({ count, max = 5 }: { count: number; max?: number }) {
 
 export default function StudyMap() {
   const nav = useNavigate()
+  const currentRef = useRef<HTMLDivElement>(null)
+
+  // 진입 시 진행 중인 과로 자동 스크롤
+  useEffect(() => {
+    currentRef.current?.scrollIntoView({ block: 'center' })
+  }, [])
 
   return (
     <div className="px-4 pt-6 pb-4">
@@ -55,7 +62,7 @@ export default function StudyMap() {
           const isDone = false // 아직 실제 완료 추적 없음
 
           return (
-            <div key={skill.id} className="relative flex items-start gap-4 mb-1">
+            <div key={skill.id} ref={isCurrent ? currentRef : undefined} className="relative flex items-start gap-4 mb-1">
               {/* 노드 원 */}
               <div
                 className={`relative z-10 w-16 h-16 rounded-full flex items-center justify-center text-2xl shrink-0 ${
