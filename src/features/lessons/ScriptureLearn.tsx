@@ -190,7 +190,7 @@ export default function ScriptureLearn() {
   const renderOptions = (layout: 'fill' | 'stack' = 'stack') => {
     const answerText = getAnswerText()
     return (
-      <div className={layout === 'fill' ? 'flex-1 flex flex-col gap-3 pb-1' : 'space-y-3'}>
+      <div className={layout === 'fill' ? 'flex flex-col gap-3 pb-1' : 'space-y-3'}>
         {shuffledOpts.map((opt, i) => {
           const isAns = showResult && opt === answerText
           const isWrn = showResult && selected === i && opt !== answerText
@@ -199,7 +199,7 @@ export default function ScriptureLearn() {
             <button key={i} onClick={() => !showResult && setSelected(i)} disabled={showResult}
               className={[
                 layout === 'fill'
-                  ? 'flex-1 w-full px-4 rounded-2xl text-left text-base font-medium transition-all active:scale-[0.98] flex items-center min-h-[58px]'
+                  ? 'w-full px-5 py-4 rounded-2xl text-left text-base font-medium transition-all active:scale-[0.98] flex items-center min-h-[60px]'
                   : 'w-full p-4 rounded-2xl text-left text-base font-medium transition-all active:scale-[0.98]',
               ].join(' ')}
               style={{
@@ -221,28 +221,6 @@ export default function ScriptureLearn() {
         <div className="flex-1 h-2.5 rounded-full overflow-hidden" style={{ backgroundColor: 'var(--color-border)' }}>
           <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progress}%`, backgroundColor: 'var(--color-primary)' }} />
         </div>
-        {/* 메모 버튼 — 현재 단계에 메모 추가/편집 */}
-        <button
-          onClick={() => setShowMemo(true)}
-          className="relative w-8 h-8 flex items-center justify-center rounded-full active:scale-90 transition-transform shrink-0"
-          style={{ color: 'var(--color-text-secondary)' }}
-          aria-label="메모"
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 20h9" />
-            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
-          </svg>
-          {/* 메모 있음 표시 — version 의존으로 sheet 닫힘 시 갱신 */}
-          {hasMemo(pageIdOf(lid, stepIdx)) && (
-            <span
-              key={memoVer}
-              className="absolute top-1 right-1 w-2 h-2 rounded-full"
-              style={{ backgroundColor: 'var(--color-primary)' }}
-            />
-          )}
-        </button>
-
         {/* 목차 버튼 */}
         <button
           onClick={() => setShowTOC(true)}
@@ -573,6 +551,26 @@ export default function ScriptureLearn() {
           )}
         </div>
       </div>
+
+      {/* 메모 FAB — 학습 화면 우하단 floating */}
+      <button
+        onClick={() => setShowMemo(true)}
+        className="fixed right-4 rounded-full flex items-center justify-center active:scale-90 z-40"
+        style={{ bottom: 'calc(env(safe-area-inset-bottom, 0px) + 88px)', width: 52, height: 52, backgroundColor: 'var(--color-primary)', color: '#fff', boxShadow: '0 4px 16px rgba(0,0,0,0.28)' }}
+        aria-label="메모 작성"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 20h9" />
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+        </svg>
+        {hasMemo(pageIdOf(lid, stepIdx)) && (
+          <span
+            key={memoVer}
+            className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 rounded-full"
+            style={{ backgroundColor: '#EF5350', border: '2px solid var(--color-bg)' }}
+          />
+        )}
+      </button>
 
       {/* 메모 시트 */}
       <MemoSheet
