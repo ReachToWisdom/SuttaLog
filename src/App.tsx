@@ -14,6 +14,7 @@ import LessonComplete from './features/lesson/LessonComplete'
 import Review from './features/review/Review'
 import Profile from './features/profile/Profile'
 import Settings from './features/settings/SettingsPage'
+import MemoList from './features/memo/MemoList'
 import { useState } from 'react'
 
 export default function App() {
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/review" element={<Review />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/memos" element={<MemoList />} />
         </Route>
         {/* 학습 화면도 하단 메뉴 표시 */}
         <Route element={<Layout />}>

@@ -2,8 +2,10 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { speakPali } from '../../utils/pali-tts'
+import { hasMemo, pageIdOf, type StepSnapshot } from '../../utils/memo'
 import WritingCanvas from '../../components/WritingCanvas'
 import LotusHeart from '../../components/LotusHeart'
+import MemoSheet from '../../components/MemoSheet'
 import { LESSON_SN56_11, type StepType } from './lesson-data-sn56-11'
 import { LESSON_SN22_59 } from './lesson-data-sn22-59'
 import { LESSON_SN45_8 } from './lesson-data-sn45-8'
@@ -100,6 +102,8 @@ export default function ScriptureLearn() {
   const [writingInput, setWritingInput] = useState('')
   const [writingChecked, setWritingChecked] = useState(false)
   const [showTOC, setShowTOC] = useState(false)
+  const [showMemo, setShowMemo] = useState(false)
+  const [memoVer, setMemoVer] = useState(0)
   const writingEnabled = localStorage.getItem('suttalog-writing') !== 'off'
 
   const step = STEPS[stepIdx]
@@ -217,6 +221,28 @@ export default function ScriptureLearn() {
         <div className="flex-1 h-2.5 rounded-full overflow-hidden" style={{ backgroundColor: 'var(--color-border)' }}>
           <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progress}%`, backgroundColor: 'var(--color-primary)' }} />
         </div>
+        {/* 메모 버튼 — 현재 단계에 메모 추가/편집 */}
+        <button
+          onClick={() => setShowMemo(true)}
+          className="relative w-8 h-8 flex items-center justify-center rounded-full active:scale-90 transition-transform shrink-0"
+          style={{ color: 'var(--color-text-secondary)' }}
+          aria-label="메모"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+          </svg>
+          {/* 메모 있음 표시 — version 의존으로 sheet 닫힘 시 갱신 */}
+          {hasMemo(pageIdOf(lid, stepIdx)) && (
+            <span
+              key={memoVer}
+              className="absolute top-1 right-1 w-2 h-2 rounded-full"
+              style={{ backgroundColor: 'var(--color-primary)' }}
+            />
+          )}
+        </button>
+
         {/* 목차 버튼 */}
         <button
           onClick={() => setShowTOC(true)}
@@ -547,6 +573,27 @@ export default function ScriptureLearn() {
           )}
         </div>
       </div>
+
+      {/* 메모 시트 */}
+      <MemoSheet
+        open={showMemo}
+        onClose={() => setShowMemo(false)}
+        lessonId={lid}
+        stepIdx={stepIdx}
+        snapshot={buildSnapshot(step)}
+        onSaved={() => setMemoVer(v => v + 1)}
+      />
     </div>
   )
+}
+
+// 현재 step에서 메모 anchor용 식별 정보 추출
+function buildSnapshot(step: Step): StepSnapshot {
+  const snap: StepSnapshot = { stepType: step.type }
+  if ('word' in step) snap.word = step.word
+  if ('pali' in step) snap.pali = step.pali
+  if ('question' in step) snap.question = step.question
+  if ('title' in step) snap.title = step.title
+  if ('instruction' in step) snap.instruction = step.instruction
+  return snap
 }

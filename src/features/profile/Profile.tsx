@@ -138,6 +138,7 @@ export default function Profile() {
       {/* 메뉴 */}
       <div className="rounded-2xl overflow-hidden" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
         {[
+          { icon: '📝', label: '메모 목록', action: () => nav('/memos') },
           { icon: '⚙️', label: '설정', action: () => nav('/settings') },
           { icon: '📤', label: '학습 데이터 내보내기', action: exportData },
           { icon: '📥', label: '학습 데이터 가져오기', action: () => importRef.current?.click() },
