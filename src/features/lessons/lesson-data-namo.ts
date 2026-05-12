@@ -1,17 +1,16 @@
-// 1과: 나모 땃사 — 세존께 경배
-// 출처: DOCS/제1과. 나모 땃사.txt
+// 1과: 나모땃사 — 세존께 경배
 import type { StepType } from './lesson-data-sn56-11'
 
-const V1 = 'Namo tassa Bhagavato Arahato Sammāsambuddhassa.'
+const V1 = 'Namo tassa bhagavato arahato sammāsambuddhassa.'
 const V1Ko = '나모 땃사 바가와또 아라하또 삼마삼붓닷사.'
-const V1K = '저 세존, 아라한, 완전히 바르게 깨달은 분께 경배드립니다.'
+const V1K = '저 세존, 아라한, 완전히 깨달은 분께 경배드립니다.'
 
 export const LESSON_NAMO: StepType[] = [
   {
     type: 'intro',
-    title: '나모 땃사',
+    title: '나모땃사',
     subtitle: '세존께 경배',
-    description: '불교 예불의 시작을 여는 경배문입니다.\n수행·독경·예불 전 세존께 예경하며 마음을 바릅니다.\n전통적으로 세 번 반복하여 독송합니다.',
+    description: '불교 예불의 시작을 여는 경배문입니다. 수행 전 세존께 예경하며 마음을 바릅니다.',
     icon: '🙏',
   },
   {
@@ -21,9 +20,6 @@ export const LESSON_NAMO: StepType[] = [
     meaning: '경배, 예경',
     icon: '🙏',
     grammar: '불변화사 / 존경의 표현',
-    verseLine: V1,
-    verseLineKo: V1K,
-    audio: true,
   },
   {
     type: 'teach',
@@ -32,68 +28,38 @@ export const LESSON_NAMO: StepType[] = [
     meaning: '그분의, 그에게',
     icon: '👆',
     grammar: '대명사 (남성 단수 속격/여격)',
-    baseForm: 'ta (그)',
-    formNote: 'ta → tassa: 남성 단수 속격/여격\n"그분께" 또는 "그분의"',
-    verseLine: V1,
-    verseLineKo: V1K,
-    audio: true,
   },
   {
     type: 'teach',
-    word: 'Bhagavato',
+    word: 'bhagavato',
     pronKo: '바가와또',
-    meaning: '세존의, 복덕 있는 분의',
+    meaning: '세존의, 복덕 있는 분',
     icon: '✨',
     grammar: '명사 (남성 단수 속격)',
-    baseForm: 'bhagavant (복덕 있는 분)',
-    formNote: 'bhagavant → bhagavato: 특수 어간(-ant) 속격형\n속격 = "~의" / 여격 = "~께"',
-    buddhism: '세존(世尊). 붓다의 존칭. "복덕(bhaga)을 갖추신 분".',
-    verseLine: V1,
-    verseLineKo: V1K,
-    audio: true,
   },
   {
     type: 'teach',
-    word: 'Arahato',
+    word: 'arahato',
     pronKo: '아라하또',
-    meaning: '아라한의, 번뇌를 소멸한 분의',
+    meaning: '아라한, 번뇌를 소멸한 분',
     icon: '🌟',
     grammar: '명사/형용사 (남성 단수 속격)',
-    baseForm: 'arahant (아라한)',
-    formNote: 'arahant → arahato: 특수 어간(-ant) 속격형\n"공양받을 만한 분"이라는 뜻',
-    buddhism: '아라한(阿羅漢). 모든 번뇌를 소멸하여 다시 태어남이 없는 분. 붓다의 9덕 중 하나.',
-    verseLine: V1,
-    verseLineKo: V1K,
-    audio: true,
   },
   {
     type: 'teach',
-    word: 'Sammāsambuddhassa',
+    word: 'sammāsambuddhassa',
     pronKo: '삼마삼붓닷사',
-    meaning: '완전히 바르게 깨달은 분의',
+    meaning: '완전히 바르게 깨달은 분',
     icon: '☸️',
     grammar: '복합어 (남성 단수 속격)',
-    baseForm: 'sammā(바르게) + saṃ(완전히) + buddha(깨달은 분)',
-    formNote: 'sammā(바르게) + saṃ(완전히) + buddha(깨달은) + -assa(속격)\n스스로의 힘으로 완전한 깨달음을 이룬 분',
-    buddhism: '정등각자(正等覺者). 스승 없이 스스로 깨달아 법륜을 굴리신 분. 붓다의 9덕 중 하나.',
-    verseLine: V1,
-    verseLineKo: V1K,
-    audio: true,
-  },
-  {
-    type: 'teach-grammar',
-    title: '속격(屬格) -assa / -ato',
-    example: 'bhagavato\narahato\nsammāsambuddhassa',
-    exampleKo: '세존의/께\n아라한의/께\n완전히 깨달은 분의/께',
-    explanation: '"~의, ~께"를 나타내는 속격(또는 여격) 어미.\n• -a 어간: -assa (예: buddhassa)\n• -ant 어간: -ato (예: bhagavato, arahato)\n\n이 경배문은 모두 속격 형태로 "그분께 경배"를 뜻합니다.',
   },
   {
     type: 'verse',
     pali: V1,
     pronKo: V1Ko,
     translation: V1K,
-    highlight: ['Namo', 'tassa', 'Bhagavato', 'Arahato', 'Sammāsambuddhassa'],
-    note: '🙏 수행·독경 전 전통적으로 세 번 독송합니다.',
+    highlight: ['Namo tassa bhagavato'],
+    note: '수행 전 세 번 독송합니다.',
   },
   {
     type: 'quiz',
@@ -103,23 +69,9 @@ export const LESSON_NAMO: StepType[] = [
   },
   {
     type: 'quiz',
-    question: '"Arahato"의 의미는?',
-    options: ['스승의', '아라한의, 번뇌 없는 분의', '세존의', '제자의'],
-    answer: 1,
-  },
-  {
-    type: 'quiz',
-    question: '"Sammāsambuddhassa"의 의미는?',
-    options: ['번뇌를 소멸한 분', '법을 설하신 분', '완전히 바르게 깨달은 분', '신들의 스승'],
+    question: '"sammāsambuddhassa"의 의미는?',
+    options: ['번뇌를 소멸한 분', '법을 설하신 분', '완전히 바르게 깨달은 분', '오온을 소멸한 분'],
     answer: 2,
-  },
-  {
-    type: 'writing',
-    instruction: '"경배"를 빠알리어로 써보세요',
-    meaning: '경배, 예경',
-    pronKo: '나모',
-    answer: 'Namo',
-    hint: 'N으로 시작',
   },
   {
     type: 'speak',
@@ -130,7 +82,7 @@ export const LESSON_NAMO: StepType[] = [
     type: 'arrange',
     instruction: '빠알리 문장을 순서대로 배열하세요.',
     translation: V1K,
-    blocks: ['tassa', 'Namo', 'Sammāsambuddhassa.', 'Bhagavato', 'Arahato'],
+    blocks: ['tassa', 'Namo', 'sammāsambuddhassa.', 'bhagavato', 'arahato'],
     correctOrder: [1, 0, 3, 4, 2],
   },
 ]
