@@ -123,7 +123,7 @@ export default function Home() {
 
       {/* 푸터 */}
       <div className="pt-5 pb-3 text-center">
-        <p className="text-[10px]" style={{ color: 'var(--color-text-tertiary)' }}>제작: 혜통</p>
+        <p className="text-[10px]" style={{ color: 'var(--color-text-tertiary)' }}>제작: 정성광, 담마삐야</p>
       </div>
     </div>
   )
