@@ -2,7 +2,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { speakPali } from '../../utils/pali-tts'
-import { hasMemo, pageIdOf, type StepSnapshot } from '../../utils/memo'
+import { getMemo, hasMemo, pageIdOf, type StepSnapshot } from '../../utils/memo'
+import { getLessonTitle } from '../../utils/lessons-meta'
 import WritingCanvas from '../../components/WritingCanvas'
 import LotusHeart from '../../components/LotusHeart'
 import MemoSheet from '../../components/MemoSheet'
@@ -114,6 +115,18 @@ export default function ScriptureLearn() {
   const isArrange = step.type === 'arrange'
   const [arrangeOrder, setArrangeOrder] = useState<number[]>([])
 
+  // writing 비활성화 모드 자동 스킵 — 렌더 중 setState 금지를 위해 useEffect로.
+  useEffect(() => {
+    if (step?.type === 'writing' && !writingEnabled) {
+      if (stepIdx + 1 >= STEPS.length) nav('/lesson-complete')
+      else {
+        setStepIdx(i => i + 1)
+        setSelected(null); setShowResult(false); setWritingInput(''); setWritingChecked(false); setArrangeOrder([])
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stepIdx, step?.type])
+
   // 특수문자 (차후 타이핑 모드에서 사용)
   // const SPECIAL_CHARS = ['ā', 'ī', 'ū', 'ṃ', 'ṅ', 'ñ', 'ṭ', 'ḍ', 'ṇ', 'ḷ']
 
@@ -168,6 +181,8 @@ export default function ScriptureLearn() {
     if (writingInput.trim().toLowerCase() !== correct.toLowerCase()) setHearts(h => Math.max(0, h - 1))
   }
   const isCorrectAnswer = selected !== null && shuffledOpts[selected] === getAnswerText()
+  const pageId = pageIdOf(lid, stepIdx)
+  const currentMemo = hasMemo(pageId) ? getMemo(pageId) : null
 
   if (hearts <= 0) {
     return (
@@ -249,6 +264,16 @@ export default function ScriptureLearn() {
             />
           ))}
         </div>
+      </div>
+
+      {/* === 페이지 고유 ID 뱃지 === */}
+      <div className="shrink-0 px-4 pb-1.5 flex items-center gap-1.5">
+        <span className="text-[10px] font-medium px-2 py-0.5 rounded-full"
+          style={{ backgroundColor: 'color-mix(in srgb, var(--color-primary) 10%, var(--color-surface))', color: 'var(--color-primary)', border: '1px solid var(--color-border-light)' }}>
+          {getLessonTitle(lid)}
+        </span>
+        <span className="text-[10px] font-mono" style={{ color: 'var(--color-text-tertiary)' }}>📍 {pageId}</span>
+        <span className="ml-auto text-[10px]" style={{ color: 'var(--color-text-tertiary)' }}>{stepIdx + 1} / {STEPS.length}</span>
       </div>
 
       {/* === 스텝 목차 오버레이 === */}
@@ -434,8 +459,7 @@ export default function ScriptureLearn() {
           </div>
         )}
 
-        {/* 쓰기 (writing 모드 on일 때만, off면 자동 스킵) */}
-        {step.type === 'writing' && !writingEnabled && (() => { handleNext(); return null })()}
+        {/* 쓰기 — writing 모드 on일 때만 표시. off면 useEffect에서 자동 스킵. */}
         {step.type === 'writing' && writingEnabled && (
           <div className="flex-1 flex flex-col">
             <p className="text-base font-bold mb-2">✍️ {step.instruction}</p>
@@ -518,6 +542,25 @@ export default function ScriptureLearn() {
               </div>
             )}
           </div>
+        )}
+
+        {/* === 메모 미리보기 카드 — 현재 단계에 메모가 있으면 노출 === */}
+        {currentMemo && (
+          <button key={memoVer} onClick={() => setShowMemo(true)}
+            className="rounded-xl p-3 text-left w-full mt-4 active:scale-[0.98]"
+            style={{ backgroundColor: '#FFF8E1', border: '1px solid #FFE082' }}>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs font-bold" style={{ color: 'var(--color-primary)' }}>📝 내 메모</span>
+              <span className="text-[10px] font-mono" style={{ color: 'var(--color-text-tertiary)' }}>{currentMemo.memoId.slice(0, 8)}</span>
+              <span className="ml-auto text-[10px]" style={{ color: 'var(--color-text-tertiary)' }}>탭하여 편집</span>
+            </div>
+            <p className="text-xs whitespace-pre-wrap leading-relaxed" style={{ color: 'var(--color-text)' }}>{currentMemo.body}</p>
+            {currentMemo.patch && (
+              <p className="text-[10px] mt-2 px-2 py-1 rounded-full inline-block" style={{ backgroundColor: 'var(--color-primary)', color: '#fff' }}>
+                AI 제안 · {currentMemo.patch.status === 'proposed' ? '검토 대기' : currentMemo.patch.status}
+              </p>
+            )}
+          </button>
         )}
 
         <div className="min-h-32" />

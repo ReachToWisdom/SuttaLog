@@ -1,6 +1,7 @@
 // 설정 페이지
 import { useState, useEffect } from 'react'
 import { isSyncConfigured, isSyncLoggedIn, getSyncUser, initSync, syncLogin, syncLogout, pullFromCloud, pushToCloud } from '../../utils/sync'
+import { clearGithubConfig, getGithubUser, githubIsConfigured, setGithubConfig } from '../../utils/memo-github'
 
 export default function SettingsPage() {
   const [soundOn, setSoundOn] = useState(localStorage.getItem('suttalog-sound') !== 'off')
@@ -18,6 +19,24 @@ export default function SettingsPage() {
     }
   }, [syncReady])
   const [writingOn, setWritingOn] = useState(localStorage.getItem('suttalog-writing') !== 'off')
+
+  // GitHub 메모 공유
+  const [ghPat, setGhPat] = useState('')
+  const [ghUser, setGhUser] = useState(getGithubUser())
+  const [ghConfigured, setGhConfigured] = useState(githubIsConfigured())
+  const saveGithubConfig = () => {
+    if (!ghPat) { alert('PAT를 입력하세요.'); return }
+    setGithubConfig(ghPat, ghUser || 'anonymous')
+    setGhConfigured(true)
+    setGhPat('')
+    alert('GitHub 메모 공유가 활성화되었습니다.')
+  }
+  const removeGithubConfig = () => {
+    if (!confirm('GitHub 토큰을 삭제할까요?')) return
+    clearGithubConfig()
+    setGhUser('')
+    setGhConfigured(false)
+  }
   const [fontSize, setFontSize] = useState(Number(localStorage.getItem('suttalog-fontsize')) || 16)
 
   // SSOT: 연꽃(목숨) 개수 — 기본값 5, 범위 1~10
@@ -124,6 +143,37 @@ export default function SettingsPage() {
         <p className="text-center mt-2 text-sm font-bold" style={{ color: 'var(--color-primary)' }}>
           {heartsCount}개
         </p>
+      </div>
+
+      {/* 📝 GitHub 메모 공유 */}
+      <div className="rounded-2xl p-4" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
+        <p className="text-sm font-semibold mb-1">📝 메모 GitHub 공유</p>
+        <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+          작성한 메모를 ReachToWisdom/SuttaLog 저장소에 push하여 공유합니다. PAT는 브라우저 localStorage에만 저장.
+        </p>
+        {ghConfigured ? (
+          <div>
+            <p className="text-xs mb-2" style={{ color: 'var(--color-primary)' }}>
+              ✅ 활성화됨 — 사용자명: <b>{ghUser || 'anonymous'}</b>
+            </p>
+            <button onClick={removeGithubConfig} className="w-full py-2 rounded-lg text-xs"
+              style={{ border: '1px solid var(--color-border)', color: '#EF5350' }}>🗑️ 토큰 삭제</button>
+          </div>
+        ) : (
+          <div className="space-y-2">
+            <input type="text" value={ghUser} onChange={e => setGhUser(e.target.value)} placeholder="GitHub 사용자명 (선택)"
+              className="w-full px-3 py-2 rounded-lg text-sm"
+              style={{ backgroundColor: 'var(--color-bg)', border: '1px solid var(--color-border)', color: 'var(--color-text)' }} />
+            <input type="password" value={ghPat} onChange={e => setGhPat(e.target.value)} placeholder="GitHub PAT (Contents: write)"
+              className="w-full px-3 py-2 rounded-lg text-sm font-mono"
+              style={{ backgroundColor: 'var(--color-bg)', border: '1px solid var(--color-border)', color: 'var(--color-text)' }} />
+            <button onClick={saveGithubConfig} className="w-full py-2 rounded-lg text-sm font-bold text-white"
+              style={{ backgroundColor: 'var(--color-primary)' }}>저장</button>
+            <p className="text-[10px]" style={{ color: 'var(--color-text-tertiary)' }}>
+              GitHub → Settings → Developer settings → Personal access tokens → Fine-grained → Repository: SuttaLog, Permissions: Contents R/W
+            </p>
+          </div>
+        )}
       </div>
 
       {/* 동기화 */}

@@ -1,6 +1,7 @@
 // 프로필/나 화면
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { countMemos } from '../../utils/memo'
 
 // 학습 데이터 내보내기
 function exportData() {
@@ -57,6 +58,7 @@ const ACHIEVEMENTS = [
 export default function Profile() {
   const nav = useNavigate()
   const importRef = useRef<HTMLInputElement>(null)
+  const [memoCount] = useState(countMemos())
 
   return (
     <div className="px-4 pt-6 space-y-5">
@@ -138,7 +140,7 @@ export default function Profile() {
       {/* 메뉴 */}
       <div className="rounded-2xl overflow-hidden" style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
         {[
-          { icon: '📝', label: '메모 목록', action: () => nav('/memos') },
+          { icon: '📝', label: `메모 목록 (${memoCount}개)`, action: () => nav('/memos') },
           { icon: '⚙️', label: '설정', action: () => nav('/settings') },
           { icon: '📤', label: '학습 데이터 내보내기', action: exportData },
           { icon: '📥', label: '학습 데이터 가져오기', action: () => importRef.current?.click() },
