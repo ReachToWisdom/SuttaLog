@@ -41,7 +41,7 @@ export default function StudyMap() {
   }, [])
 
   return (
-    <div className="px-4 pt-6 pb-4">
+    <div className="px-4 pt-6 pb-24">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-xl font-bold">📖 학습맵</h1>
         <span className="text-sm px-3 py-1 rounded-full"
